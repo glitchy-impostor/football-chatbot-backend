@@ -1,0 +1,3636 @@
+{
+  "profiles": {
+    "DEN_2025": {
+      "team": "DEN",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6334164588528678,
+        "epa_per_play": 0.03135852036575228,
+        "success_rate": 0.4339152119700748,
+        "shotgun_rate": 0.6608478802992519,
+        "no_huddle_rate": 0.13050706566916043,
+        "explosive_rate": 0.05320033250207814,
+        "pass_epa": 0.08344488188976378,
+        "rush_epa": -0.058641043083900224,
+        "total_plays": 1203
+      },
+      "defense": {
+        "epa_per_play": -0.07925871021775545,
+        "success_rate": 0.37269681742043553,
+        "pass_epa": -0.07371662337662338,
+        "rush_epa": -0.08932334905660377
+      },
+      "deviations": {
+        "pass_rate": 0.03054606163628326,
+        "epa_per_play": 0.02590749398129302,
+        "success_rate": -0.005255562167356342,
+        "shotgun_rate": 0.004512710684870913,
+        "explosive_rate": -0.0041786179183335714
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.06212664277180413,
+          "epa_vs_league": 0.10875464755077657,
+          "success_rate_vs_league": 0.012664277180406247,
+          "team_pass_rate": 0.9814814814814815,
+          "team_epa": 0.003935185185185185,
+          "sample_size": 108
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.13229265216020183,
+          "epa_vs_league": -0.0991236518448439,
+          "success_rate_vs_league": -0.06370230211289818,
+          "team_pass_rate": 0.21428571428571427,
+          "team_epa": -0.04384285714285714,
+          "sample_size": 14
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.009152445419010391,
+          "epa_vs_league": 0.09970376584993806,
+          "success_rate_vs_league": -0.035751739918009284,
+          "team_pass_rate": 0.5294117647058824,
+          "team_epa": 0.49066470588235295,
+          "sample_size": 17
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.052896971373094015,
+          "epa_vs_league": 0.07110877936430425,
+          "success_rate_vs_league": 0.02059016162011229,
+          "team_pass_rate": 0.5594262295081968,
+          "team_epa": 0.07887848360655737,
+          "sample_size": 488
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.030492446384266736,
+          "epa_vs_league": -0.027288354831586197,
+          "success_rate_vs_league": -0.042908174532039545,
+          "team_pass_rate": 0.7164179104477612,
+          "team_epa": -0.0244726368159204,
+          "sample_size": 201
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.020026089477244158,
+          "epa_vs_league": -0.09913980678487455,
+          "success_rate_vs_league": -0.04008237510870616,
+          "team_pass_rate": 0.5801526717557252,
+          "team_epa": -0.061250381679389315,
+          "sample_size": 131
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.0673167891710938,
+          "epa_vs_league": -0.08971716274895083,
+          "success_rate_vs_league": -0.004863789632001514,
+          "team_pass_rate": 0.5384615384615384,
+          "team_epa": -0.08026025641025641,
+          "sample_size": 78
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.003980569938308753,
+          "epa_vs_league": 0.0068723190251416474,
+          "success_rate_vs_league": -0.0630790699802497,
+          "team_pass_rate": 0.352112676056338,
+          "team_epa": 0.04157323943661972,
+          "sample_size": 71
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.049964518036664685,
+          "epa_vs_league": 0.17167395623891188,
+          "success_rate_vs_league": 0.05390892962743937,
+          "team_pass_rate": 0.9605263157894737,
+          "team_epa": 0.12572631578947369,
+          "sample_size": 76
+        }
+      },
+      "strengths": [
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "NYJ_2025": {
+      "team": "NYJ",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6075322101090188,
+        "epa_per_play": -0.12650465807730427,
+        "success_rate": 0.40733399405351833,
+        "shotgun_rate": 0.7314172447968286,
+        "no_huddle_rate": 0.09712586719524281,
+        "explosive_rate": 0.03865213082259663,
+        "pass_epa": -0.14154176182707995,
+        "rush_epa": -0.10322752525252525,
+        "total_plays": 1009
+      },
+      "defense": {
+        "epa_per_play": 0.1472207977207977,
+        "success_rate": 0.45584045584045585,
+        "pass_epa": 0.2866715025906736,
+        "rush_epa": -0.02312088607594937
+      },
+      "deviations": {
+        "pass_rate": 0.0046618128924342805,
+        "epa_per_play": -0.13195568446176353,
+        "success_rate": -0.03183678008391283,
+        "shotgun_rate": 0.07508207518244758,
+        "explosive_rate": -0.01872681959781508
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.008243727598566286,
+          "epa_vs_league": -0.3678016487455197,
+          "success_rate_vs_league": -0.1243727598566308,
+          "team_pass_rate": 0.9111111111111111,
+          "team_epa": -0.4726211111111111,
+          "sample_size": 90
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.029740680713128076,
+          "epa_vs_league": -0.32763594003241486,
+          "success_rate_vs_league": -0.12398703403565636,
+          "team_pass_rate": 0.55,
+          "team_epa": 0.063325,
+          "sample_size": 20
+        },
+        "down4_medium": {
+          "pass_rate_vs_league": -0.05899419729206967,
+          "epa_vs_league": -0.10020009671179883,
+          "success_rate_vs_league": 0.07205029013539649,
+          "team_pass_rate": 0.9090909090909091,
+          "team_epa": 0.1295818181818182,
+          "sample_size": 11
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.04209917079257808,
+          "epa_vs_league": -0.005243519703599757,
+          "success_rate_vs_league": 0.01775912445891692,
+          "team_pass_rate": 0.5486284289276808,
+          "team_epa": 0.0025261845386533666,
+          "sample_size": 401
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.05229957838891408,
+          "epa_vs_league": -0.10422589765638436,
+          "success_rate_vs_league": -0.0468108170082811,
+          "team_pass_rate": 0.6946107784431138,
+          "team_epa": -0.10141017964071856,
+          "sample_size": 167
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.1264982636944102,
+          "epa_vs_league": -0.3548513720081401,
+          "success_rate_vs_league": -0.1312801052985325,
+          "team_pass_rate": 0.4336283185840708,
+          "team_epa": -0.3169619469026549,
+          "sample_size": 113
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.12631716308354807,
+          "epa_vs_league": 0.06974654193716764,
+          "success_rate_vs_league": 0.0433236551071674,
+          "team_pass_rate": 0.3448275862068966,
+          "team_epa": 0.07920344827586207,
+          "sample_size": 58
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.05186789388197077,
+          "epa_vs_league": -0.13523342041147807,
+          "success_rate_vs_league": -0.006036816459122907,
+          "team_pass_rate": 0.4,
+          "team_epa": -0.1005325,
+          "sample_size": 40
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.046364266888611505,
+          "epa_vs_league": -0.2611486558468581,
+          "success_rate_vs_league": -0.04940491052850604,
+          "team_pass_rate": 0.8641975308641975,
+          "team_epa": -0.3070962962962963,
+          "sample_size": 81
+        },
+        "down4_long": {
+          "pass_rate_vs_league": -0.06825396825396823,
+          "epa_vs_league": -0.507255238095238,
+          "success_rate_vs_league": -0.09365079365079365,
+          "team_pass_rate": 0.9,
+          "team_epa": -1.17196,
+          "sample_size": 10
+        }
+      },
+      "strengths": [],
+      "weaknesses": [
+        "offensive_efficiency",
+        "overall_defense"
+      ]
+    },
+    "CHI_2025": {
+      "team": "CHI",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5920318725099601,
+        "epa_per_play": 0.07361952191235059,
+        "success_rate": 0.4541832669322709,
+        "shotgun_rate": 0.5258964143426295,
+        "no_huddle_rate": 0.04940239043824701,
+        "explosive_rate": 0.06693227091633466,
+        "pass_epa": 0.12250807537012114,
+        "rush_epa": 0.002673828125,
+        "total_plays": 1255
+      },
+      "defense": {
+        "epa_per_play": 0.03136909246575342,
+        "success_rate": 0.4589041095890411,
+        "pass_epa": 0.07416237337192474,
+        "rush_epa": -0.030622851153039834
+      },
+      "deviations": {
+        "pass_rate": -0.010838524706624386,
+        "epa_per_play": 0.06816849552789132,
+        "success_rate": 0.015012492794839738,
+        "shotgun_rate": -0.13043875527175153,
+        "explosive_rate": 0.009553320495922953
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.009938090583251902,
+          "epa_vs_league": 0.11106592701205605,
+          "success_rate_vs_league": 0.04128380579993485,
+          "team_pass_rate": 0.9292929292929293,
+          "team_epa": 0.006246464646464647,
+          "sample_size": 99
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.09657836644591611,
+          "epa_vs_league": 0.15881295529801326,
+          "success_rate_vs_league": 0.07022626931567327,
+          "team_pass_rate": 0.25,
+          "team_epa": 0.21409375,
+          "sample_size": 16
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.18344438441683175,
+          "epa_vs_league": -0.9636498289213038,
+          "success_rate_vs_league": -0.17954258959121194,
+          "team_pass_rate": 0.7037037037037037,
+          "team_epa": -0.5726888888888889,
+          "sample_size": 27
+        },
+        "down4_medium": {
+          "pass_rate_vs_league": 0.03191489361702127,
+          "epa_vs_league": 0.3242796235679215,
+          "success_rate_vs_league": -0.011865793780687361,
+          "team_pass_rate": 1.0,
+          "team_epa": 0.5540615384615385,
+          "sample_size": 13
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.02981651789633144,
+          "epa_vs_league": 0.12097174958878815,
+          "success_rate_vs_league": 0.019841345233111096,
+          "team_pass_rate": 0.5363457760314342,
+          "team_epa": 0.12874145383104127,
+          "sample_size": 509
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.0864452405529581,
+          "epa_vs_league": 0.038542421519217926,
+          "success_rate_vs_league": 0.017163559819458774,
+          "team_pass_rate": 0.6604651162790698,
+          "team_epa": 0.04135813953488372,
+          "sample_size": 215
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.10851367905267456,
+          "epa_vs_league": -0.07551926381516265,
+          "success_rate_vs_league": -0.024014904042466312,
+          "team_pass_rate": 0.45161290322580644,
+          "team_epa": -0.03762983870967742,
+          "sample_size": 124
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.14646942461511997,
+          "epa_vs_league": 0.09438854820676013,
+          "success_rate_vs_league": 0.04175625698804508,
+          "team_pass_rate": 0.3246753246753247,
+          "team_epa": 0.10384545454545455,
+          "sample_size": 77
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.1812796585878531,
+          "epa_vs_league": -0.09345239099971336,
+          "success_rate_vs_league": -0.04133093410618183,
+          "team_pass_rate": 0.5294117647058824,
+          "team_epa": -0.058751470588235294,
+          "sample_size": 68
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.12167290886392013,
+          "epa_vs_league": 0.20377097378277154,
+          "success_rate_vs_league": 0.035780274656679156,
+          "team_pass_rate": 0.7888888888888889,
+          "team_epa": 0.15782333333333334,
+          "sample_size": 90
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack"
+      ],
+      "weaknesses": []
+    },
+    "IND_2025": {
+      "team": "IND",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5984174085064293,
+        "epa_per_play": 0.07212057368941642,
+        "success_rate": 0.4629080118694362,
+        "shotgun_rate": 0.7171117705242335,
+        "no_huddle_rate": 0.051434223541048464,
+        "explosive_rate": 0.05341246290801187,
+        "pass_epa": 0.07581123966942149,
+        "rush_epa": 0.06662093596059113,
+        "total_plays": 1011
+      },
+      "defense": {
+        "epa_per_play": 0.004269845594913715,
+        "success_rate": 0.4550408719346049,
+        "pass_epa": 0.058783309352517986,
+        "rush_epa": -0.08904753694581281
+      },
+      "deviations": {
+        "pass_rate": -0.0044529887101552035,
+        "epa_per_play": 0.06666954730495715,
+        "success_rate": 0.023737237732005034,
+        "shotgun_rate": 0.060776600909852485,
+        "explosive_rate": -0.0039664875123998425
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.062211981566820285,
+          "epa_vs_league": 0.3390037480798771,
+          "success_rate_vs_league": 0.05499231950844857,
+          "team_pass_rate": 0.8571428571428571,
+          "team_epa": 0.2341842857142857,
+          "sample_size": 70
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.09786607799852831,
+          "epa_vs_league": -0.1085252391464312,
+          "success_rate_vs_league": -0.1589403973509934,
+          "team_pass_rate": 0.4444444444444444,
+          "team_epa": -0.05324444444444444,
+          "sample_size": 18
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.22859265262020528,
+          "epa_vs_league": 0.28547655996758514,
+          "success_rate_vs_league": 0.08434629929767701,
+          "team_pass_rate": 0.2916666666666667,
+          "team_epa": 0.6764375,
+          "sample_size": 24
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.1479028697571744,
+          "epa_vs_league": 0.03722687637969095,
+          "success_rate_vs_league": 0.07339955849889623,
+          "team_pass_rate": 0.16666666666666666,
+          "team_epa": 0.07825833333333333,
+          "sample_size": 12
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.027749701675771954,
+          "epa_vs_league": 0.022795780391316616,
+          "success_rate_vs_league": 0.008857029813733208,
+          "team_pass_rate": 0.5342789598108747,
+          "team_epa": 0.03056548463356974,
+          "sample_size": 423
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.11284574072894771,
+          "epa_vs_league": 0.030234281984334206,
+          "success_rate_vs_league": 0.008541892207433788,
+          "team_pass_rate": 0.8597560975609756,
+          "team_epa": 0.03305,
+          "sample_size": 164
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.12494139709329583,
+          "epa_vs_league": 0.1871615008204407,
+          "success_rate_vs_league": 0.12502930145335206,
+          "team_pass_rate": 0.4351851851851852,
+          "team_epa": 0.22505092592592593,
+          "sample_size": 108
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.037329826980741776,
+          "epa_vs_league": 0.3801566529833395,
+          "success_rate_vs_league": 0.06640956977695112,
+          "team_pass_rate": 0.5084745762711864,
+          "team_epa": 0.3896135593220339,
+          "sample_size": 59
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.07694566544006315,
+          "epa_vs_league": -0.12693651363181707,
+          "success_rate_vs_league": 0.0032852174391820865,
+          "team_pass_rate": 0.2711864406779661,
+          "team_epa": -0.09223559322033899,
+          "sample_size": 59
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.011313202247191012,
+          "epa_vs_league": -0.19066173455056182,
+          "success_rate_vs_league": -0.07602528089887639,
+          "team_pass_rate": 0.921875,
+          "team_epa": -0.236609375,
+          "sample_size": 64
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "rushing_attack"
+      ],
+      "weaknesses": []
+    },
+    "HOU_2025": {
+      "team": "HOU",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6052631578947368,
+        "epa_per_play": -0.030741611842105263,
+        "success_rate": 0.4120065789473684,
+        "shotgun_rate": 0.6151315789473685,
+        "no_huddle_rate": 0.03700657894736842,
+        "explosive_rate": 0.05098684210526316,
+        "pass_epa": 0.023375135869565217,
+        "rush_epa": -0.113720625,
+        "total_plays": 1216
+      },
+      "defense": {
+        "epa_per_play": -0.1607240909090909,
+        "success_rate": 0.37454545454545457,
+        "pass_epa": -0.16277622478386167,
+        "rush_epa": -0.15721625615763546
+      },
+      "deviations": {
+        "pass_rate": 0.002392760678152306,
+        "epa_per_play": -0.03619263822656452,
+        "success_rate": -0.027164195190062745,
+        "shotgun_rate": -0.04120359066701251,
+        "explosive_rate": -0.006392108315148554
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.014607425441266031,
+          "epa_vs_league": 0.10784399066747818,
+          "success_rate_vs_league": 0.01860417934672348,
+          "team_pass_rate": 0.9339622641509434,
+          "team_epa": 0.0030245283018867923,
+          "sample_size": 106
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.2751497950173447,
+          "epa_vs_league": -0.20379508041627248,
+          "success_rate_vs_league": -0.20655944497004103,
+          "team_pass_rate": 0.07142857142857142,
+          "team_epa": -0.1485142857142857,
+          "sample_size": 14
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.14525931928687197,
+          "epa_vs_league": -0.09876719003241491,
+          "success_rate_vs_league": 0.06351296596434364,
+          "team_pass_rate": 0.375,
+          "team_epa": 0.29219375,
+          "sample_size": 16
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.13275135460565923,
+          "epa_vs_league": -0.3802860024081879,
+          "success_rate_vs_league": -0.23720650210716443,
+          "team_pass_rate": 0.18181818181818182,
+          "team_epa": -0.3392545454545455,
+          "sample_size": 11
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.027021061413791292,
+          "epa_vs_league": -0.05976396653733509,
+          "success_rate_vs_league": -0.040885248215953296,
+          "team_pass_rate": 0.47950819672131145,
+          "team_epa": -0.051994262295081965,
+          "sample_size": 488
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.019637629559300596,
+          "epa_vs_league": -0.04121844528839307,
+          "success_rate_vs_league": -0.028819526861302347,
+          "team_pass_rate": 0.7272727272727273,
+          "team_epa": -0.038402727272727276,
+          "sample_size": 220
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.14979708184365637,
+          "epa_vs_league": 0.004374697031919353,
+          "success_rate_vs_league": 0.005719151608851114,
+          "team_pass_rate": 0.7099236641221374,
+          "team_epa": 0.04226412213740458,
+          "sample_size": 131
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.028855250709555358,
+          "epa_vs_league": 0.09421114921686113,
+          "success_rate_vs_league": 0.030392620624408728,
+          "team_pass_rate": 0.5,
+          "team_epa": 0.10366805555555555,
+          "sample_size": 72
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.030671788657711807,
+          "epa_vs_league": -0.0008802854908431523,
+          "success_rate_vs_league": -0.032227292649599115,
+          "team_pass_rate": 0.31746031746031744,
+          "team_epa": 0.03382063492063492,
+          "sample_size": 63
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.017704654895666083,
+          "epa_vs_league": -0.059128550026752276,
+          "success_rate_vs_league": 0.008796147672552157,
+          "team_pass_rate": 0.8928571428571429,
+          "team_epa": -0.10507619047619048,
+          "sample_size": 84
+        }
+      },
+      "strengths": [
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "LAC_2025": {
+      "team": "LAC",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.636523266022827,
+        "epa_per_play": -0.03543538191395961,
+        "success_rate": 0.4310798946444249,
+        "shotgun_rate": 0.7155399473222125,
+        "no_huddle_rate": 0.0456540825285338,
+        "explosive_rate": 0.05267778753292362,
+        "pass_epa": -0.014282344827586207,
+        "rush_epa": -0.07247874396135266,
+        "total_plays": 1139
+      },
+      "defense": {
+        "epa_per_play": -0.07895167322834645,
+        "success_rate": 0.4153543307086614,
+        "pass_epa": -0.05661703821656051,
+        "rush_epa": -0.11510154639175257
+      },
+      "deviations": {
+        "pass_rate": 0.03365286880624252,
+        "epa_per_play": -0.04088640829841887,
+        "success_rate": -0.008090879493006242,
+        "shotgun_rate": 0.0592047777078315,
+        "explosive_rate": -0.004701162887488092
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.0010997067448680342,
+          "epa_vs_league": 0.029363780547409568,
+          "success_rate_vs_league": 0.004667644183773245,
+          "team_pass_rate": 0.9204545454545454,
+          "team_epa": -0.07545568181818182,
+          "sample_size": 88
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.11580913567668533,
+          "epa_vs_league": -0.29495771777890983,
+          "success_rate_vs_league": -0.030735269145865163,
+          "team_pass_rate": 0.23076923076923078,
+          "team_epa": -0.23967692307692307,
+          "sample_size": 13
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.22025931928687198,
+          "epa_vs_league": -0.39688094003241486,
+          "success_rate_vs_league": -0.023987034035656385,
+          "team_pass_rate": 0.3,
+          "team_epa": -0.00592,
+          "sample_size": 10
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.0023596307537860906,
+          "epa_vs_league": -0.1195234820200309,
+          "success_rate_vs_league": -0.03946448318863088,
+          "team_pass_rate": 0.5088888888888888,
+          "team_epa": -0.11175377777777777,
+          "sample_size": 450
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.0951949063258668,
+          "epa_vs_league": 0.062413229352755256,
+          "success_rate_vs_league": 0.030749851129128314,
+          "team_pass_rate": 0.8421052631578947,
+          "team_epa": 0.06522894736842105,
+          "sample_size": 190
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.11656514704482723,
+          "epa_vs_league": 0.013312830533612513,
+          "success_rate_vs_league": 0.03619610735700013,
+          "team_pass_rate": 0.6766917293233082,
+          "team_epa": 0.05120225563909774,
+          "sample_size": 133
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.0012652312181554715,
+          "epa_vs_league": 0.13070935872154654,
+          "success_rate_vs_league": 0.03189864472079429,
+          "team_pass_rate": 0.46987951807228917,
+          "team_epa": 0.14016626506024096,
+          "sample_size": 83
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.0314654394513626,
+          "epa_vs_league": -0.08074092041147807,
+          "success_rate_vs_league": -0.15603681645912293,
+          "team_pass_rate": 0.31666666666666665,
+          "team_epa": -0.04604,
+          "sample_size": 60
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.04449438202247191,
+          "epa_vs_league": -0.09029168539325844,
+          "success_rate_vs_league": 0.04089887640449441,
+          "team_pass_rate": 0.9550561797752809,
+          "team_epa": -0.13623932584269663,
+          "sample_size": 89
+        }
+      },
+      "strengths": [
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "ATL_2025": {
+      "team": "ATL",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5656370656370656,
+        "epa_per_play": -0.021368050193050193,
+        "success_rate": 0.4372586872586873,
+        "shotgun_rate": 0.805019305019305,
+        "no_huddle_rate": 0.111003861003861,
+        "explosive_rate": 0.05405405405405406,
+        "pass_epa": 0.006733617747440273,
+        "rush_epa": -0.05796266666666667,
+        "total_plays": 1036
+      },
+      "defense": {
+        "epa_per_play": -0.0037384909264565427,
+        "success_rate": 0.44603629417383,
+        "pass_epa": 0.004030793650793651,
+        "rush_epa": -0.015476258992805756
+      },
+      "deviations": {
+        "pass_rate": -0.037233331579518913,
+        "epa_per_play": -0.026819076577509458,
+        "success_rate": -0.0019120868787438905,
+        "shotgun_rate": 0.14868413540492398,
+        "explosive_rate": -0.0033248963663576533
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.01146010186757207,
+          "epa_vs_league": -0.3301686955291454,
+          "success_rate_vs_league": -0.07846632710809279,
+          "team_pass_rate": 0.9078947368421053,
+          "team_epa": -0.4349881578947368,
+          "sample_size": 76
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.11496009509254546,
+          "epa_vs_league": 0.6094268976057056,
+          "success_rate_vs_league": -0.030735269145865163,
+          "team_pass_rate": 0.46153846153846156,
+          "team_epa": 0.6647076923076923,
+          "sample_size": 13
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.02025931928687197,
+          "epa_vs_league": -0.4859859400324149,
+          "success_rate_vs_league": -0.06148703403565636,
+          "team_pass_rate": 0.5,
+          "team_epa": -0.095025,
+          "sample_size": 16
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.05778210551551277,
+          "epa_vs_league": 0.01303690168029813,
+          "success_rate_vs_league": -0.011552562155980939,
+          "team_pass_rate": 0.44874715261959,
+          "team_epa": 0.020806605922551253,
+          "sample_size": 439
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.00596320638636294,
+          "epa_vs_league": 0.04591301761651811,
+          "success_rate_vs_league": 0.08816061942918879,
+          "team_pass_rate": 0.7528735632183908,
+          "team_epa": 0.048728735632183905,
+          "sample_size": 174
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.0776704419276038,
+          "epa_vs_league": 0.10667724156118144,
+          "success_rate_vs_league": 0.014892849211636694,
+          "team_pass_rate": 0.4824561403508772,
+          "team_epa": 0.14456666666666668,
+          "sample_size": 114
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.012128355847821681,
+          "epa_vs_league": -0.2056978899452518,
+          "success_rate_vs_league": -0.020836887572312612,
+          "team_pass_rate": 0.45901639344262296,
+          "team_epa": -0.19624098360655737,
+          "sample_size": 61
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.11736287534879847,
+          "epa_vs_league": 0.19697407958852192,
+          "success_rate_vs_league": 0.05934779892549247,
+          "team_pass_rate": 0.23076923076923078,
+          "team_epa": 0.231675,
+          "sample_size": 52
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.01590879048248517,
+          "epa_vs_league": -0.3071450066093853,
+          "success_rate_vs_league": -0.11095175148711167,
+          "team_pass_rate": 0.9264705882352942,
+          "team_epa": -0.35309264705882354,
+          "sample_size": 68
+        }
+      },
+      "strengths": [],
+      "weaknesses": []
+    },
+    "PIT_2025": {
+      "team": "PIT",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6124031007751938,
+        "epa_per_play": -0.00622703488372093,
+        "success_rate": 0.4312015503875969,
+        "shotgun_rate": 0.6695736434108527,
+        "no_huddle_rate": 0.11918604651162791,
+        "explosive_rate": 0.05232558139534884,
+        "pass_epa": -0.008922626582278482,
+        "rush_epa": -0.001968,
+        "total_plays": 1032
+      },
+      "defense": {
+        "epa_per_play": 0.02171136752136752,
+        "success_rate": 0.43675213675213675,
+        "pass_epa": 0.043331950207468876,
+        "rush_epa": -0.013258836689038031
+      },
+      "deviations": {
+        "pass_rate": 0.009532703558609246,
+        "epa_per_play": -0.011678061268180193,
+        "success_rate": -0.007969223749834276,
+        "shotgun_rate": 0.013238473796471695,
+        "explosive_rate": -0.0050533690250628704
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.0595925297113753,
+          "epa_vs_league": 0.024317357102433504,
+          "success_rate_vs_league": -0.007413695529145448,
+          "team_pass_rate": 0.9789473684210527,
+          "team_epa": -0.08050210526315789,
+          "sample_size": 95
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.0388860587536084,
+          "epa_vs_league": 0.33503458991339785,
+          "success_rate_vs_league": 0.12311088470028869,
+          "team_pass_rate": 0.3076923076923077,
+          "team_epa": 0.3903153846153846,
+          "sample_size": 13
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.18692598595353865,
+          "epa_vs_league": 0.21143905996758516,
+          "success_rate_vs_league": 0.04267963263101027,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.6024,
+          "sample_size": 18
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.014569536423841067,
+          "epa_vs_league": -0.32693145695364234,
+          "success_rate_vs_league": -0.10993377483443711,
+          "team_pass_rate": 0.3,
+          "team_epa": -0.2859,
+          "sample_size": 10
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.007893818787974127,
+          "epa_vs_league": -0.0023983100114838927,
+          "success_rate_vs_league": 0.004157311683164022,
+          "team_pass_rate": 0.5144230769230769,
+          "team_epa": 0.005371394230769231,
+          "sample_size": 416
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.01845277165959225,
+          "epa_vs_league": -0.07788443309946468,
+          "success_rate_vs_league": -0.04855035469268881,
+          "team_pass_rate": 0.7653631284916201,
+          "team_epa": -0.07506871508379888,
+          "sample_size": 179
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.003522808693575352,
+          "epa_vs_league": 0.030039820177533642,
+          "success_rate_vs_league": 0.013568784332457617,
+          "team_pass_rate": 0.5566037735849056,
+          "team_epa": 0.06792924528301887,
+          "sample_size": 106
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.005778327632632307,
+          "epa_vs_league": 0.20336155519976712,
+          "success_rate_vs_league": 0.03616185139363948,
+          "team_pass_rate": 0.47692307692307695,
+          "team_epa": 0.21281846153846154,
+          "sample_size": 65
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.08951141646285682,
+          "epa_vs_league": -0.08388023075630566,
+          "success_rate_vs_league": -0.004312678528088476,
+          "team_pass_rate": 0.25862068965517243,
+          "team_epa": -0.04917931034482759,
+          "sample_size": 58
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.05718013773106201,
+          "epa_vs_league": -0.06720881116346503,
+          "success_rate_vs_league": -0.048807538963392516,
+          "team_pass_rate": 0.967741935483871,
+          "team_epa": -0.11315645161290322,
+          "sample_size": 62
+        }
+      },
+      "strengths": [],
+      "weaknesses": []
+    },
+    "CLE_2025": {
+      "team": "CLE",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6235408560311284,
+        "epa_per_play": -0.19022889105058366,
+        "success_rate": 0.3453307392996109,
+        "shotgun_rate": 0.6731517509727627,
+        "no_huddle_rate": 0.08949416342412451,
+        "explosive_rate": 0.03988326848249027,
+        "pass_epa": -0.25212589703588145,
+        "rush_epa": -0.08770697674418605,
+        "total_plays": 1028
+      },
+      "defense": {
+        "epa_per_play": -0.09583903420523139,
+        "success_rate": 0.4024144869215292,
+        "pass_epa": -0.1124918439716312,
+        "rush_epa": -0.07399674418604651
+      },
+      "deviations": {
+        "pass_rate": 0.02067045881454388,
+        "epa_per_play": -0.19567991743504293,
+        "success_rate": -0.09384003483782027,
+        "shotgun_rate": 0.01681658135838171,
+        "explosive_rate": -0.01749568193792144
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.02508960573476704,
+          "epa_vs_league": -0.19617683393070492,
+          "success_rate_vs_league": -0.06140979689366785,
+          "team_pass_rate": 0.9444444444444444,
+          "team_epa": -0.3009962962962963,
+          "sample_size": 108
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.10796708809953842,
+          "epa_vs_league": 0.04639193257074052,
+          "success_rate_vs_league": -0.12863736704796308,
+          "team_pass_rate": 0.45454545454545453,
+          "team_epa": 0.10167272727272728,
+          "sample_size": 11
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.27025931928687197,
+          "epa_vs_league": 0.46135780996758513,
+          "success_rate_vs_league": 0.12601296596434364,
+          "team_pass_rate": 0.25,
+          "team_epa": 0.85231875,
+          "sample_size": 16
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.015858801566389746,
+          "epa_vs_league": -0.1591005500133974,
+          "success_rate_vs_league": -0.09777294090007366,
+          "team_pass_rate": 0.5223880597014925,
+          "team_epa": -0.15133084577114428,
+          "sample_size": 402
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.025110368556573115,
+          "epa_vs_league": -0.18379551076177977,
+          "success_rate_vs_league": -0.11075546656926277,
+          "team_pass_rate": 0.772020725388601,
+          "team_epa": -0.18097979274611398,
+          "sample_size": 193
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.030126582278480973,
+          "epa_vs_league": -0.13950542510548522,
+          "success_rate_vs_league": -0.11756329113924052,
+          "team_pass_rate": 0.53,
+          "team_epa": -0.101616,
+          "sample_size": 100
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.1315221077810107,
+          "epa_vs_league": 0.01082611252923011,
+          "success_rate_vs_league": 0.04690205458667285,
+          "team_pass_rate": 0.33962264150943394,
+          "team_epa": 0.020283018867924527,
+          "sample_size": 53
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.06552341046585536,
+          "epa_vs_league": -0.30618570302017367,
+          "success_rate_vs_league": -0.05603681645912295,
+          "team_pass_rate": 0.2826086956521739,
+          "team_epa": -0.27148478260869563,
+          "sample_size": 46
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.035384148193136955,
+          "epa_vs_league": -0.2708807379289402,
+          "success_rate_vs_league": -0.04139690252049799,
+          "team_pass_rate": 0.9459459459459459,
+          "team_epa": -0.3168283783783784,
+          "sample_size": 74
+        }
+      },
+      "strengths": [
+        "overall_defense"
+      ],
+      "weaknesses": [
+        "offensive_efficiency"
+      ]
+    },
+    "BAL_2025": {
+      "team": "BAL",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5261506276150628,
+        "epa_per_play": 0.03395575313807531,
+        "success_rate": 0.4456066945606695,
+        "shotgun_rate": 0.6485355648535565,
+        "no_huddle_rate": 0.029288702928870293,
+        "explosive_rate": 0.07112970711297072,
+        "pass_epa": 0.017754671968190854,
+        "rush_epa": 0.05194503311258278,
+        "total_plays": 956
+      },
+      "defense": {
+        "epa_per_play": 0.024137918215613383,
+        "success_rate": 0.44144981412639406,
+        "pass_epa": 0.08381205164992826,
+        "rush_epa": -0.08560580474934038
+      },
+      "deviations": {
+        "pass_rate": -0.07671976960152171,
+        "epa_per_play": 0.02850472675361605,
+        "success_rate": 0.006435920423238317,
+        "shotgun_rate": -0.00779960476082453,
+        "explosive_rate": 0.013750756692559006
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.01814516129032262,
+          "epa_vs_league": -0.21644147513440862,
+          "success_rate_vs_league": -0.06777553763440858,
+          "team_pass_rate": 0.9375,
+          "team_epa": -0.3212609375,
+          "sample_size": 64
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.2696552895228392,
+          "epa_vs_league": -0.11151156393275599,
+          "success_rate_vs_league": -0.10765834606894209,
+          "team_pass_rate": 0.07692307692307693,
+          "team_epa": -0.05623076923076923,
+          "sample_size": 13
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.16724068071312803,
+          "epa_vs_league": 0.8844640599675851,
+          "success_rate_vs_league": 0.06351296596434364,
+          "team_pass_rate": 0.6875,
+          "team_epa": 1.275425,
+          "sample_size": 16
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.01876379690949226,
+          "epa_vs_league": 0.5367602097130243,
+          "success_rate_vs_league": 0.24006622516556286,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.5777916666666667,
+          "sample_size": 12
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.04924282597429874,
+          "epa_vs_league": 0.04736421535573683,
+          "success_rate_vs_league": 0.028642719491436153,
+          "team_pass_rate": 0.457286432160804,
+          "team_epa": 0.05513391959798995,
+          "sample_size": 398
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.05512953491421968,
+          "epa_vs_league": -0.041867087878679494,
+          "success_rate_vs_league": -0.001982665092933711,
+          "team_pass_rate": 0.6917808219178082,
+          "team_epa": -0.0390513698630137,
+          "sample_size": 146
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.23269295395989692,
+          "epa_vs_league": 0.05856101737239088,
+          "success_rate_vs_league": -0.033934972555169696,
+          "team_pass_rate": 0.3274336283185841,
+          "team_epa": 0.09645044247787611,
+          "sample_size": 113
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.13781141595711133,
+          "epa_vs_league": -0.07507277935456744,
+          "success_rate_vs_league": -0.03905182382003569,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": -0.06561587301587302,
+          "sample_size": 63
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.2176973235093336,
+          "epa_vs_league": -0.14940526823756503,
+          "success_rate_vs_league": -0.07777594689390555,
+          "team_pass_rate": 0.13043478260869565,
+          "team_epa": -0.11470434782608696,
+          "sample_size": 46
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.02187063467962347,
+          "epa_vs_league": 0.20294088369268143,
+          "success_rate_vs_league": 0.05319769207409658,
+          "team_pass_rate": 0.9324324324324325,
+          "team_epa": 0.15699324324324324,
+          "sample_size": 74
+        }
+      },
+      "strengths": [
+        "rushing_attack"
+      ],
+      "weaknesses": []
+    },
+    "KC_2025": {
+      "team": "KC",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6583969465648855,
+        "epa_per_play": 0.03488330152671756,
+        "success_rate": 0.4446564885496183,
+        "shotgun_rate": 0.8072519083969466,
+        "no_huddle_rate": 0.02480916030534351,
+        "explosive_rate": 0.05248091603053435,
+        "pass_epa": 0.07648101449275363,
+        "rush_epa": -0.045291061452513964,
+        "total_plays": 1048
+      },
+      "defense": {
+        "epa_per_play": -0.020260491299897647,
+        "success_rate": 0.436028659160696,
+        "pass_epa": 0.026920962199312715,
+        "rush_epa": -0.08977848101265823
+      },
+      "deviations": {
+        "pass_rate": 0.055526549348300924,
+        "epa_per_play": 0.029432275142258293,
+        "success_rate": 0.005485714412187148,
+        "shotgun_rate": 0.15091673878256562,
+        "explosive_rate": -0.004898034389877362
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.007474429583005593,
+          "epa_vs_league": -0.3348854156831891,
+          "success_rate_vs_league": -0.09483346446367688,
+          "team_pass_rate": 0.926829268292683,
+          "team_epa": -0.4397048780487805,
+          "sample_size": 82
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.013245033112582794,
+          "epa_vs_league": -0.17080579470198676,
+          "success_rate_vs_league": -0.07560706401766004,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": -0.115525,
+          "sample_size": 12
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.040259319286871986,
+          "epa_vs_league": 1.2903630599675853,
+          "success_rate_vs_league": 0.2160129659643436,
+          "team_pass_rate": 0.48,
+          "team_epa": 1.681324,
+          "sample_size": 25
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.06191621750294829,
+          "epa_vs_league": 0.09185117742828051,
+          "success_rate_vs_league": 0.014704116966048175,
+          "team_pass_rate": 0.568445475638051,
+          "team_epa": 0.09962088167053364,
+          "sample_size": 431
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.12166107173940066,
+          "epa_vs_league": 0.021640281984334202,
+          "success_rate_vs_league": 0.011050603008827542,
+          "team_pass_rate": 0.8685714285714285,
+          "team_epa": 0.024456,
+          "sample_size": 175
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.0916591320072333,
+          "epa_vs_league": -0.1983563893911995,
+          "success_rate_vs_league": -0.03899186256781195,
+          "team_pass_rate": 0.6517857142857143,
+          "team_epa": -0.16046696428571428,
+          "sample_size": 112
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.07552191737622199,
+          "epa_vs_league": 0.05034709366130559,
+          "success_rate_vs_league": 0.03205928729107543,
+          "team_pass_rate": 0.5466666666666666,
+          "team_epa": 0.059804,
+          "sample_size": 75
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.009149055270571638,
+          "epa_vs_league": -0.23709583566571535,
+          "success_rate_vs_league": -0.030613087645563586,
+          "team_pass_rate": 0.3389830508474576,
+          "team_epa": -0.20239491525423728,
+          "sample_size": 59
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.03859074462007239,
+          "epa_vs_league": 0.01321543705960769,
+          "success_rate_vs_league": -0.012995619881927212,
+          "team_pass_rate": 0.9491525423728814,
+          "team_epa": -0.03273220338983051,
+          "sample_size": 59
+        }
+      },
+      "strengths": [],
+      "weaknesses": []
+    },
+    "LV_2025": {
+      "team": "LV",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6369426751592356,
+        "epa_per_play": -0.21536061571125265,
+        "success_rate": 0.37579617834394907,
+        "shotgun_rate": 0.6613588110403397,
+        "no_huddle_rate": 0.0870488322717622,
+        "explosive_rate": 0.044585987261146494,
+        "pass_epa": -0.1650795,
+        "rush_epa": -0.30357309941520466,
+        "total_plays": 942
+      },
+      "defense": {
+        "epa_per_play": 0.024258633776091082,
+        "success_rate": 0.4497153700189753,
+        "pass_epa": 0.09856060606060606,
+        "rush_epa": -0.07168782608695652
+      },
+      "deviations": {
+        "pass_rate": 0.03407227794265111,
+        "epa_per_play": -0.2208116420957119,
+        "success_rate": -0.06337459579348209,
+        "shotgun_rate": 0.00502364142595868,
+        "explosive_rate": -0.012792963159265217
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.021627565982404673,
+          "epa_vs_league": -0.12942712854349953,
+          "success_rate_vs_league": -0.040786901270772224,
+          "team_pass_rate": 0.8977272727272727,
+          "team_epa": -0.23424659090909092,
+          "sample_size": 88
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.05116925214169943,
+          "epa_vs_league": -0.938208559080034,
+          "success_rate_vs_league": -0.1477965578451802,
+          "team_pass_rate": 0.5714285714285714,
+          "team_epa": -0.5472476190476191,
+          "sample_size": 21
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.06715495239121305,
+          "epa_vs_league": -0.13786680950541103,
+          "success_rate_vs_league": -0.02876272880266595,
+          "team_pass_rate": 0.5736842105263158,
+          "team_epa": -0.1300971052631579,
+          "sample_size": 380
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.10588471580638681,
+          "epa_vs_league": -0.31689007699002475,
+          "success_rate_vs_league": -0.1368614849032604,
+          "team_pass_rate": 0.6410256410256411,
+          "team_epa": -0.314074358974359,
+          "sample_size": 156
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.04771655497642091,
+          "epa_vs_league": -0.1901355035368578,
+          "success_rate_vs_league": -0.02638682055100522,
+          "team_pass_rate": 0.6078431372549019,
+          "team_epa": -0.15224607843137256,
+          "sample_size": 102
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.07430979616410077,
+          "epa_vs_league": -0.3878235730053611,
+          "success_rate_vs_league": -0.07945586422407613,
+          "team_pass_rate": 0.5454545454545454,
+          "team_epa": -0.3783666666666667,
+          "sample_size": 66
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.14023998690522654,
+          "epa_vs_league": -0.10087068785333854,
+          "success_rate_vs_league": -0.13743216529633223,
+          "team_pass_rate": 0.4883720930232558,
+          "team_epa": -0.06616976744186047,
+          "sample_size": 43
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.05553989716244523,
+          "epa_vs_league": -0.22703710531327367,
+          "success_rate_vs_league": -0.046893924966672995,
+          "team_pass_rate": 0.9661016949152542,
+          "team_epa": -0.27298474576271187,
+          "sample_size": 59
+        }
+      },
+      "strengths": [],
+      "weaknesses": [
+        "offensive_efficiency"
+      ]
+    },
+    "DAL_2025": {
+      "team": "DAL",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6192203082502267,
+        "epa_per_play": 0.09696627379873074,
+        "success_rate": 0.46600181323662737,
+        "shotgun_rate": 0.6255666364460563,
+        "no_huddle_rate": 0.09156844968268359,
+        "explosive_rate": 0.06255666364460562,
+        "pass_epa": 0.1585212298682284,
+        "rush_epa": -0.003133809523809524,
+        "total_plays": 1103
+      },
+      "defense": {
+        "epa_per_play": 0.16738685491723465,
+        "success_rate": 0.48880233690360275,
+        "pass_epa": 0.2430500787401575,
+        "rush_epa": 0.04482015306122449
+      },
+      "deviations": {
+        "pass_rate": 0.01634991103364214,
+        "epa_per_play": 0.09151524741427147,
+        "success_rate": 0.026831039099196208,
+        "shotgun_rate": -0.03076853316832473,
+        "explosive_rate": 0.005177713224193907
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.0046957942017150645,
+          "epa_vs_league": -0.020333702191370623,
+          "success_rate_vs_league": -0.023669524976180745,
+          "team_pass_rate": 0.9240506329113924,
+          "team_epa": -0.12515316455696202,
+          "sample_size": 79
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.08199306212551244,
+          "epa_vs_league": 0.24189063386944182,
+          "success_rate_vs_league": 0.07915484074424467,
+          "team_pass_rate": 0.42857142857142855,
+          "team_epa": 0.2971714285714286,
+          "sample_size": 14
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.22974068071312803,
+          "epa_vs_league": 0.11641405996758514,
+          "success_rate_vs_league": 0.0010129659643436373,
+          "team_pass_rate": 0.75,
+          "team_epa": 0.507375,
+          "sample_size": 24
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.07927541877678224,
+          "epa_vs_league": 0.24292736657576938,
+          "success_rate_vs_league": 0.07830151928320994,
+          "team_pass_rate": 0.23529411764705882,
+          "team_epa": 0.28395882352941176,
+          "sample_size": 17
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.0012214025087757818,
+          "epa_vs_league": 0.003662142891504838,
+          "success_rate_vs_league": 0.011236153754044298,
+          "team_pass_rate": 0.505307855626327,
+          "team_epa": 0.011431847133757961,
+          "sample_size": 471
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.011913172579736786,
+          "epa_vs_league": 0.13630369374904008,
+          "success_rate_vs_league": 0.05273127527773508,
+          "team_pass_rate": 0.7588235294117647,
+          "team_epa": 0.13911941176470588,
+          "sample_size": 170
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.058517485518129186,
+          "epa_vs_league": 0.22148006641993848,
+          "success_rate_vs_league": 0.057860437674318865,
+          "team_pass_rate": 0.6186440677966102,
+          "team_epa": 0.2593694915254237,
+          "sample_size": 118
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.1729230473197248,
+          "epa_vs_league": 0.22789224620367846,
+          "success_rate_vs_league": 0.03251126469220533,
+          "team_pass_rate": 0.6440677966101694,
+          "team_epa": 0.23734915254237288,
+          "sample_size": 59
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.040756782770859645,
+          "epa_vs_league": 0.06576991292185526,
+          "success_rate_vs_league": -0.04214792757023411,
+          "team_pass_rate": 0.3888888888888889,
+          "team_epa": 0.10047083333333333,
+          "sample_size": 72
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.05958745597853432,
+          "epa_vs_league": 0.09323420761361731,
+          "success_rate_vs_league": 0.02798591313097437,
+          "team_pass_rate": 0.9701492537313433,
+          "team_epa": 0.0472865671641791,
+          "sample_size": 67
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack"
+      ],
+      "weaknesses": [
+        "overall_defense"
+      ]
+    },
+    "TEN_2025": {
+      "team": "TEN",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6492462311557788,
+        "epa_per_play": -0.1596694472361809,
+        "success_rate": 0.37386934673366834,
+        "shotgun_rate": 0.7286432160804021,
+        "no_huddle_rate": 0.10150753768844221,
+        "explosive_rate": 0.05125628140703518,
+        "pass_epa": -0.19632863777089785,
+        "rush_epa": -0.09181318051575932,
+        "total_plays": 995
+      },
+      "defense": {
+        "epa_per_play": 0.10042280524722502,
+        "success_rate": 0.4510595358224016,
+        "pass_epa": 0.18238076923076924,
+        "rush_epa": -0.02428676844783715
+      },
+      "deviations": {
+        "pass_rate": 0.04637583393919431,
+        "epa_per_play": -0.16512047362064017,
+        "success_rate": -0.06530142740376282,
+        "shotgun_rate": 0.07230804646602107,
+        "explosive_rate": -0.006122669013376533
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.01026392961876832,
+          "epa_vs_league": -0.4569674063212773,
+          "success_rate_vs_league": -0.06982730531117626,
+          "team_pass_rate": 0.9090909090909091,
+          "team_epa": -0.5617868686868687,
+          "sample_size": 99
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.0388860587536084,
+          "epa_vs_league": -0.13403464085583291,
+          "success_rate_vs_league": -0.030735269145865163,
+          "team_pass_rate": 0.3076923076923077,
+          "team_epa": -0.07875384615384616,
+          "sample_size": 13
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.10474068071312803,
+          "epa_vs_league": -0.3311734400324149,
+          "success_rate_vs_league": -0.12398703403565636,
+          "team_pass_rate": 0.625,
+          "team_epa": 0.0597875,
+          "sample_size": 16
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.014304075198230626,
+          "epa_vs_league": -0.11040017299225312,
+          "success_rate_vs_league": -0.06936031652196423,
+          "team_pass_rate": 0.5208333333333334,
+          "team_epa": -0.10263046875,
+          "sample_size": 384
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.021875770335602174,
+          "epa_vs_league": -0.15848045790005885,
+          "success_rate_vs_league": -0.06505179170628395,
+          "team_pass_rate": 0.7687861271676301,
+          "team_epa": -0.15566473988439306,
+          "sample_size": 173
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.07012551856185512,
+          "epa_vs_league": -0.011681862080275145,
+          "success_rate_vs_league": -0.02218513987873627,
+          "team_pass_rate": 0.6302521008403361,
+          "team_epa": 0.026207563025210084,
+          "sample_size": 119
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.03654755840186302,
+          "epa_vs_league": -0.17012459864638674,
+          "success_rate_vs_league": -0.0869150716832836,
+          "team_pass_rate": 0.5076923076923077,
+          "team_epa": -0.16066769230769232,
+          "sample_size": 65
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.02686789388197075,
+          "epa_vs_league": -0.25943529541147803,
+          "success_rate_vs_league": -0.08728681645912295,
+          "team_pass_rate": 0.375,
+          "team_epa": -0.224734375,
+          "sample_size": 32
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.04532055518836753,
+          "epa_vs_league": -0.23056559484467945,
+          "success_rate_vs_league": -0.05212822207534695,
+          "team_pass_rate": 0.9558823529411765,
+          "team_epa": -0.27651323529411764,
+          "sample_size": 68
+        },
+        "down4_long": {
+          "pass_rate_vs_league": 0.031746031746031744,
+          "epa_vs_league": -0.36681190476190473,
+          "success_rate_vs_league": -0.04365079365079366,
+          "team_pass_rate": 1.0,
+          "team_epa": -1.0315166666666666,
+          "sample_size": 12
+        }
+      },
+      "strengths": [],
+      "weaknesses": [
+        "offensive_efficiency",
+        "overall_defense"
+      ]
+    },
+    "BUF_2025": {
+      "team": "BUF",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5635910224438903,
+        "epa_per_play": 0.1375744804655029,
+        "success_rate": 0.486284289276808,
+        "shotgun_rate": 0.5037406483790524,
+        "no_huddle_rate": 0.05652535328345802,
+        "explosive_rate": 0.0714879467996675,
+        "pass_epa": 0.1905122418879056,
+        "rush_epa": 0.06920914285714286,
+        "total_plays": 1203
+      },
+      "defense": {
+        "epa_per_play": -0.010995327102803739,
+        "success_rate": 0.4289719626168224,
+        "pass_epa": -0.05035218800648298,
+        "rush_epa": 0.042609933774834435
+      },
+      "deviations": {
+        "pass_rate": -0.039279374772694275,
+        "epa_per_play": 0.13212345408104365,
+        "success_rate": 0.04711351513937684,
+        "shotgun_rate": -0.15259452123532857,
+        "explosive_rate": 0.014108996379255785
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.0556451612903226,
+          "epa_vs_league": 0.2041157123655914,
+          "success_rate_vs_league": 0.035349462365591444,
+          "team_pass_rate": 0.975,
+          "team_epa": 0.09929625,
+          "sample_size": 80
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.03803701816946853,
+          "epa_vs_league": 0.17504997452878246,
+          "success_rate_vs_league": -0.18458142299201902,
+          "team_pass_rate": 0.38461538461538464,
+          "team_epa": 0.23033076923076923,
+          "sample_size": 13
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.018202219174666467,
+          "epa_vs_league": -0.049718632340107205,
+          "success_rate_vs_league": -0.04706395711257949,
+          "team_pass_rate": 0.5384615384615384,
+          "team_epa": 0.3412423076923077,
+          "sample_size": 26
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.1607233825776872,
+          "epa_vs_league": -0.397246841569027,
+          "success_rate_vs_league": -0.04839531329597557,
+          "team_pass_rate": 0.15384615384615385,
+          "team_epa": -0.3562153846153846,
+          "sample_size": 13
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.08222646929048122,
+          "epa_vs_league": 0.06937232763025684,
+          "success_rate_vs_league": 0.05793259516462279,
+          "team_pass_rate": 0.4243027888446215,
+          "team_epa": 0.07714203187250997,
+          "sample_size": 502
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.054259233811246976,
+          "epa_vs_league": 0.07079890186737514,
+          "success_rate_vs_league": 0.026656283877666276,
+          "team_pass_rate": 0.8011695906432749,
+          "team_epa": 0.07361461988304094,
+          "sample_size": 171
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.04746835443037978,
+          "epa_vs_league": 0.20953082805907172,
+          "success_rate_vs_league": 0.0071202531645569445,
+          "team_pass_rate": 0.6075949367088608,
+          "team_epa": 0.24742025316455696,
+          "sample_size": 158
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.10643886693750348,
+          "epa_vs_league": 0.2458113289554232,
+          "success_rate_vs_league": 0.07598085591852632,
+          "team_pass_rate": 0.36470588235294116,
+          "team_epa": 0.25526823529411763,
+          "sample_size": 85
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.019514952705500188,
+          "epa_vs_league": 0.11051672664734546,
+          "success_rate_vs_league": 0.07631612471734761,
+          "team_pass_rate": 0.36764705882352944,
+          "team_epa": 0.14521764705882353,
+          "sample_size": 68
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.05548933398469302,
+          "epa_vs_league": 0.23496793030451066,
+          "success_rate_vs_league": 0.0439928350431526,
+          "team_pass_rate": 0.855072463768116,
+          "team_epa": 0.18902028985507247,
+          "sample_size": 69
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "rushing_attack"
+      ],
+      "weaknesses": []
+    },
+    "WAS_2025": {
+      "team": "WAS",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5797546012269938,
+        "epa_per_play": 0.005407975460122699,
+        "success_rate": 0.4560327198364008,
+        "shotgun_rate": 0.8793456032719836,
+        "no_huddle_rate": 0.6165644171779141,
+        "explosive_rate": 0.05214723926380368,
+        "pass_epa": 0.03611005291005291,
+        "rush_epa": -0.03694744525547445,
+        "total_plays": 978
+      },
+      "defense": {
+        "epa_per_play": 0.14248638059701493,
+        "success_rate": 0.47574626865671643,
+        "pass_epa": 0.22348025889967638,
+        "rush_epa": 0.03223480176211454
+      },
+      "deviations": {
+        "pass_rate": -0.02311579598959068,
+        "epa_per_play": -4.3050924336564093e-05,
+        "success_rate": 0.01686194569896965,
+        "shotgun_rate": 0.22301043365760265,
+        "explosive_rate": -0.005231711156608032
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.014855687606112111,
+          "epa_vs_league": 0.05012077815506508,
+          "success_rate_vs_league": 0.09258630447085459,
+          "team_pass_rate": 0.9342105263157895,
+          "team_epa": -0.054698684210526316,
+          "sample_size": 76
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.25566927553682517,
+          "epa_vs_league": 0.05434647802528597,
+          "success_rate_vs_league": -0.0377282761388722,
+          "team_pass_rate": 0.09090909090909091,
+          "team_epa": 0.10962727272727273,
+          "sample_size": 11
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.3130740140464614,
+          "epa_vs_league": 0.40357239330091843,
+          "success_rate_vs_league": 0.09823518818656585,
+          "team_pass_rate": 0.8333333333333334,
+          "team_epa": 0.7945333333333333,
+          "sample_size": 18
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.31456953642384106,
+          "epa_vs_league": -0.13168145695364236,
+          "success_rate_vs_league": -0.20993377483443715,
+          "team_pass_rate": 0.0,
+          "team_epa": -0.09065,
+          "sample_size": 10
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.07025474833118117,
+          "epa_vs_league": -0.035614557183429596,
+          "success_rate_vs_league": 0.005241399164310323,
+          "team_pass_rate": 0.4362745098039216,
+          "team_epa": -0.02784485294117647,
+          "sample_size": 408
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.1040213201866057,
+          "epa_vs_league": 0.1822252757731541,
+          "success_rate_vs_league": 0.05974625518274057,
+          "team_pass_rate": 0.8509316770186336,
+          "team_epa": 0.18504099378881989,
+          "sample_size": 161
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.02169159953970079,
+          "epa_vs_league": 0.12932784762178748,
+          "success_rate_vs_league": 0.059709436133486726,
+          "team_pass_rate": 0.5818181818181818,
+          "team_epa": 0.16721727272727271,
+          "sample_size": 110
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.037329826980741776,
+          "epa_vs_league": -0.4108297876946266,
+          "success_rate_vs_league": -0.12003110818915058,
+          "team_pass_rate": 0.5084745762711864,
+          "team_epa": -0.4013728813559322,
+          "sample_size": 59
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.1108439705248089,
+          "epa_vs_league": -0.23932295430978315,
+          "success_rate_vs_league": -0.01366393510319075,
+          "team_pass_rate": 0.23728813559322035,
+          "team_epa": -0.20462203389830508,
+          "sample_size": 59
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.025946413137424407,
+          "epa_vs_league": -0.0250023595505618,
+          "success_rate_vs_league": -0.015929127052722536,
+          "team_pass_rate": 0.8846153846153846,
+          "team_epa": -0.07095,
+          "sample_size": 52
+        }
+      },
+      "strengths": [],
+      "weaknesses": [
+        "overall_defense"
+      ]
+    },
+    "NE_2025": {
+      "team": "NE",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5958333333333333,
+        "epa_per_play": 0.11184,
+        "success_rate": 0.465,
+        "shotgun_rate": 0.5475,
+        "no_huddle_rate": 0.020833333333333332,
+        "explosive_rate": 0.08083333333333333,
+        "pass_epa": 0.24699006993006992,
+        "rush_epa": -0.0874018556701031,
+        "total_plays": 1200
+      },
+      "defense": {
+        "epa_per_play": -0.09346311688311688,
+        "success_rate": 0.42943722943722945,
+        "pass_epa": -0.09931754143646408,
+        "rush_epa": -0.08362877030162413
+      },
+      "deviations": {
+        "pass_rate": -0.0070370638832512045,
+        "epa_per_play": 0.10638897361554073,
+        "success_rate": 0.02582922586256886,
+        "shotgun_rate": -0.108835169614381,
+        "explosive_rate": 0.023454382912921616
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.0335863377609108,
+          "epa_vs_league": 0.3679818153067679,
+          "success_rate_vs_league": 0.10961416824794434,
+          "team_pass_rate": 0.9529411764705882,
+          "team_epa": 0.26316235294117646,
+          "sample_size": 85
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.013245033112582794,
+          "epa_vs_league": 0.22101920529801322,
+          "success_rate_vs_league": 0.0493929359823399,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.2763,
+          "sample_size": 24
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.0987882997607471,
+          "epa_vs_league": 1.5401485837771087,
+          "success_rate_vs_league": 0.23315582310720073,
+          "team_pass_rate": 0.6190476190476191,
+          "team_epa": 1.9311095238095237,
+          "sample_size": 21
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.07004584819154358,
+          "epa_vs_league": 0.16091469689251148,
+          "success_rate_vs_league": 0.0285277636271013,
+          "team_pass_rate": 0.38461538461538464,
+          "team_epa": 0.20194615384615386,
+          "sample_size": 13
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.02572117732702195,
+          "epa_vs_league": 0.0965175684850196,
+          "success_rate_vs_league": 0.024373900649752978,
+          "team_pass_rate": 0.4808080808080808,
+          "team_epa": 0.10428727272727273,
+          "sample_size": 495
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.0376200299083036,
+          "epa_vs_league": 0.20601577369704138,
+          "success_rate_vs_league": 0.0635210055344787,
+          "team_pass_rate": 0.7845303867403315,
+          "team_epa": 0.20883149171270718,
+          "sample_size": 181
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.002373417721519,
+          "epa_vs_league": -0.13768692510548522,
+          "success_rate_vs_league": -0.0300632911392405,
+          "team_pass_rate": 0.5625,
+          "team_epa": -0.0997975,
+          "sample_size": 160
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.08599810785241252,
+          "epa_vs_league": -0.077698334910123,
+          "success_rate_vs_league": -0.023178807947019875,
+          "team_pass_rate": 0.5571428571428572,
+          "team_epa": -0.06824142857142858,
+          "sample_size": 70
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.06479877278469592,
+          "epa_vs_league": -0.04335258707814474,
+          "success_rate_vs_league": -0.05603681645912295,
+          "team_pass_rate": 0.2833333333333333,
+          "team_epa": -0.008651666666666667,
+          "sample_size": 60
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.015364128173116942,
+          "epa_vs_league": -0.03320668053821612,
+          "success_rate_vs_league": -0.024713552503814684,
+          "team_pass_rate": 0.9259259259259259,
+          "team_epa": -0.07915432098765432,
+          "sample_size": 81
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "ARI_2025": {
+      "team": "ARI",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6964618249534451,
+        "epa_per_play": -0.018504283054003725,
+        "success_rate": 0.4301675977653631,
+        "shotgun_rate": 0.7141527001862198,
+        "no_huddle_rate": 0.12104283054003724,
+        "explosive_rate": 0.05307262569832402,
+        "pass_epa": 0.022558288770053475,
+        "rush_epa": -0.11272147239263804,
+        "total_plays": 1074
+      },
+      "defense": {
+        "epa_per_play": 0.08844178537511871,
+        "success_rate": 0.4852801519468186,
+        "pass_epa": 0.16360756843800323,
+        "rush_epa": -0.019609027777777777
+      },
+      "deviations": {
+        "pass_rate": 0.09359142773686058,
+        "epa_per_play": -0.02395530943846299,
+        "success_rate": -0.009003176372068045,
+        "shotgun_rate": 0.057817530571838804,
+        "explosive_rate": -0.0043063247220876885
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.011097957975732431,
+          "epa_vs_league": -0.1638722807536747,
+          "success_rate_vs_league": -0.008572555983032415,
+          "team_pass_rate": 0.908256880733945,
+          "team_epa": -0.2686917431192661,
+          "sample_size": 109
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.2248502049826553,
+          "epa_vs_league": 0.04241206244087038,
+          "success_rate_vs_league": -0.06370230211289818,
+          "team_pass_rate": 0.5714285714285714,
+          "team_epa": 0.09769285714285714,
+          "sample_size": 14
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.058720857748410404,
+          "epa_vs_league": -0.943637863109338,
+          "success_rate_vs_league": -0.1624485724971948,
+          "team_pass_rate": 0.46153846153846156,
+          "team_epa": -0.5526769230769231,
+          "sample_size": 13
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.11761652774189046,
+          "epa_vs_league": -0.07687494342220756,
+          "success_rate_vs_league": -0.027497892452108486,
+          "team_pass_rate": 0.6241457858769932,
+          "team_epa": -0.06910523917995444,
+          "sample_size": 439
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.0439059696985844,
+          "epa_vs_league": 0.0014138738210688977,
+          "success_rate_vs_league": -0.003031029644233685,
+          "team_pass_rate": 0.7908163265306123,
+          "team_epa": 0.004229591836734694,
+          "sample_size": 196
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.20910418695228827,
+          "epa_vs_league": 0.1588115364329763,
+          "success_rate_vs_league": 0.07089824732229794,
+          "team_pass_rate": 0.7692307692307693,
+          "team_epa": 0.19670096153846153,
+          "sample_size": 104
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.020918742773047394,
+          "epa_vs_league": 0.2123637285819405,
+          "success_rate_vs_league": 0.1038053190371071,
+          "team_pass_rate": 0.49206349206349204,
+          "team_epa": 0.22182063492063492,
+          "sample_size": 63
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.11738513526128108,
+          "epa_vs_league": 0.1467318382092116,
+          "success_rate_vs_league": -0.004312678528088476,
+          "team_pass_rate": 0.46551724137931033,
+          "team_epa": 0.18143275862068967,
+          "sample_size": 58
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.01251512532411414,
+          "epa_vs_league": 0.05949187121866897,
+          "success_rate_vs_league": 0.04176318063958517,
+          "team_pass_rate": 0.9230769230769231,
+          "team_epa": 0.013544230769230768,
+          "sample_size": 52
+        }
+      },
+      "strengths": [],
+      "weaknesses": [
+        "overall_defense"
+      ]
+    },
+    "TB_2025": {
+      "team": "TB",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6046948356807512,
+        "epa_per_play": -0.008879906103286385,
+        "success_rate": 0.42347417840375584,
+        "shotgun_rate": 0.6507042253521127,
+        "no_huddle_rate": 0.061971830985915494,
+        "explosive_rate": 0.06009389671361502,
+        "pass_epa": 0.03833447204968944,
+        "rush_epa": -0.08110332541567696,
+        "total_plays": 1065
+      },
+      "defense": {
+        "epa_per_play": 0.013278181818181817,
+        "success_rate": 0.4484848484848485,
+        "pass_epa": 0.07969906832298136,
+        "rush_epa": -0.11034913294797688
+      },
+      "deviations": {
+        "pass_rate": 0.0018244384641666889,
+        "epa_per_play": -0.014330932487745647,
+        "success_rate": -0.015696595733675323,
+        "shotgun_rate": -0.005630944262268289,
+        "explosive_rate": 0.0027149462932033117
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.03982883475971033,
+          "epa_vs_league": 0.044475584814570986,
+          "success_rate_vs_league": 0.024380074610489355,
+          "team_pass_rate": 0.9591836734693877,
+          "team_epa": -0.06034387755102041,
+          "sample_size": 98
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.11496009509254546,
+          "epa_vs_league": -0.18585002547121754,
+          "success_rate_vs_league": -0.26150449991509594,
+          "team_pass_rate": 0.46153846153846156,
+          "team_epa": -0.13056923076923077,
+          "sample_size": 13
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.02025931928687197,
+          "epa_vs_league": -0.6658053844768593,
+          "success_rate_vs_league": -0.06843147848010078,
+          "team_pass_rate": 0.5,
+          "team_epa": -0.27484444444444445,
+          "sample_size": 18
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.08543046357615897,
+          "epa_vs_league": 0.17197854304635762,
+          "success_rate_vs_league": 0.09006622516556284,
+          "team_pass_rate": 0.4,
+          "team_epa": 0.21301,
+          "sample_size": 10
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.04481232078011432,
+          "epa_vs_league": -0.008487105634364493,
+          "success_rate_vs_league": -0.01545829602699128,
+          "team_pass_rate": 0.4617169373549884,
+          "team_epa": -0.0007174013921113689,
+          "sample_size": 431
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.03997488906961144,
+          "epa_vs_league": 0.009853680891438028,
+          "success_rate_vs_league": -0.0017206694345760498,
+          "team_pass_rate": 0.7868852459016393,
+          "team_epa": 0.012669398907103824,
+          "sample_size": 183
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.010577032728931401,
+          "epa_vs_league": -0.011546181862241985,
+          "success_rate_vs_league": -0.0531488767248261,
+          "team_pass_rate": 0.5495495495495496,
+          "team_epa": 0.026343243243243244,
+          "sample_size": 111
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.0064671910080628114,
+          "epa_vs_league": 0.1323296608254847,
+          "success_rate_vs_league": 0.047183665400528096,
+          "team_pass_rate": 0.47761194029850745,
+          "team_epa": 0.14178656716417912,
+          "sample_size": 67
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.029226384448008513,
+          "epa_vs_league": -0.04505563739261015,
+          "success_rate_vs_league": -0.06547077872327389,
+          "team_pass_rate": 0.37735849056603776,
+          "team_epa": -0.010354716981132075,
+          "sample_size": 53
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.024922073214932894,
+          "epa_vs_league": 0.014350866255889813,
+          "success_rate_vs_league": 0.03183762232693005,
+          "team_pass_rate": 0.9354838709677419,
+          "team_epa": -0.03159677419354839,
+          "sample_size": 62
+        }
+      },
+      "strengths": [],
+      "weaknesses": []
+    },
+    "NYG_2025": {
+      "team": "NYG",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5810936051899908,
+        "epa_per_play": 0.012329935125115848,
+        "success_rate": 0.42075996292863765,
+        "shotgun_rate": 0.7673772011121409,
+        "no_huddle_rate": 0.21408711770157554,
+        "explosive_rate": 0.057460611677479144,
+        "pass_epa": 0.04057208931419458,
+        "rush_epa": -0.026846681415929205,
+        "total_plays": 1079
+      },
+      "defense": {
+        "epa_per_play": 0.08739389534883721,
+        "success_rate": 0.4699612403100775,
+        "pass_epa": 0.06044150641025641,
+        "rush_epa": 0.12861519607843136
+      },
+      "deviations": {
+        "pass_rate": -0.021776792026593772,
+        "epa_per_play": 0.006878908740656585,
+        "success_rate": -0.01841081120879351,
+        "shotgun_rate": 0.11104203149775993,
+        "explosive_rate": 8.166125706743355e-05
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.0069609507640068236,
+          "epa_vs_league": 0.2289173571024335,
+          "success_rate_vs_league": 0.01363893604980193,
+          "team_pass_rate": 0.9263157894736842,
+          "team_epa": 0.1240978947368421,
+          "sample_size": 95
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.017057997190447538,
+          "epa_vs_league": -0.21498079470198678,
+          "success_rate_vs_league": 0.05318081477021869,
+          "team_pass_rate": 0.36363636363636365,
+          "team_epa": -0.1597,
+          "sample_size": 11
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.14640734737979466,
+          "epa_vs_league": 0.02118191711044226,
+          "success_rate_vs_league": -0.004939414988037294,
+          "team_pass_rate": 0.6666666666666666,
+          "team_epa": 0.41214285714285714,
+          "sample_size": 21
+        },
+        "down4_medium": {
+          "pass_rate_vs_league": 0.03191489361702127,
+          "epa_vs_league": -0.357191914893617,
+          "success_rate_vs_league": -0.17340425531914894,
+          "team_pass_rate": 1.0,
+          "team_epa": -0.12741,
+          "sample_size": 10
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.06456953642384106,
+          "epa_vs_league": 0.07865187637969095,
+          "success_rate_vs_league": 0.07339955849889623,
+          "team_pass_rate": 0.25,
+          "team_epa": 0.11968333333333334,
+          "sample_size": 12
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.014304075198230626,
+          "epa_vs_league": 0.04324580501700614,
+          "success_rate_vs_league": -0.027983001707149402,
+          "team_pass_rate": 0.5208333333333334,
+          "team_epa": 0.05101550925925926,
+          "sample_size": 432
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.08386687857115838,
+          "epa_vs_league": -0.09319778323305711,
+          "success_rate_vs_league": -0.0528313845688122,
+          "team_pass_rate": 0.6630434782608695,
+          "team_epa": -0.09038206521739131,
+          "sample_size": 184
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.14273527793065494,
+          "epa_vs_league": -0.12781029467070262,
+          "success_rate_vs_league": -0.01538937809576224,
+          "team_pass_rate": 0.41739130434782606,
+          "team_epa": -0.08992086956521739,
+          "sample_size": 115
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.004265086775129101,
+          "epa_vs_league": 0.14404965103835476,
+          "success_rate_vs_league": 0.0283434402965399,
+          "team_pass_rate": 0.47540983606557374,
+          "team_epa": 0.15350655737704919,
+          "sample_size": 61
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.09389481798243604,
+          "epa_vs_league": -0.08067888651317298,
+          "success_rate_vs_league": 0.03718352252392787,
+          "team_pass_rate": 0.2542372881355932,
+          "team_epa": -0.04597796610169492,
+          "sample_size": 59
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.029964782827435865,
+          "epa_vs_league": 0.009835700150930736,
+          "success_rate_vs_league": -0.0018648331376823757,
+          "team_pass_rate": 0.8805970149253731,
+          "team_epa": -0.036111940298507464,
+          "sample_size": 67
+        }
+      },
+      "strengths": [],
+      "weaknesses": [
+        "overall_defense"
+      ]
+    },
+    "LA_2025": {
+      "team": "LA",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5952380952380952,
+        "epa_per_play": 0.1445273015873016,
+        "success_rate": 0.5071428571428571,
+        "shotgun_rate": 0.4246031746031746,
+        "no_huddle_rate": 0.06746031746031746,
+        "explosive_rate": 0.07777777777777778,
+        "pass_epa": 0.21804586666666667,
+        "rush_epa": 0.03641176470588235,
+        "total_plays": 1260
+      },
+      "defense": {
+        "epa_per_play": -0.0467487079091621,
+        "success_rate": 0.4267815191855912,
+        "pass_epa": -0.018573358585858585,
+        "rush_epa": -0.09275876288659794
+      },
+      "deviations": {
+        "pass_rate": -0.007632301978489298,
+        "epa_per_play": 0.13907627520284233,
+        "success_rate": 0.06797208300542595,
+        "shotgun_rate": -0.2317319950112064,
+        "explosive_rate": 0.02039882735736607
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.05170777988614794,
+          "epa_vs_league": -0.17427612586970273,
+          "success_rate_vs_league": -0.02273877292852622,
+          "team_pass_rate": 0.8676470588235294,
+          "team_epa": -0.2790955882352941,
+          "sample_size": 68
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.044725981380170865,
+          "epa_vs_league": 0.20470181399366538,
+          "success_rate_vs_league": 0.029465399750455867,
+          "team_pass_rate": 0.391304347826087,
+          "team_epa": 0.25998260869565215,
+          "sample_size": 23
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.09168789071544342,
+          "epa_vs_league": 0.3897140599675851,
+          "success_rate_vs_league": 0.05458439453577224,
+          "team_pass_rate": 0.42857142857142855,
+          "team_epa": 0.780675,
+          "sample_size": 28
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.12987490802060336,
+          "epa_vs_league": -0.04117034584253127,
+          "success_rate_vs_league": 0.1567328918322295,
+          "team_pass_rate": 0.4444444444444444,
+          "team_epa": -0.0001388888888888889,
+          "sample_size": 18
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.0009334284320614561,
+          "epa_vs_league": 0.13998253456371704,
+          "success_rate_vs_league": 0.05148079044320991,
+          "team_pass_rate": 0.5074626865671642,
+          "team_epa": 0.14775223880597016,
+          "sample_size": 536
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.022320412398741385,
+          "epa_vs_league": 0.23876944681949905,
+          "success_rate_vs_league": 0.15984181180003632,
+          "team_pass_rate": 0.7692307692307693,
+          "team_epa": 0.24158516483516485,
+          "sample_size": 182
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.01949125211642344,
+          "epa_vs_league": 0.15308446024483324,
+          "success_rate_vs_league": 0.03562142223655568,
+          "team_pass_rate": 0.5796178343949044,
+          "team_epa": 0.19097388535031848,
+          "sample_size": 157
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.14423986609417078,
+          "epa_vs_league": -0.12931624699803507,
+          "success_rate_vs_league": -0.06713485190306379,
+          "team_pass_rate": 0.6153846153846154,
+          "team_epa": -0.11985934065934066,
+          "sample_size": 91
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.05662979864387552,
+          "epa_vs_league": 0.28036812720756954,
+          "success_rate_vs_league": 0.1701536597313532,
+          "team_pass_rate": 0.40476190476190477,
+          "team_epa": 0.31506904761904764,
+          "sample_size": 84
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.02883214164113046,
+          "epa_vs_league": -0.02330084439904665,
+          "success_rate_vs_league": -0.040987402110997606,
+          "team_pass_rate": 0.9393939393939394,
+          "team_epa": -0.06924848484848485,
+          "sample_size": 66
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack"
+      ],
+      "weaknesses": []
+    },
+    "SF_2025": {
+      "team": "SF",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5957627118644068,
+        "epa_per_play": 0.061053898305084744,
+        "success_rate": 0.47627118644067795,
+        "shotgun_rate": 0.5440677966101695,
+        "no_huddle_rate": 0.04152542372881356,
+        "explosive_rate": 0.05,
+        "pass_epa": 0.13180014224751066,
+        "rush_epa": -0.04321153039832285,
+        "total_plays": 1180
+      },
+      "defense": {
+        "epa_per_play": 0.06986202974628171,
+        "success_rate": 0.48381452318460194,
+        "pass_epa": 0.13090624092888245,
+        "rush_epa": -0.022779955947136565
+      },
+      "deviations": {
+        "pass_rate": -0.007107685352177762,
+        "epa_per_play": 0.055602871920625484,
+        "success_rate": 0.03710041230324679,
+        "shotgun_rate": -0.11226737300421152,
+        "explosive_rate": -0.007378950420411708
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.013978494623655968,
+          "epa_vs_league": 0.48422079569892473,
+          "success_rate_vs_league": 0.13784946236559142,
+          "team_pass_rate": 0.9333333333333333,
+          "team_epa": 0.3794013333333333,
+          "sample_size": 75
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.1465783664459161,
+          "epa_vs_league": 0.2672242052980132,
+          "success_rate_vs_league": 0.1577262693156733,
+          "team_pass_rate": 0.2,
+          "team_epa": 0.322505,
+          "sample_size": 20
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.02025931928687197,
+          "epa_vs_league": -0.018200940032414903,
+          "success_rate_vs_league": 0.02601296596434366,
+          "team_pass_rate": 0.5,
+          "team_epa": 0.37276,
+          "sample_size": 20
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.08543046357615897,
+          "epa_vs_league": 0.07665854304635762,
+          "success_rate_vs_league": 0.09006622516556284,
+          "team_pass_rate": 0.4,
+          "team_epa": 0.11769,
+          "sample_size": 10
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.014345493355950922,
+          "epa_vs_league": -0.033748233069290895,
+          "success_rate_vs_league": 0.01919688195384761,
+          "team_pass_rate": 0.5208747514910537,
+          "team_epa": -0.025978528827037772,
+          "sample_size": 503
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.024366238912652993,
+          "epa_vs_league": 0.07032843092050442,
+          "success_rate_vs_league": 0.008801362887246977,
+          "team_pass_rate": 0.7712765957446809,
+          "team_epa": 0.07314414893617022,
+          "sample_size": 188
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.027175005023106324,
+          "epa_vs_league": -0.00530053621659634,
+          "success_rate_vs_league": 0.07211924854329915,
+          "team_pass_rate": 0.5873015873015873,
+          "team_epa": 0.03258888888888889,
+          "sample_size": 126
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.05556033370602903,
+          "epa_vs_league": 0.141984652102864,
+          "success_rate_vs_league": 0.0157822310140191,
+          "team_pass_rate": 0.4155844155844156,
+          "team_epa": 0.15144155844155843,
+          "sample_size": 77
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.08424321722914035,
+          "epa_vs_league": 0.009367135144077485,
+          "success_rate_vs_league": -0.02825903868134516,
+          "team_pass_rate": 0.2638888888888889,
+          "team_epa": 0.044068055555555555,
+          "sample_size": 72
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.013488835158583456,
+          "epa_vs_league": 0.2888590328545015,
+          "success_rate_vs_league": 0.08655383302517428,
+          "team_pass_rate": 0.9240506329113924,
+          "team_epa": 0.2429113924050633,
+          "sample_size": 79
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack"
+      ],
+      "weaknesses": [
+        "overall_defense"
+      ]
+    },
+    "NO_2025": {
+      "team": "NO",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6306390977443609,
+        "epa_per_play": -0.08805234962406015,
+        "success_rate": 0.4201127819548872,
+        "shotgun_rate": 0.7875939849624061,
+        "no_huddle_rate": 0.22650375939849623,
+        "explosive_rate": 0.03571428571428571,
+        "pass_epa": -0.05133323397913562,
+        "rush_epa": -0.15074580152671757,
+        "total_plays": 1064
+      },
+      "defense": {
+        "epa_per_play": -0.05905996112730807,
+        "success_rate": 0.41788143828960156,
+        "pass_epa": -0.01548,
+        "rush_epa": -0.1121260775862069
+      },
+      "deviations": {
+        "pass_rate": 0.027768700527776358,
+        "epa_per_play": -0.09350337600851942,
+        "success_rate": -0.019057992182543948,
+        "shotgun_rate": 0.13125881534802508,
+        "explosive_rate": -0.021664664706125998
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.05361813426329565,
+          "epa_vs_league": -0.005462970066841044,
+          "success_rate_vs_league": -0.03188026736413829,
+          "team_pass_rate": 0.972972972972973,
+          "team_epa": -0.11028243243243244,
+          "sample_size": 74
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.04199844972165456,
+          "epa_vs_league": -1.1660435487280671,
+          "success_rate_vs_league": -0.14572616447043896,
+          "team_pass_rate": 0.4782608695652174,
+          "team_epa": -0.7750826086956522,
+          "sample_size": 23
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.014018687070376679,
+          "epa_vs_league": -0.09270897364864582,
+          "success_rate_vs_league": -0.06768366127082265,
+          "team_pass_rate": 0.5205479452054794,
+          "team_epa": -0.0849392694063927,
+          "sample_size": 438
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.07034852641670308,
+          "epa_vs_league": 0.04741220076606009,
+          "success_rate_vs_league": 0.07614124840404146,
+          "team_pass_rate": 0.817258883248731,
+          "team_epa": 0.05022791878172589,
+          "sample_size": 197
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.047016274864376095,
+          "epa_vs_league": -0.07013942510548524,
+          "success_rate_vs_league": -0.0032775768535261984,
+          "team_pass_rate": 0.6071428571428571,
+          "team_epa": -0.03225,
+          "sample_size": 112
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.050854894217980895,
+          "epa_vs_league": 0.023703963226522972,
+          "success_rate_vs_league": 0.057566533667887,
+          "team_pass_rate": 0.42028985507246375,
+          "team_epa": 0.03316086956521739,
+          "sample_size": 69
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.01357002154154524,
+          "epa_vs_league": -0.12734134594339297,
+          "success_rate_vs_league": -0.024121922842101684,
+          "team_pass_rate": 0.3617021276595745,
+          "team_epa": -0.0926404255319149,
+          "sample_size": 47
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.037144076233821655,
+          "epa_vs_league": -0.18747387853790357,
+          "success_rate_vs_league": -0.04002844545583839,
+          "team_pass_rate": 0.8734177215189873,
+          "team_epa": -0.23342151898734176,
+          "sample_size": 79
+        }
+      },
+      "strengths": [
+        "overall_defense"
+      ],
+      "weaknesses": [
+        "offensive_efficiency"
+      ]
+    },
+    "GB_2025": {
+      "team": "GB",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5663217309501412,
+        "epa_per_play": 0.12163443085606773,
+        "success_rate": 0.47507055503292567,
+        "shotgun_rate": 0.6349952963311383,
+        "no_huddle_rate": 0.08372530573847602,
+        "explosive_rate": 0.06679209783631232,
+        "pass_epa": 0.26587441860465116,
+        "rush_epa": -0.06672234273318872,
+        "total_plays": 1063
+      },
+      "defense": {
+        "epa_per_play": 0.03816710758377425,
+        "success_rate": 0.4435626102292769,
+        "pass_epa": 0.09877837837837838,
+        "rush_epa": -0.04808739316239316
+      },
+      "deviations": {
+        "pass_rate": -0.036548666266443375,
+        "epa_per_play": 0.11618340447160846,
+        "success_rate": 0.035899780895494504,
+        "shotgun_rate": -0.021339873283242716,
+        "explosive_rate": 0.00941314741590061
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.021121351766513086,
+          "epa_vs_league": 0.40188493855606755,
+          "success_rate_vs_league": 0.11451612903225811,
+          "team_pass_rate": 0.9404761904761905,
+          "team_epa": 0.2970654761904762,
+          "sample_size": 84
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.13229265216020183,
+          "epa_vs_league": -0.2098379375591296,
+          "success_rate_vs_league": 0.29344055502995897,
+          "team_pass_rate": 0.21428571428571427,
+          "team_epa": -0.15455714285714287,
+          "sample_size": 14
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.11131962808154905,
+          "epa_vs_league": 0.656123270493901,
+          "success_rate_vs_league": 0.11285507122750149,
+          "team_pass_rate": 0.631578947368421,
+          "team_epa": 1.0470842105263158,
+          "sample_size": 19
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.025891444923257623,
+          "epa_vs_league": 0.050102049744079453,
+          "success_rate_vs_league": 0.006670672468164884,
+          "team_pass_rate": 0.4806378132118451,
+          "team_epa": 0.057871753986332576,
+          "sample_size": 439
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.015203039758857173,
+          "epa_vs_league": 0.05878976978921225,
+          "success_rate_vs_league": -0.0036532297437856798,
+          "team_pass_rate": 0.7317073170731707,
+          "team_epa": 0.06160548780487805,
+          "sample_size": 164
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.060126582278481,
+          "epa_vs_league": 0.12196498665922065,
+          "success_rate_vs_league": 0.0544955323901713,
+          "team_pass_rate": 0.5,
+          "team_epa": 0.15985441176470588,
+          "sample_size": 136
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.016599294744990112,
+          "epa_vs_league": 0.1232987754794874,
+          "success_rate_vs_league": -0.015061924830136686,
+          "team_pass_rate": 0.45454545454545453,
+          "team_epa": 0.13275568181818181,
+          "sample_size": 88
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.15205367474548023,
+          "epa_vs_league": 0.06131476586303174,
+          "success_rate_vs_league": 0.0714141639330339,
+          "team_pass_rate": 0.19607843137254902,
+          "team_epa": 0.0960156862745098,
+          "sample_size": 51
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.028213712451272688,
+          "epa_vs_league": 0.3648496812657647,
+          "success_rate_vs_league": 0.09042880073377668,
+          "team_pass_rate": 0.9387755102040817,
+          "team_epa": 0.3189020408163265,
+          "sample_size": 49
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack"
+      ],
+      "weaknesses": []
+    },
+    "MIN_2025": {
+      "team": "MIN",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6097560975609756,
+        "epa_per_play": -0.11549872746553552,
+        "success_rate": 0.42629904559915166,
+        "shotgun_rate": 0.5567338282078473,
+        "no_huddle_rate": 0.07529162248144221,
+        "explosive_rate": 0.04878048780487805,
+        "pass_epa": -0.15457008695652175,
+        "rush_epa": -0.054449728260869565,
+        "total_plays": 943
+      },
+      "defense": {
+        "epa_per_play": -0.09945762045231071,
+        "success_rate": 0.41002949852507375,
+        "pass_epa": -0.1197606463878327,
+        "rush_epa": -0.07770733197556008
+      },
+      "deviations": {
+        "pass_rate": 0.006885700344391066,
+        "epa_per_play": -0.12094975384999479,
+        "success_rate": -0.012871728538279503,
+        "shotgun_rate": -0.09960134140653365,
+        "explosive_rate": -0.00859846261553366
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.00472069236821393,
+          "epa_vs_league": -0.24025004982953055,
+          "success_rate_vs_league": -0.02166273275635977,
+          "team_pass_rate": 0.9146341463414634,
+          "team_epa": -0.34506951219512194,
+          "sample_size": 82
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.3409216335540839,
+          "epa_vs_league": -0.11909954470198675,
+          "success_rate_vs_league": 0.13272626931567327,
+          "team_pass_rate": 0.6875,
+          "team_epa": -0.06381875,
+          "sample_size": 16
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.08275931928687197,
+          "epa_vs_league": -0.13384219003241488,
+          "success_rate_vs_league": 0.06351296596434364,
+          "team_pass_rate": 0.4375,
+          "team_epa": 0.25711875,
+          "sample_size": 16
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.017979639814492077,
+          "epa_vs_league": -0.06289006047634982,
+          "success_rate_vs_league": -0.0011947630868496817,
+          "team_pass_rate": 0.48854961832061067,
+          "team_epa": -0.05512035623409669,
+          "sample_size": 393
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.040660356832027844,
+          "epa_vs_league": -0.054228843015665794,
+          "success_rate_vs_league": -0.018592254134029595,
+          "team_pass_rate": 0.70625,
+          "team_epa": -0.051413125,
+          "sample_size": 160
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.012688951702101492,
+          "epa_vs_league": -0.18205350277538815,
+          "success_rate_vs_league": 0.046999815656876,
+          "team_pass_rate": 0.5728155339805825,
+          "team_epa": -0.1441640776699029,
+          "sample_size": 103
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.0688552507095554,
+          "epa_vs_league": -0.7409209063386945,
+          "success_rate_vs_league": -0.1746073793755913,
+          "team_pass_rate": 0.54,
+          "team_epa": -0.731464,
+          "sample_size": 50
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.06491137214284032,
+          "epa_vs_league": 0.15648603611026107,
+          "success_rate_vs_league": 0.030919705280007537,
+          "team_pass_rate": 0.41304347826086957,
+          "team_epa": 0.19118695652173914,
+          "sample_size": 46
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.056104868913857686,
+          "epa_vs_league": -0.13728735955056182,
+          "success_rate_vs_league": -0.03644194756554303,
+          "team_pass_rate": 0.9666666666666667,
+          "team_epa": -0.183235,
+          "sample_size": 60
+        }
+      },
+      "strengths": [
+        "overall_defense"
+      ],
+      "weaknesses": [
+        "offensive_efficiency"
+      ]
+    },
+    "CIN_2025": {
+      "team": "CIN",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6587225929456625,
+        "epa_per_play": -0.008452907530981888,
+        "success_rate": 0.4547187797902765,
+        "shotgun_rate": 0.8198284080076264,
+        "no_huddle_rate": 0.02669208770257388,
+        "explosive_rate": 0.052430886558627265,
+        "pass_epa": -0.02018176555716353,
+        "rush_epa": 0.014185754189944133,
+        "total_plays": 1049
+      },
+      "defense": {
+        "epa_per_play": 0.1298185507246377,
+        "success_rate": 0.4782608695652174,
+        "pass_epa": 0.17983704918032786,
+        "rush_epa": 0.05802729411764706
+      },
+      "deviations": {
+        "pass_rate": 0.05585219572907796,
+        "epa_per_play": -0.01390393391544115,
+        "success_rate": 0.01554800565284531,
+        "shotgun_rate": 0.16349323839324537,
+        "explosive_rate": -0.004948063861784445
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.003692188107267791,
+          "epa_vs_league": 0.19457126959450705,
+          "success_rate_vs_league": 0.035198859955952844,
+          "team_pass_rate": 0.9156626506024096,
+          "team_epa": 0.08975180722891567,
+          "sample_size": 83
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.06086408073163041,
+          "epa_vs_league": -0.9143307947019867,
+          "success_rate_vs_league": -0.13513087354146958,
+          "team_pass_rate": 0.2857142857142857,
+          "team_epa": -0.85905,
+          "sample_size": 14
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.018202219174666467,
+          "epa_vs_league": 0.6376544445829698,
+          "success_rate_vs_league": 0.1452437351951129,
+          "team_pass_rate": 0.5384615384615384,
+          "team_epa": 1.0286153846153847,
+          "sample_size": 13
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.08800377147765348,
+          "epa_vs_league": -0.007214351167082281,
+          "success_rate_vs_league": 0.03628342873240176,
+          "team_pass_rate": 0.5945330296127562,
+          "team_epa": 0.0005553530751708428,
+          "sample_size": 439
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.00596320638636294,
+          "epa_vs_league": -0.16351629272830948,
+          "success_rate_vs_league": -0.05551754149035143,
+          "team_pass_rate": 0.7528735632183908,
+          "team_epa": -0.16070057471264368,
+          "sample_size": 174
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.10042387643711537,
+          "epa_vs_league": -0.24022612235319166,
+          "success_rate_vs_league": -0.05471925444199277,
+          "team_pass_rate": 0.6605504587155964,
+          "team_epa": -0.20233669724770642,
+          "sample_size": 109
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.004265086775129101,
+          "epa_vs_league": 0.009739814972780994,
+          "success_rate_vs_league": 0.0283434402965399,
+          "team_pass_rate": 0.47540983606557374,
+          "team_epa": 0.01919672131147541,
+          "sample_size": 61
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.07122273259164819,
+          "epa_vs_league": 0.31201520862078,
+          "success_rate_vs_league": 0.1375115706376513,
+          "team_pass_rate": 0.41935483870967744,
+          "team_epa": 0.34671612903225807,
+          "sample_size": 62
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.04889766170665044,
+          "epa_vs_league": 0.10405980261160036,
+          "success_rate_vs_league": 0.06671120558761012,
+          "team_pass_rate": 0.9594594594594594,
+          "team_epa": 0.05811216216216216,
+          "sample_size": 74
+        }
+      },
+      "strengths": [],
+      "weaknesses": [
+        "overall_defense"
+      ]
+    },
+    "JAX_2025": {
+      "team": "JAX",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6024844720496895,
+        "epa_per_play": 0.030359449866903282,
+        "success_rate": 0.4472049689440994,
+        "shotgun_rate": 0.611357586512866,
+        "no_huddle_rate": 0.07009760425909495,
+        "explosive_rate": 0.062111801242236024,
+        "pass_epa": 0.08074359351988218,
+        "rush_epa": -0.04600401785714286,
+        "total_plays": 1127
+      },
+      "defense": {
+        "epa_per_play": -0.08616853211009175,
+        "success_rate": 0.41651376146788993,
+        "pass_epa": -0.09448295302013422,
+        "rush_epa": -0.06821420289855072
+      },
+      "deviations": {
+        "pass_rate": -0.0003859251668950625,
+        "epa_per_play": 0.024908423482444018,
+        "success_rate": 0.008034194806668227,
+        "shotgun_rate": -0.044977583101515006,
+        "explosive_rate": 0.004732850821824314
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.032452390205985227,
+          "epa_vs_league": 0.07755922140173598,
+          "success_rate_vs_league": 0.035198859955952844,
+          "team_pass_rate": 0.9518072289156626,
+          "team_epa": -0.02726024096385542,
+          "sample_size": 83
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.06086408073163041,
+          "epa_vs_league": -0.1990950804162725,
+          "success_rate_vs_league": 0.03153579312519711,
+          "team_pass_rate": 0.2857142857142857,
+          "team_epa": -0.14381428571428573,
+          "sample_size": 21
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.3119259859535386,
+          "epa_vs_league": -0.4898109400324149,
+          "success_rate_vs_league": -0.04065370070232299,
+          "team_pass_rate": 0.20833333333333334,
+          "team_epa": -0.09885,
+          "sample_size": 24
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.006877228731533347,
+          "epa_vs_league": 0.10563008150789607,
+          "success_rate_vs_league": 0.0285277636271013,
+          "team_pass_rate": 0.3076923076923077,
+          "team_epa": 0.14666153846153845,
+          "sample_size": 13
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.008688133169245105,
+          "epa_vs_league": -0.00332709554660095,
+          "success_rate_vs_league": -0.002218106377036677,
+          "team_pass_rate": 0.5152173913043478,
+          "team_epa": 0.004442608695652174,
+          "sample_size": 460
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.02113088028137422,
+          "epa_vs_league": 0.12355438507711772,
+          "success_rate_vs_league": 0.05267063246390852,
+          "team_pass_rate": 0.7680412371134021,
+          "team_epa": 0.12637010309278351,
+          "sample_size": 194
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.038234073459223916,
+          "epa_vs_league": -0.0857115562530262,
+          "success_rate_vs_league": -0.07412066818842084,
+          "team_pass_rate": 0.5983606557377049,
+          "team_epa": -0.04782213114754098,
+          "sample_size": 122
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.07114474929044462,
+          "epa_vs_league": 0.04478142699463891,
+          "success_rate_vs_league": -0.02794071270892462,
+          "team_pass_rate": 0.4,
+          "team_epa": 0.05423833333333333,
+          "sample_size": 60
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.08936789388197075,
+          "epa_vs_league": 0.05171314208852193,
+          "success_rate_vs_league": 0.08458818354087705,
+          "team_pass_rate": 0.4375,
+          "team_epa": 0.0864140625,
+          "sample_size": 64
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.05341894060995189,
+          "epa_vs_league": 0.2709541339559317,
+          "success_rate_vs_league": 0.03477017364657814,
+          "team_pass_rate": 0.8571428571428571,
+          "team_epa": 0.22500649350649352,
+          "sample_size": 77
+        }
+      },
+      "strengths": [
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "CAR_2025": {
+      "team": "CAR",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5939565627950897,
+        "epa_per_play": -0.04132974504249292,
+        "success_rate": 0.43059490084985835,
+        "shotgun_rate": 0.6685552407932012,
+        "no_huddle_rate": 0.059490084985835696,
+        "explosive_rate": 0.05193578847969783,
+        "pass_epa": -0.03120556438791733,
+        "rush_epa": -0.0561393023255814,
+        "total_plays": 1059
+      },
+      "defense": {
+        "epa_per_play": 0.07043311506080449,
+        "success_rate": 0.4462114125350795,
+        "pass_epa": 0.11856963696369636,
+        "rush_epa": 0.007429373650107991
+      },
+      "deviations": {
+        "pass_rate": -0.008913834421494848,
+        "epa_per_play": -0.04678077142695218,
+        "success_rate": -0.00857587328757281,
+        "shotgun_rate": 0.01222007117882018,
+        "explosive_rate": -0.005443161940713884
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.00043591979075841003,
+          "epa_vs_league": -0.10788864574251672,
+          "success_rate_vs_league": -0.05890729439116532,
+          "team_pass_rate": 0.918918918918919,
+          "team_epa": -0.2127081081081081,
+          "sample_size": 74
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.35342163355408385,
+          "epa_vs_league": 0.06482920529801324,
+          "success_rate_vs_league": 0.007726269315673273,
+          "team_pass_rate": 0.7,
+          "team_epa": 0.12011,
+          "sample_size": 10
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.05116925214169943,
+          "epa_vs_league": 0.7989676313961566,
+          "success_rate_vs_league": 0.09029868025005794,
+          "team_pass_rate": 0.5714285714285714,
+          "team_epa": 1.1899285714285714,
+          "sample_size": 28
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.058492306633948,
+          "epa_vs_league": -0.035484715789597235,
+          "success_rate_vs_league": 0.031143676934540787,
+          "team_pass_rate": 0.44803695150115475,
+          "team_epa": -0.027715011547344112,
+          "sample_size": 433
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.007516417438088507,
+          "epa_vs_league": -0.04068844528839307,
+          "success_rate_vs_league": -0.04245589049766596,
+          "team_pass_rate": 0.7393939393939394,
+          "team_epa": -0.03787272727272727,
+          "sample_size": 165
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.03511151295961423,
+          "epa_vs_league": -0.1378203774864376,
+          "success_rate_vs_league": -0.054864878440827825,
+          "team_pass_rate": 0.5952380952380952,
+          "team_epa": -0.09993095238095238,
+          "sample_size": 126
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.07122813206548756,
+          "epa_vs_league": -0.12386877074547409,
+          "success_rate_vs_league": -0.05223449801965907,
+          "team_pass_rate": 0.5423728813559322,
+          "team_epa": -0.11441186440677967,
+          "sample_size": 59
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.05186789388197077,
+          "epa_vs_league": -0.058226374956932614,
+          "success_rate_vs_league": -0.08330954373185023,
+          "team_pass_rate": 0.4,
+          "team_epa": -0.023525454545454544,
+          "sample_size": 55
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.03251301726500411,
+          "epa_vs_league": -0.28467187174568376,
+          "success_rate_vs_league": -0.05392162236229103,
+          "team_pass_rate": 0.8780487804878049,
+          "team_epa": -0.330619512195122,
+          "sample_size": 82
+        }
+      },
+      "strengths": [],
+      "weaknesses": [
+        "overall_defense"
+      ]
+    },
+    "SEA_2025": {
+      "team": "SEA",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5206463195691203,
+        "epa_per_play": 0.050813644524236985,
+        "success_rate": 0.46768402154398564,
+        "shotgun_rate": 0.4622980251346499,
+        "no_huddle_rate": 0.07091561938958707,
+        "explosive_rate": 0.07091561938958707,
+        "pass_epa": 0.1522389655172414,
+        "rush_epa": -0.05934868913857678,
+        "total_plays": 1114
+      },
+      "defense": {
+        "epa_per_play": -0.11339372349448686,
+        "success_rate": 0.3986429177268872,
+        "pass_epa": -0.06988218465539663,
+        "rush_epa": -0.19500439024390243
+      },
+      "deviations": {
+        "pass_rate": -0.0822240776474642,
+        "epa_per_play": 0.045362618139777725,
+        "success_rate": 0.028513247406554476,
+        "shotgun_rate": -0.19403714447973108,
+        "explosive_rate": 0.01353666896917536
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.17778180500181218,
+          "epa_vs_league": -0.004713121904071527,
+          "success_rate_vs_league": 0.046164069107164474,
+          "team_pass_rate": 0.7415730337078652,
+          "team_epa": -0.10953258426966292,
+          "sample_size": 89
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.0034216335540838694,
+          "epa_vs_league": 0.37647420529801323,
+          "success_rate_vs_league": 0.10772626931567325,
+          "team_pass_rate": 0.35,
+          "team_epa": 0.431755,
+          "sample_size": 20
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.02025931928687197,
+          "epa_vs_league": -0.3597309400324149,
+          "success_rate_vs_league": -0.023987034035656385,
+          "team_pass_rate": 0.5,
+          "team_epa": 0.03123,
+          "sample_size": 10
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.01876379690949226,
+          "epa_vs_league": -0.4163314569536424,
+          "success_rate_vs_league": -0.25993377483443714,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": -0.3753,
+          "sample_size": 12
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.04402925813510272,
+          "epa_vs_league": 0.06420404575774688,
+          "success_rate_vs_league": 0.021785516811369143,
+          "team_pass_rate": 0.4625,
+          "team_epa": 0.07197375,
+          "sample_size": 480
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.11728072720239824,
+          "epa_vs_league": -0.045716247116194896,
+          "success_rate_vs_league": 0.054225206183430685,
+          "team_pass_rate": 0.6296296296296297,
+          "team_epa": -0.0429005291005291,
+          "sample_size": 189
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.13030202087497222,
+          "epa_vs_league": 0.08260355735065511,
+          "success_rate_vs_league": 0.014892849211636694,
+          "team_pass_rate": 0.4298245614035088,
+          "team_epa": 0.12049298245614035,
+          "sample_size": 114
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.06534764784116925,
+          "epa_vs_league": -0.011471399092317605,
+          "success_rate_vs_league": 0.01408827279832181,
+          "team_pass_rate": 0.4057971014492754,
+          "team_epa": -0.0020144927536231883,
+          "sample_size": 69
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.043047360355317366,
+          "epa_vs_league": 0.0326160287410643,
+          "success_rate_vs_league": 0.020234369981555034,
+          "team_pass_rate": 0.3050847457627119,
+          "team_epa": 0.06731694915254237,
+          "sample_size": 59
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.05981552909609256,
+          "epa_vs_league": 0.26771928224048297,
+          "success_rate_vs_league": 0.05783665939963106,
+          "team_pass_rate": 0.8507462686567164,
+          "team_epa": 0.22177164179104478,
+          "sample_size": 67
+        }
+      },
+      "strengths": [
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "PHI_2025": {
+      "team": "PHI",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5735707591377694,
+        "epa_per_play": 0.021316588566073102,
+        "success_rate": 0.4311152764761012,
+        "shotgun_rate": 0.7713214620431116,
+        "no_huddle_rate": 0.19400187441424555,
+        "explosive_rate": 0.04967197750702906,
+        "pass_epa": 0.06464477124183006,
+        "rush_epa": -0.0369621978021978,
+        "total_plays": 1067
+      },
+      "defense": {
+        "epa_per_play": -0.07000115967885816,
+        "success_rate": 0.42194469223907227,
+        "pass_epa": -0.05386987951807229,
+        "rush_epa": -0.09343916849015317
+      },
+      "deviations": {
+        "pass_rate": -0.029299638078815082,
+        "epa_per_play": 0.01586556218161384,
+        "success_rate": -0.008055497661329958,
+        "shotgun_rate": 0.1149862924287306,
+        "explosive_rate": -0.007706972913382654
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.07029823493609244,
+          "epa_vs_league": 0.1686996510448367,
+          "success_rate_vs_league": 0.01860417934672348,
+          "team_pass_rate": 0.8490566037735849,
+          "team_epa": 0.06388018867924529,
+          "sample_size": 106
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.013245033112582794,
+          "epa_vs_league": -0.02938746136865342,
+          "success_rate_vs_league": 0.0410596026490066,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.025893333333333334,
+          "sample_size": 15
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.18692598595353865,
+          "epa_vs_league": 0.29747239330091846,
+          "success_rate_vs_league": 0.04267963263101027,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.6884333333333333,
+          "sample_size": 15
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.13275135460565923,
+          "epa_vs_league": 0.11208672486453944,
+          "success_rate_vs_league": -0.055388320288982607,
+          "team_pass_rate": 0.18181818181818182,
+          "team_epa": 0.15311818181818182,
+          "sample_size": 11
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.031119422069529,
+          "epa_vs_league": -0.017423100026796447,
+          "success_rate_vs_league": -0.002243562033283464,
+          "team_pass_rate": 0.47540983606557374,
+          "team_epa": -0.009653395784543325,
+          "sample_size": 427
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.0784320959624627,
+          "epa_vs_league": -0.20357332671131798,
+          "success_rate_vs_league": -0.08000529761229047,
+          "team_pass_rate": 0.6684782608695652,
+          "team_epa": -0.20075760869565218,
+          "sample_size": 184
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.012600690448791751,
+          "epa_vs_league": 0.21323966580360568,
+          "success_rate_vs_league": 0.059709436133486726,
+          "team_pass_rate": 0.5727272727272728,
+          "team_epa": 0.2511290909090909,
+          "sample_size": 110
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.02883705698275235,
+          "epa_vs_league": -0.0995511371079252,
+          "success_rate_vs_league": -0.0176843024525144,
+          "team_pass_rate": 0.4423076923076923,
+          "team_epa": -0.09009423076923077,
+          "sample_size": 52
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.10114325620081133,
+          "epa_vs_league": 0.15363676074794222,
+          "success_rate_vs_league": 0.08164434296116685,
+          "team_pass_rate": 0.4492753623188406,
+          "team_epa": 0.1883376811594203,
+          "sample_size": 69
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.0490233362143474,
+          "epa_vs_league": 0.10433687121866897,
+          "success_rate_vs_league": -0.035159896283491754,
+          "team_pass_rate": 0.8615384615384616,
+          "team_epa": 0.05838923076923077,
+          "sample_size": 65
+        }
+      },
+      "strengths": [
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "MIA_2025": {
+      "team": "MIA",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5658174097664543,
+        "epa_per_play": -0.016815180467091295,
+        "success_rate": 0.41932059447983017,
+        "shotgun_rate": 0.7144373673036093,
+        "no_huddle_rate": 0.03503184713375796,
+        "explosive_rate": 0.06263269639065817,
+        "pass_epa": -0.008494746716697936,
+        "rush_epa": -0.027658190709046456,
+        "total_plays": 942
+      },
+      "defense": {
+        "epa_per_play": 0.08820708661417323,
+        "success_rate": 0.48523622047244097,
+        "pass_epa": 0.16554215851602025,
+        "rush_epa": -0.020208274231678487
+      },
+      "deviations": {
+        "pass_rate": -0.03705298745013019,
+        "epa_per_play": -0.02226620685155056,
+        "success_rate": -0.019850179657600997,
+        "shotgun_rate": 0.05810219768922831,
+        "explosive_rate": 0.005253745970246464
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.055718475073313734,
+          "epa_vs_league": -0.09660781036168134,
+          "success_rate_vs_league": -0.040786901270772224,
+          "team_pass_rate": 0.8636363636363636,
+          "team_epa": -0.20142727272727273,
+          "sample_size": 88
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.013245033112582794,
+          "epa_vs_league": -0.10518079470198675,
+          "success_rate_vs_league": -0.10338484179543783,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": -0.0499,
+          "sample_size": 18
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.02025931928687197,
+          "epa_vs_league": -1.7265609400324147,
+          "success_rate_vs_league": -0.29065370070232305,
+          "team_pass_rate": 0.5,
+          "team_epa": -1.3356,
+          "sample_size": 12
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.04776637153716462,
+          "epa_vs_league": -0.05193954960307787,
+          "success_rate_vs_league": -0.011182696247050095,
+          "team_pass_rate": 0.4587628865979381,
+          "team_epa": -0.044169845360824744,
+          "sample_size": 388
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.09010562310421721,
+          "epa_vs_league": 0.07797836482457089,
+          "success_rate_vs_league": -0.003725390228704162,
+          "team_pass_rate": 0.6568047337278107,
+          "team_epa": 0.08079408284023669,
+          "sample_size": 169
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.04901547116736993,
+          "epa_vs_league": 0.14542057489451476,
+          "success_rate_vs_league": 0.0324367088607595,
+          "team_pass_rate": 0.5111111111111111,
+          "team_epa": 0.18331,
+          "sample_size": 90
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.06638284452853987,
+          "epa_vs_league": -0.1997830968148849,
+          "success_rate_vs_league": -0.07079785556606744,
+          "team_pass_rate": 0.40476190476190477,
+          "team_epa": -0.19032619047619048,
+          "sample_size": 42
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.033686075700152585,
+          "epa_vs_league": 0.025962715952158294,
+          "success_rate_vs_league": -0.010582271004577537,
+          "team_pass_rate": 0.38181818181818183,
+          "team_epa": 0.060663636363636364,
+          "sample_size": 55
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.00733599130119611,
+          "epa_vs_league": 0.03810731786879304,
+          "success_rate_vs_league": -0.016549474447263512,
+          "team_pass_rate": 0.9032258064516129,
+          "team_epa": -0.00784032258064516,
+          "sample_size": 62
+        }
+      },
+      "strengths": [],
+      "weaknesses": [
+        "overall_defense"
+      ]
+    },
+    "DET_2025": {
+      "team": "DET",
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.5942857142857143,
+        "epa_per_play": 0.08127780952380953,
+        "success_rate": 0.4523809523809524,
+        "shotgun_rate": 0.5152380952380953,
+        "no_huddle_rate": 0.06095238095238095,
+        "explosive_rate": 0.0761904761904762,
+        "pass_epa": 0.17030368589743589,
+        "rush_epa": -0.04912629107981221,
+        "total_plays": 1050
+      },
+      "defense": {
+        "epa_per_play": -0.009908653846153847,
+        "success_rate": 0.4173076923076923,
+        "pass_epa": 0.006221875,
+        "rush_epa": -0.0357175
+      },
+      "deviations": {
+        "pass_rate": -0.008584682930870224,
+        "epa_per_play": 0.07582678313935026,
+        "success_rate": 0.01321017824352122,
+        "shotgun_rate": -0.1410970743762857,
+        "explosive_rate": 0.018811525770064487
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.001993475897064223,
+          "epa_vs_league": -0.05854458257822884,
+          "success_rate_vs_league": -0.03248761628609398,
+          "team_pass_rate": 0.9213483146067416,
+          "team_epa": -0.16336404494382023,
+          "sample_size": 89
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.1534216335540839,
+          "epa_vs_league": 0.2580477767265847,
+          "success_rate_vs_league": 0.15058341217281618,
+          "team_pass_rate": 0.5,
+          "team_epa": 0.31332857142857146,
+          "sample_size": 14
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.17204837302082032,
+          "epa_vs_league": -0.2174609400324149,
+          "success_rate_vs_league": -0.08552549557411793,
+          "team_pass_rate": 0.6923076923076923,
+          "team_epa": 0.1735,
+          "sample_size": 26
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.011488759882915311,
+          "epa_vs_league": 0.057994259721710836,
+          "success_rate_vs_league": 0.017562543838396172,
+          "team_pass_rate": 0.5180180180180181,
+          "team_epa": 0.06576396396396396,
+          "sample_size": 444
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.05246591238758347,
+          "epa_vs_league": 0.09862705976211199,
+          "success_rate_vs_league": 0.016129968088192614,
+          "team_pass_rate": 0.6944444444444444,
+          "team_epa": 0.10144277777777778,
+          "sample_size": 180
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.09345991561181433,
+          "epa_vs_league": 0.16768009870403858,
+          "success_rate_vs_league": 0.008627185051235664,
+          "team_pass_rate": 0.4666666666666667,
+          "team_epa": 0.2055695238095238,
+          "sample_size": 105
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.03762718053411679,
+          "epa_vs_league": 0.0013044971700775128,
+          "success_rate_vs_league": -0.015660010954538617,
+          "team_pass_rate": 0.5087719298245614,
+          "team_epa": 0.01076140350877193,
+          "sample_size": 57
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.020288946513549677,
+          "epa_vs_league": 0.12298329011483772,
+          "success_rate_vs_league": 0.07554213090929807,
+          "team_pass_rate": 0.3684210526315789,
+          "team_epa": 0.1576842105263158,
+          "sample_size": 57
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.05981552909609256,
+          "epa_vs_league": 0.027155103136005363,
+          "success_rate_vs_league": 0.01306053999664597,
+          "team_pass_rate": 0.8507462686567164,
+          "team_epa": -0.018792537313432837,
+          "sample_size": 67
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack"
+      ],
+      "weaknesses": []
+    }
+  },
+  "league_averages": {
+    "2025": {
+      "season": 2025,
+      "overall": {
+        "pass_rate": 0.6028703972165845,
+        "epa_per_play": 0.005451026384459263,
+        "success_rate": 0.43917077413743116,
+        "shotgun_rate": 0.656335169614381,
+        "no_huddle_rate": 0.09698463322702233,
+        "explosive_rate": 0.05737895042041171,
+        "total_plays": 34490.0
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate": 0.9193548387096774,
+          "epa_per_play": -0.10481946236559139,
+          "success_rate": 0.3021505376344086,
+          "sample_size": 2790
+        },
+        "down1_medium": {
+          "pass_rate": 0.3465783664459161,
+          "epa_per_play": 0.055280794701986755,
+          "success_rate": 0.4922737306843267,
+          "sample_size": 453
+        },
+        "down4_short": {
+          "pass_rate": 0.520259319286872,
+          "epa_per_play": 0.3909609400324149,
+          "success_rate": 0.6239870340356564,
+          "sample_size": 617
+        },
+        "down4_medium": {
+          "pass_rate": 0.9680851063829787,
+          "epa_per_play": 0.22978191489361702,
+          "success_rate": 0.4734042553191489,
+          "sample_size": 188
+        },
+        "down1_short": {
+          "pass_rate": 0.31456953642384106,
+          "epa_per_play": 0.04103145695364238,
+          "success_rate": 0.5099337748344371,
+          "sample_size": 302
+        },
+        "down1_long": {
+          "pass_rate": 0.5065292581351027,
+          "epa_per_play": 0.0077697042422531235,
+          "success_rate": 0.42613114985529754,
+          "sample_size": 14167
+        },
+        "down2_long": {
+          "pass_rate": 0.7469103568320279,
+          "epa_per_play": 0.0028157180156657964,
+          "success_rate": 0.4060922541340296,
+          "sample_size": 5745
+        },
+        "down2_medium": {
+          "pass_rate": 0.560126582278481,
+          "epa_per_play": 0.03788942510548523,
+          "success_rate": 0.4675632911392405,
+          "sample_size": 3792
+        },
+        "down3_short": {
+          "pass_rate": 0.47114474929044464,
+          "epa_per_play": 0.009456906338694417,
+          "success_rate": 0.5946073793755913,
+          "sample_size": 2114
+        },
+        "down2_short": {
+          "pass_rate": 0.34813210611802925,
+          "epa_per_play": 0.03470092041147807,
+          "success_rate": 0.556036816459123,
+          "sample_size": 1847
+        },
+        "down3_medium": {
+          "pass_rate": 0.910561797752809,
+          "epa_per_play": -0.0459476404494382,
+          "success_rate": 0.4197752808988764,
+          "sample_size": 2225
+        },
+        "down4_long": {
+          "pass_rate": 0.9682539682539683,
+          "epa_per_play": -0.6647047619047619,
+          "success_rate": 0.29365079365079366,
+          "sample_size": 126
+        }
+      }
+    }
+  }
+}
