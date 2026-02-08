@@ -1,0 +1,3988 @@
+================================================================================
+FOOTBALL CHATBOT - END-TO-END TEST RESULTS
+Timestamp: 2026-01-31T20:09:01.956806
+API Base: http://localhost:8000
+================================================================================
+
+Checking API health...
+✅ API Status: healthy
+   LLM Available: True
+   LLM Provider: openai
+   LLM Model: gpt-4.1-nano
+
+
+--------------------------------------------------------------------------------
+CATEGORY: Situation Analysis - Yardline Parsing
+--------------------------------------------------------------------------------
+
+TEST 1: Should I run or pass on 3rd and 5 at my 36
+  Notes: User says 'at my 36' - should parse yardline as 36
+  Expected Params: {'down': 3, 'distance': 5, 'yardline': 36}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 3, 'distance': 5, 'yardline': 36}
+  Response Text: **3rd & 5**
+At the 36 yard line
+
+**Expected Points Added:**
+• Pass: -0.022
+• Run: +0.013
+
+**Recommendation: RUN** (57% confidence)
+Running has 0.035 higher expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+TEST 2: run or pass on 2nd and 8 at the 40 yard line
+  Notes: Explicit 'at the 40 yard line'
+  Expected Params: {'down': 2, 'distance': 8, 'yardline': 40}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 2, 'distance': 8, 'yardline': 40}
+  Response Text: **2nd & 8**
+At the 40 yard line
+
+**Expected Points Added:**
+• Pass: +0.145
+• Run: +0.111
+
+**Recommendation: PASS** (57% confidence)
+Passing has 0.034 higher expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+TEST 3: 3rd and 7 from the 25
+  Notes: 'from the 25' format
+  Expected Params: {'down': 3, 'distance': 7, 'yardline': 25}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 3, 'distance': 7, 'yardline': 25}
+  Response Text: **3rd & 7**
+At the 25 yard line
+
+**Expected Points Added:**
+• Pass: +0.054
+• Run: +0.086
+
+**Recommendation: RUN** (56% confidence)
+Running has 0.032 higher expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+TEST 4: should I pass on 1st and 10 at midfield
+  Notes: 'midfield' should map to 50
+  Expected Params: {'down': 1, 'distance': 10, 'yardline': 50}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 1, 'distance': 10, 'yardline': 50}
+  Response Text: **1st & 10**
+At the 50 yard line
+
+**Expected Points Added:**
+• Pass: +0.014
+• Run: -0.015
+
+**Recommendation: PASS** (56% confidence)
+Passing has 0.029 higher expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+TEST 5: run or pass 3rd and 2 on their 15
+  Notes: 'on their 15' - opponent's territory
+  Expected Params: {'down': 3, 'distance': 2, 'yardline': 15}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 3, 'distance': 2, 'yardline': 15}
+  Response Text: **3rd & 2**
+At the 15 yard line
+
+**Expected Points Added:**
+• Pass: +0.122
+• Run: +0.129
+
+**Recommendation: NEUTRAL**
+Both options have similar expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+TEST 6: 2nd and goal from the 3
+  Notes: Goal line situation
+  Expected Params: {'down': 2, 'distance': 3, 'yardline': 3}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 2, 'distance': 3, 'yardline': 3}
+  Response Text: **2nd & 3**
+At the 3 yard line
+
+**Expected Points Added:**
+• Pass: -0.003
+• Run: +0.018
+
+**Recommendation: RUN** (54% confidence)
+Running has 0.021 higher expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+--------------------------------------------------------------------------------
+CATEGORY: Situation Analysis - No Yardline
+--------------------------------------------------------------------------------
+
+TEST 7: should I run or pass on 3rd and 5
+  Notes: No yardline specified - should use default (50)
+  Expected Params: {'down': 3, 'distance': 5}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 3, 'distance': 5, 'yardline': 50}
+  Response Text: **3rd & 5**
+At the 50 yard line
+
+**Expected Points Added:**
+• Pass: -0.003
+• Run: +0.034
+
+**Recommendation: RUN** (57% confidence)
+Running has 0.037 higher expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+--------------------------------------------------------------------------------
+CATEGORY: 4th Down - Yardline Parsing
+--------------------------------------------------------------------------------
+
+TEST 8: should I go for it on 4th and 2 at the 35
+  Notes: Standard 4th down query
+  Expected Params: {'down': 4, 'distance': 2, 'yardline': 35}
+  Pipeline: decision_analysis
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 4, 'distance': 2, 'yardline': 35}
+  Response Text: **4th & 2 at the 35**
+(52 yard field goal)
+
+**Go For It:**
+• Expected Points: 2.12
+• TD Probability: 0.0%
+• Turnover Risk: 29.2%
+
+**Kick Field Goal:**
+• Expected Points: 2.15
+• Success Rate: 71.5%
+
+**...
+  Raw Data Keys: ['situation', 'simulations', 'go_for_it', 'field_goal', 'punt', 'recommendation', 'confidence', 'expected_points_difference']
+
+TEST 9: 4th and 1 at my own 28
+  Notes: 'my own 28' = 100-28 = 72 yards from opponent endzone
+  Expected Params: {'down': 4, 'distance': 1, 'yardline': 72}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 4, 'distance': 1, 'yardline': 72}
+  Response Text: **4th & 1**
+At the 72 yard line
+
+**Expected Points Added:**
+• Pass: +0.668
+• Run: +0.726
+
+**Recommendation: RUN** (62% confidence)
+Running has 0.058 higher expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+TEST 10: go for it on 4th and goal from the 1
+  Notes: Goal line 4th down
+  Expected Params: {'down': 4, 'distance': 1, 'yardline': 1}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 4, 'distance': 1, 'yardline': 1}
+  Response Text: **4th & 1**
+At the 1 yard line
+
+**Expected Points Added:**
+• Pass: -1.176
+• Run: -0.734
+
+**Recommendation: RUN** (95% confidence)
+Running has 0.442 higher expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+TEST 11: 4th and 5 at the opponent's 40
+  Notes: Opponent's territory explicit
+  Expected Params: {'down': 4, 'distance': 5, 'yardline': 40}
+  Pipeline: situation_epa
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'down': 4, 'distance': 5, 'yardline': 40}
+  Response Text: **4th & 5**
+At the 40 yard line
+
+**Expected Points Added:**
+• Pass: +0.689
+• Run: +0.769
+
+**Recommendation: RUN** (66% confidence)
+Running has 0.079 higher expected value.
+  Raw Data Keys: ['situation', 'team', 'analysis', 'team_adjustments']
+
+--------------------------------------------------------------------------------
+CATEGORY: Team Profile
+--------------------------------------------------------------------------------
+
+TEST 12: Tell me about the Chiefs
+  Notes: Full team name
+  Expected Params: {'team': 'KC'}
+  Pipeline: team_profile
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'team': 'KC'}
+  Response Text: **KC 2023 Profile**
+
+**Offense:**
+• EPA/Play: +0.028 (above avg)
+• Pass Rate: 66.7%
+• Success Rate: 43.6%
+• Pass EPA: +0.107 | Rush EPA: -0.131
+
+**Defense:**
+• EPA/Play Allowed: -0.078 (good)
+
+**Stren...
+  Raw Data Keys: ['team', 'season', 'profile']
+
+TEST 13: team profile for KC
+  Notes: Abbreviation
+  Expected Params: {'team': 'KC'}
+  Pipeline: team_profile
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'team': 'KC'}
+  Response Text: **KC 2023 Profile**
+
+**Offense:**
+• EPA/Play: +0.028 (above avg)
+• Pass Rate: 66.7%
+• Success Rate: 43.6%
+• Pass EPA: +0.107 | Rush EPA: -0.131
+
+**Defense:**
+• EPA/Play Allowed: -0.078 (good)
+
+**Stren...
+  Raw Data Keys: ['team', 'season', 'profile']
+
+TEST 14: How good are the 49ers
+  Notes: Nickname parsing
+  Expected Params: {'team': 'SF'}
+  Pipeline: team_profile
+  Confidence: 0.70
+  Tier: 2
+  Used LLM: False
+  Actual Params: {'team': 'SF'}
+  Response Text: **SF 2023 Profile**
+
+**Offense:**
+• EPA/Play: +0.166 (above avg)
+• Pass Rate: 55.4%
+• Success Rate: 50.3%
+• Pass EPA: +0.272 | Rush EPA: +0.034
+
+**Defense:**
+• EPA/Play Allowed: -0.063 (good)
+
+**Stren...
+  Raw Data Keys: ['team', 'season', 'profile']
+
+TEST 15: tell me about the niners
+  Notes: Alternate nickname
+  Expected Params: {'team': 'SF'}
+  Pipeline: team_profile
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'team': 'SF'}
+  Response Text: **SF 2023 Profile**
+
+**Offense:**
+• EPA/Play: +0.166 (above avg)
+• Pass Rate: 55.4%
+• Success Rate: 50.3%
+• Pass EPA: +0.272 | Rush EPA: +0.034
+
+**Defense:**
+• EPA/Play Allowed: -0.063 (good)
+
+**Stren...
+  Raw Data Keys: ['team', 'season', 'profile']
+
+TEST 16: Ravens offense
+  Notes: Partial query
+  Expected Params: {'team': 'BAL'}
+  Pipeline: team_profile
+  Confidence: 0.70
+  Tier: 2
+  Used LLM: False
+  Actual Params: {'team': 'BAL'}
+  Response Text: **BAL 2023 Profile**
+
+**Offense:**
+• EPA/Play: +0.063 (above avg)
+• Pass Rate: 57.6%
+• Success Rate: 47.0%
+• Pass EPA: +0.088 | Rush EPA: +0.029
+
+**Defense:**
+• EPA/Play Allowed: -0.142 (good)
+
+**Stre...
+  Raw Data Keys: ['team', 'season', 'profile']
+
+--------------------------------------------------------------------------------
+CATEGORY: Team Comparison
+--------------------------------------------------------------------------------
+
+TEST 17: KC vs SF
+  Notes: Simple vs format
+  Expected Params: {'team1': 'KC', 'team2': 'SF'}
+  Pipeline: team_comparison
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'team1': 'KC', 'team2': 'SF'}
+  Response Text: **KC vs SF**
+
+**Offensive Efficiency:**
+• KC: +0.028 EPA/play
+• SF: +0.166 EPA/play
+• Edge: SF (+0.138)
+
+**Tendencies:**
+• KC pass rate: 66.7%
+• SF pass rate: 55.4%
+  Raw Data Keys: ['team1', 'team2', 'season', 'comparison', 'profile1', 'profile2']
+
+TEST 18: compare the Chiefs and Ravens
+  Notes: Full names with 'compare'
+  Expected Params: {'team1': 'KC', 'team2': 'BAL'}
+  Pipeline: team_comparison
+  Confidence: 0.70
+  Tier: 2
+  Used LLM: False
+  Actual Params: {'team1': 'KC', 'team2': 'BAL'}
+  Response Text: **KC vs BAL**
+
+**Offensive Efficiency:**
+• KC: +0.028 EPA/play
+• BAL: +0.063 EPA/play
+• Edge: BAL (+0.035)
+
+**Tendencies:**
+• KC pass rate: 66.7%
+• BAL pass rate: 57.6%
+  Raw Data Keys: ['team1', 'team2', 'season', 'comparison', 'profile1', 'profile2']
+
+TEST 19: Bills versus Dolphins matchup
+  Notes: 'versus' and 'matchup'
+  Expected Params: {'team1': 'BUF', 'team2': 'MIA'}
+  Pipeline: team_comparison
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'team1': 'BUF', 'team2': 'MIA'}
+  Response Text: **BUF vs MIA**
+
+**Offensive Efficiency:**
+• BUF: +0.115 EPA/play
+• MIA: +0.080 EPA/play
+• Edge: BUF (+0.035)
+
+**Tendencies:**
+• BUF pass rate: 59.2%
+• MIA pass rate: 60.0%
+
+**Matchup Notes:**
+• BUF's ...
+  Raw Data Keys: ['team1', 'team2', 'season', 'comparison', 'profile1', 'profile2']
+
+TEST 20: How do the Eagles match up against Dallas
+  Notes: Natural language comparison
+  Expected Params: {'team1': 'PHI', 'team2': 'DAL'}
+  Pipeline: team_comparison
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'team1': 'PHI', 'team2': 'DAL'}
+  Response Text: **PHI vs DAL**
+
+**Offensive Efficiency:**
+• PHI: +0.044 EPA/play
+• DAL: +0.103 EPA/play
+• Edge: DAL (+0.059)
+
+**Tendencies:**
+• PHI pass rate: 59.8%
+• DAL pass rate: 63.1%
+  Raw Data Keys: ['team1', 'team2', 'season', 'comparison', 'profile1', 'profile2']
+
+--------------------------------------------------------------------------------
+CATEGORY: Team Tendencies
+--------------------------------------------------------------------------------
+
+TEST 21: How often do the Ravens pass
+  Notes: Pass rate question
+  Expected Params: {'team': 'BAL'}
+  Pipeline: team_tendencies
+  Confidence: 0.70
+  Tier: 2
+  Used LLM: False
+  Response Text: **BAL Tendencies**
+
+**Overall:**
+• Pass Rate: 57.6%
+• Shotgun Rate: 84.8%
+• Passes 3.7% less than league average
+  Raw Data Keys: ['team', 'season', 'overall_tendencies', 'deviations', 'situational', 'specific_situation']
+
+TEST 22: Chiefs tendencies on third down
+  Notes: Situational tendencies
+  Expected Params: {'team': 'KC', 'down': 3}
+  Pipeline: team_tendencies
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Response Text: **KC Tendencies**
+
+**Overall:**
+• Pass Rate: 66.7%
+• Shotgun Rate: 83.0%
+• Passes 5.4% more than league average
+  Raw Data Keys: ['team', 'season', 'overall_tendencies', 'deviations', 'situational', 'specific_situation']
+
+TEST 23: what is the KC offensive style
+  Notes: Style question
+  Expected Params: {'team': 'KC'}
+  Pipeline: team_tendencies
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Response Text: **KC Tendencies**
+
+**Overall:**
+• Pass Rate: 66.7%
+• Shotgun Rate: 83.0%
+• Passes 5.4% more than league average
+  Raw Data Keys: ['team', 'season', 'overall_tendencies', 'deviations', 'situational', 'specific_situation']
+
+--------------------------------------------------------------------------------
+CATEGORY: Player Rankings
+--------------------------------------------------------------------------------
+
+TEST 24: top 10 running backs by EPA
+  Notes: RB rankings
+  Expected Params: {'position': 'RB', 'count': 10}
+  Pipeline: player_rankings
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Response Text: **Top RBs by Epa Per Play**
+
+1. **00-0033873**
+   EPA: +0.488 (70 attempts, 30% shrinkage)
+2. **00-0034857**
+   EPA: +0.479 (121 attempts, 20% shrinkage)
+3. **00-0039150**
+   EPA: +0.364 (36 attempts,...
+  Raw Data Keys: ['position', 'stat_type', 'metric', 'count', 'players']
+
+TEST 25: best quarterbacks
+  Notes: QB without count
+  Expected Params: {'position': 'QB'}
+  Pipeline: player_rankings
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Response Text: **Top QBs by Epa Per Play**
+
+1. **00-0027973**
+   EPA: +0.044 (61 attempts, 33% shrinkage)
+2. **00-0033936**
+   EPA: -0.011 (60 attempts, 33% shrinkage)
+3. **00-0035704**
+   EPA: -0.019 (83 attempts, ...
+  Raw Data Keys: ['position', 'stat_type', 'metric', 'count', 'players']
+
+TEST 26: top 5 wide receivers
+  Notes: WR with count
+  Expected Params: {'position': 'WR', 'count': 5}
+  Pipeline: player_rankings
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Response Text: **Top WRs by Epa Per Target**
+
+1. **00-0037261**
+   EPA: +0.652 (58 attempts, 34% shrinkage)
+2. **00-0036261**
+   EPA: +0.612 (125 attempts, 19% shrinkage)
+3. **00-0033288**
+   EPA: +0.542 (103 attemp...
+  Raw Data Keys: ['position', 'stat_type', 'metric', 'count', 'players']
+
+TEST 27: best TEs by yards
+  Notes: TE by yards metric
+  Expected Params: {'position': 'TE', 'metric': 'yards'}
+  Pipeline: player_rankings
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Response Text: **Top TEs by Receiving Yards**
+
+No players found matching criteria.
+  Raw Data Keys: ['position', 'stat_type', 'metric', 'count', 'players']
+
+--------------------------------------------------------------------------------
+CATEGORY: Edge Case
+--------------------------------------------------------------------------------
+
+TEST 28: KC
+  Notes: Just team abbreviation
+  Expected Params: {'team': 'KC'}
+  Pipeline: general_query
+  Confidence: 0.30
+  Tier: 3
+  Used LLM: False
+  Response Text: Here's what I found:
+
+**KC:**
+• EPA/Play: +0.028
+• Pass Rate: 66.7%
+• Strengths: offensive_efficiency, passing_attack, overall_defense
+  Raw Data Keys: ['teams_mentioned', 'season', 'available_data']
+
+TEST 29: run or pass
+  Notes: Missing situation details
+  Expected Params: {}
+  Pipeline: situation_epa
+  Confidence: 0.70
+  Tier: 2
+  Used LLM: False
+  Response Text: I couldn't complete that analysis: Down and distance required
+
+TEST 30: should I go for it
+  Notes: Missing 4th down details
+  Expected Params: {}
+  Pipeline: decision_analysis
+  Confidence: 0.70
+  Tier: 2
+  Used LLM: False
+  Response Text: I couldn't complete that analysis: Distance required for decision analysis
+
+TEST 31: what's the weather like
+  Notes: Unrelated query - should fallback
+  Expected Params: {}
+  Pipeline: general_query
+  Confidence: 0.30
+  Tier: 3
+  Used LLM: False
+  Response Text: I don't have specific data for that query. Could you ask about a specific team, player, or game situation?
+  Raw Data Keys: ['teams_mentioned', 'season', 'available_data']
+
+TEST 32: 3rd and 5
+  Notes: Just down and distance
+  Expected Params: {'down': 3, 'distance': 5}
+  Pipeline: general_query
+  Confidence: 0.30
+  Tier: 3
+  Used LLM: False
+  Response Text: I don't have specific data for that query. Could you ask about a specific team, player, or game situation?
+  Raw Data Keys: ['teams_mentioned', 'season', 'available_data']
+
+--------------------------------------------------------------------------------
+CATEGORY: Context
+--------------------------------------------------------------------------------
+
+TEST 33: How do we match up against the Ravens
+  Notes: Uses favorite team from context
+  Context: {'favorite_team': 'KC'}
+  Expected Params: {'team1': 'KC', 'team2': 'BAL'}
+  Pipeline: team_comparison
+  Confidence: 0.95
+  Tier: 1
+  Used LLM: False
+  Actual Params: {'team1': 'KC', 'team2': 'BAL'}
+  Response Text: **KC vs BAL**
+
+**Offensive Efficiency:**
+• KC: +0.028 EPA/play
+• BAL: +0.063 EPA/play
+• Edge: BAL (+0.035)
+
+**Tendencies:**
+• KC pass rate: 66.7%
+• BAL pass rate: 57.6%
+  Raw Data Keys: ['team1', 'team2', 'season', 'comparison', 'profile1', 'profile2']
+
+TEST 34: tell me about my team
+  Notes: 'my team' with context
+  Context: {'favorite_team': 'SF'}
+  Expected Params: {'team': 'SF'}
+  Pipeline: team_profile
+  Confidence: 0.80
+  Tier: 2
+  Used LLM: False
+  Actual Params: {'team': 'SF'}
+  Response Text: **SF 2023 Profile**
+
+**Offense:**
+• EPA/Play: +0.166 (above avg)
+• Pass Rate: 55.4%
+• Success Rate: 50.3%
+• Pass EPA: +0.272 | Rush EPA: +0.034
+
+**Defense:**
+• EPA/Play Allowed: -0.063 (good)
+
+**Stren...
+  Raw Data Keys: ['team', 'season', 'profile']
+
+================================================================================
+SUMMARY
+================================================================================
+Total Tests: 34
+Issues Found: 2
+
+  ⚠️  FAILED: run or pass - I couldn't complete that analysis: Down and distance required
+  ⚠️  FAILED: should I go for it - I couldn't complete that analysis: Distance required for decision analysis
+
+================================================================================
+RAW RESPONSE DATA
+================================================================================
+
+--- TEST 1: Should I run or pass on 3rd and 5 at my 36 ---
+{
+  "text": "**3rd & 5**\nAt the 36 yard line\n\n**Expected Points Added:**\n\u2022 Pass: -0.022\n\u2022 Run: +0.013\n\n**Recommendation: RUN** (57% confidence)\nRunning has 0.035 higher expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 3,
+      "distance": 5,
+      "yardline": 36,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 3,
+        "ydstogo": 5,
+        "yardline_100": 36,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": -0.022,
+      "run_epa": 0.013,
+      "epa_difference": -0.035,
+      "recommendation": "run",
+      "confidence": 0.57
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 2: run or pass on 2nd and 8 at the 40 yard line ---
+{
+  "text": "**2nd & 8**\nAt the 40 yard line\n\n**Expected Points Added:**\n\u2022 Pass: +0.145\n\u2022 Run: +0.111\n\n**Recommendation: PASS** (57% confidence)\nPassing has 0.034 higher expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 2,
+      "distance": 8,
+      "yardline": 40,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 2,
+        "ydstogo": 8,
+        "yardline_100": 40,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": 0.145,
+      "run_epa": 0.1105,
+      "epa_difference": 0.0346,
+      "recommendation": "pass",
+      "confidence": 0.569
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 3: 3rd and 7 from the 25 ---
+{
+  "text": "**3rd & 7**\nAt the 25 yard line\n\n**Expected Points Added:**\n\u2022 Pass: +0.054\n\u2022 Run: +0.086\n\n**Recommendation: RUN** (56% confidence)\nRunning has 0.032 higher expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 3,
+      "distance": 7,
+      "yardline": 25,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 3,
+        "ydstogo": 7,
+        "yardline_100": 25,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": 0.0536,
+      "run_epa": 0.0859,
+      "epa_difference": -0.0323,
+      "recommendation": "run",
+      "confidence": 0.565
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 4: should I pass on 1st and 10 at midfield ---
+{
+  "text": "**1st & 10**\nAt the 50 yard line\n\n**Expected Points Added:**\n\u2022 Pass: +0.014\n\u2022 Run: -0.015\n\n**Recommendation: PASS** (56% confidence)\nPassing has 0.029 higher expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 1,
+      "distance": 10,
+      "yardline": 50,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 1,
+        "ydstogo": 10,
+        "yardline_100": 50,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": 0.0138,
+      "run_epa": -0.0152,
+      "epa_difference": 0.029,
+      "recommendation": "pass",
+      "confidence": 0.558
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 5: run or pass 3rd and 2 on their 15 ---
+{
+  "text": "**3rd & 2**\nAt the 15 yard line\n\n**Expected Points Added:**\n\u2022 Pass: +0.122\n\u2022 Run: +0.129\n\n**Recommendation: NEUTRAL**\nBoth options have similar expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 3,
+      "distance": 2,
+      "yardline": 15,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 3,
+        "ydstogo": 2,
+        "yardline_100": 15,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": 0.1221,
+      "run_epa": 0.1293,
+      "epa_difference": -0.0072,
+      "recommendation": "neutral",
+      "confidence": 0.5
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 6: 2nd and goal from the 3 ---
+{
+  "text": "**2nd & 3**\nAt the 3 yard line\n\n**Expected Points Added:**\n\u2022 Pass: -0.003\n\u2022 Run: +0.018\n\n**Recommendation: RUN** (54% confidence)\nRunning has 0.021 higher expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 2,
+      "distance": 3,
+      "yardline": 3,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 2,
+        "ydstogo": 3,
+        "yardline_100": 3,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": -0.0034,
+      "run_epa": 0.018,
+      "epa_difference": -0.0214,
+      "recommendation": "run",
+      "confidence": 0.543
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 7: should I run or pass on 3rd and 5 ---
+{
+  "text": "**3rd & 5**\nAt the 50 yard line\n\n**Expected Points Added:**\n\u2022 Pass: -0.003\n\u2022 Run: +0.034\n\n**Recommendation: RUN** (57% confidence)\nRunning has 0.037 higher expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 3,
+      "distance": 5,
+      "yardline": 50,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 3,
+        "ydstogo": 5,
+        "yardline_100": 50,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": -0.0026,
+      "run_epa": 0.0341,
+      "epa_difference": -0.0367,
+      "recommendation": "run",
+      "confidence": 0.573
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 8: should I go for it on 4th and 2 at the 35 ---
+{
+  "text": "**4th & 2 at the 35**\n(52 yard field goal)\n\n**Go For It:**\n\u2022 Expected Points: 2.12\n\u2022 TD Probability: 0.0%\n\u2022 Turnover Risk: 29.2%\n\n**Kick Field Goal:**\n\u2022 Expected Points: 2.15\n\u2022 Success Rate: 71.5%\n\n**Recommendation: KICK THE FIELD GOAL** (51% confidence)",
+  "pipeline": "decision_analysis",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 4,
+      "ydstogo": 2,
+      "yardline": 35,
+      "fg_distance": 52
+    },
+    "simulations": 5000,
+    "go_for_it": {
+      "expected_points": 2.125,
+      "td_probability": 0.0,
+      "fg_probability": 0.708,
+      "turnover_probability": 0.292
+    },
+    "field_goal": {
+      "expected_points": 2.146,
+      "success_probability": 0.715
+    },
+    "punt": {
+      "expected_points": 0
+    },
+    "recommendation": "field_goal",
+    "confidence": 0.507,
+    "expected_points_difference": 0.02
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 9: 4th and 1 at my own 28 ---
+{
+  "text": "**4th & 1**\nAt the 72 yard line\n\n**Expected Points Added:**\n\u2022 Pass: +0.668\n\u2022 Run: +0.726\n\n**Recommendation: RUN** (62% confidence)\nRunning has 0.058 higher expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 4,
+      "distance": 1,
+      "yardline": 72,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 4,
+        "ydstogo": 1,
+        "yardline_100": 72,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": 0.6685,
+      "run_epa": 0.7263,
+      "epa_difference": -0.0577,
+      "recommendation": "run",
+      "confidence": 0.615
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 10: go for it on 4th and goal from the 1 ---
+{
+  "text": "**4th & 1**\nAt the 1 yard line\n\n**Expected Points Added:**\n\u2022 Pass: -1.176\n\u2022 Run: -0.734\n\n**Recommendation: RUN** (95% confidence)\nRunning has 0.442 higher expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 4,
+      "distance": 1,
+      "yardline": 1,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 4,
+        "ydstogo": 1,
+        "yardline_100": 1,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": -1.1758,
+      "run_epa": -0.7339,
+      "epa_difference": -0.4418,
+      "recommendation": "run",
+      "confidence": 0.95
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 11: 4th and 5 at the opponent's 40 ---
+{
+  "text": "**4th & 5**\nAt the 40 yard line\n\n**Expected Points Added:**\n\u2022 Pass: +0.689\n\u2022 Run: +0.769\n\n**Recommendation: RUN** (66% confidence)\nRunning has 0.079 higher expected value.",
+  "pipeline": "situation_epa",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "situation": {
+      "down": 4,
+      "distance": 5,
+      "yardline": 40,
+      "quarter": 2,
+      "score_differential": 0
+    },
+    "team": null,
+    "analysis": {
+      "situation": {
+        "down": 4,
+        "ydstogo": 5,
+        "yardline_100": 40,
+        "quarter": 2,
+        "score_differential": 0
+      },
+      "pass_epa": 0.6893,
+      "run_epa": 0.7687,
+      "epa_difference": -0.0795,
+      "recommendation": "run",
+      "confidence": 0.659
+    },
+    "team_adjustments": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 12: Tell me about the Chiefs ---
+{
+  "text": "**KC 2023 Profile**\n\n**Offense:**\n\u2022 EPA/Play: +0.028 (above avg)\n\u2022 Pass Rate: 66.7%\n\u2022 Success Rate: 43.6%\n\u2022 Pass EPA: +0.107 | Rush EPA: -0.131\n\n**Defense:**\n\u2022 EPA/Play Allowed: -0.078 (good)\n\n**Strengths:** Offensive Efficiency, Passing Attack, Overall Defense",
+  "pipeline": "team_profile",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "team": "KC",
+    "season": 2023,
+    "profile": {
+      "team": "KC",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.6671709531013615,
+        "epa_per_play": 0.027937443267776096,
+        "success_rate": 0.4357034795763994,
+        "shotgun_rate": 0.829803328290469,
+        "no_huddle_rate": 0.02798789712556732,
+        "explosive_rate": 0.06354009077155824,
+        "pass_epa": 0.1072185941043084,
+        "rush_epa": -0.13098522727272727,
+        "total_plays": 1322
+      },
+      "defense": {
+        "epa_per_play": -0.07793125,
+        "success_rate": 0.4066358024691358,
+        "pass_epa": -0.10577272727272727,
+        "rush_epa": -0.02916433121019108
+      },
+      "deviations": {
+        "pass_rate": 0.05422151489911431,
+        "epa_per_play": 0.05529478034642778,
+        "success_rate": 0.008989996430331937,
+        "shotgun_rate": 0.1102527664927162,
+        "explosive_rate": 0.0046355963895357705
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.062728564967371,
+          "epa_vs_league": 0.2957456764876914,
+          "success_rate_vs_league": 0.08716805582477227,
+          "team_pass_rate": 0.9904761904761905,
+          "team_epa": 0.14449428571428571,
+          "sample_size": 105
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.1594254091604851,
+          "epa_vs_league": 0.16716187448486988,
+          "success_rate_vs_league": 0.009419521959260546,
+          "team_pass_rate": 0.5263157894736842,
+          "team_epa": 0.0843157894736842,
+          "sample_size": 19
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.10482799350361738,
+          "epa_vs_league": 0.5375725380186033,
+          "success_rate_vs_league": 0.12623652738815894,
+          "team_pass_rate": 0.6153846153846154,
+          "team_epa": 0.9377923076923077,
+          "sample_size": 13
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.045307443365695754,
+          "epa_vs_league": 0.08516498381877023,
+          "success_rate_vs_league": 0.1909385113268608,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.033953333333333335,
+          "sample_size": 15
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.027187182039736357,
+          "epa_vs_league": -0.04120203274812163,
+          "success_rate_vs_league": -0.039645181068412416,
+          "team_pass_rate": 0.5501792114695341,
+          "team_epa": -0.07235519713261648,
+          "sample_size": 558
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.0914164277084758,
+          "epa_vs_league": 0.11387005400212516,
+          "success_rate_vs_league": 0.05178963916100199,
+          "team_pass_rate": 0.8130434782608695,
+          "team_epa": 0.056649565217391305,
+          "sample_size": 230
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.11349165376011006,
+          "epa_vs_league": 0.13287904133258877,
+          "success_rate_vs_league": 0.05091329252403082,
+          "team_pass_rate": 0.6666666666666666,
+          "team_epa": 0.19050204081632652,
+          "sample_size": 147
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.11787545787545795,
+          "epa_vs_league": 0.21730175457875456,
+          "success_rate_vs_league": 0.018205128205128207,
+          "team_pass_rate": 0.6483516483516484,
+          "team_epa": 0.20542637362637362,
+          "sample_size": 91
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.00014766004965072188,
+          "epa_vs_league": -0.05916281550799672,
+          "success_rate_vs_league": -0.021816772335889745,
+          "team_pass_rate": 0.38596491228070173,
+          "team_epa": -0.02134561403508772,
+          "sample_size": 57
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.04064254659063593,
+          "epa_vs_league": -0.0703797388084158,
+          "success_rate_vs_league": 0.024660811430818608,
+          "team_pass_rate": 0.9605263157894737,
+          "team_epa": -0.05389605263157895,
+          "sample_size": 76
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 13: team profile for KC ---
+{
+  "text": "**KC 2023 Profile**\n\n**Offense:**\n\u2022 EPA/Play: +0.028 (above avg)\n\u2022 Pass Rate: 66.7%\n\u2022 Success Rate: 43.6%\n\u2022 Pass EPA: +0.107 | Rush EPA: -0.131\n\n**Defense:**\n\u2022 EPA/Play Allowed: -0.078 (good)\n\n**Strengths:** Offensive Efficiency, Passing Attack, Overall Defense",
+  "pipeline": "team_profile",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "team": "KC",
+    "season": 2023,
+    "profile": {
+      "team": "KC",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.6671709531013615,
+        "epa_per_play": 0.027937443267776096,
+        "success_rate": 0.4357034795763994,
+        "shotgun_rate": 0.829803328290469,
+        "no_huddle_rate": 0.02798789712556732,
+        "explosive_rate": 0.06354009077155824,
+        "pass_epa": 0.1072185941043084,
+        "rush_epa": -0.13098522727272727,
+        "total_plays": 1322
+      },
+      "defense": {
+        "epa_per_play": -0.07793125,
+        "success_rate": 0.4066358024691358,
+        "pass_epa": -0.10577272727272727,
+        "rush_epa": -0.02916433121019108
+      },
+      "deviations": {
+        "pass_rate": 0.05422151489911431,
+        "epa_per_play": 0.05529478034642778,
+        "success_rate": 0.008989996430331937,
+        "shotgun_rate": 0.1102527664927162,
+        "explosive_rate": 0.0046355963895357705
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.062728564967371,
+          "epa_vs_league": 0.2957456764876914,
+          "success_rate_vs_league": 0.08716805582477227,
+          "team_pass_rate": 0.9904761904761905,
+          "team_epa": 0.14449428571428571,
+          "sample_size": 105
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.1594254091604851,
+          "epa_vs_league": 0.16716187448486988,
+          "success_rate_vs_league": 0.009419521959260546,
+          "team_pass_rate": 0.5263157894736842,
+          "team_epa": 0.0843157894736842,
+          "sample_size": 19
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.10482799350361738,
+          "epa_vs_league": 0.5375725380186033,
+          "success_rate_vs_league": 0.12623652738815894,
+          "team_pass_rate": 0.6153846153846154,
+          "team_epa": 0.9377923076923077,
+          "sample_size": 13
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.045307443365695754,
+          "epa_vs_league": 0.08516498381877023,
+          "success_rate_vs_league": 0.1909385113268608,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.033953333333333335,
+          "sample_size": 15
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.027187182039736357,
+          "epa_vs_league": -0.04120203274812163,
+          "success_rate_vs_league": -0.039645181068412416,
+          "team_pass_rate": 0.5501792114695341,
+          "team_epa": -0.07235519713261648,
+          "sample_size": 558
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.0914164277084758,
+          "epa_vs_league": 0.11387005400212516,
+          "success_rate_vs_league": 0.05178963916100199,
+          "team_pass_rate": 0.8130434782608695,
+          "team_epa": 0.056649565217391305,
+          "sample_size": 230
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.11349165376011006,
+          "epa_vs_league": 0.13287904133258877,
+          "success_rate_vs_league": 0.05091329252403082,
+          "team_pass_rate": 0.6666666666666666,
+          "team_epa": 0.19050204081632652,
+          "sample_size": 147
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.11787545787545795,
+          "epa_vs_league": 0.21730175457875456,
+          "success_rate_vs_league": 0.018205128205128207,
+          "team_pass_rate": 0.6483516483516484,
+          "team_epa": 0.20542637362637362,
+          "sample_size": 91
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.00014766004965072188,
+          "epa_vs_league": -0.05916281550799672,
+          "success_rate_vs_league": -0.021816772335889745,
+          "team_pass_rate": 0.38596491228070173,
+          "team_epa": -0.02134561403508772,
+          "sample_size": 57
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.04064254659063593,
+          "epa_vs_league": -0.0703797388084158,
+          "success_rate_vs_league": 0.024660811430818608,
+          "team_pass_rate": 0.9605263157894737,
+          "team_epa": -0.05389605263157895,
+          "sample_size": 76
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 14: How good are the 49ers ---
+{
+  "text": "**SF 2023 Profile**\n\n**Offense:**\n\u2022 EPA/Play: +0.166 (above avg)\n\u2022 Pass Rate: 55.4%\n\u2022 Success Rate: 50.3%\n\u2022 Pass EPA: +0.272 | Rush EPA: +0.034\n\n**Defense:**\n\u2022 EPA/Play Allowed: -0.063 (good)\n\n**Strengths:** Offensive Efficiency, Passing Attack, Overall Defense",
+  "pipeline": "team_profile",
+  "confidence": 0.7,
+  "success": true,
+  "data": {
+    "team": "SF",
+    "season": 2023,
+    "profile": {
+      "team": "SF",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.5536912751677853,
+        "epa_per_play": 0.16556535234899328,
+        "success_rate": 0.50251677852349,
+        "shotgun_rate": 0.6098993288590604,
+        "no_huddle_rate": 0.01761744966442953,
+        "explosive_rate": 0.08557046979865772,
+        "pass_epa": 0.27188606060606063,
+        "rush_epa": 0.03366372180451128,
+        "total_plays": 1192
+      },
+      "defense": {
+        "epa_per_play": -0.06299639133921411,
+        "success_rate": 0.42502004811547717,
+        "pass_epa": -0.06734287410926366,
+        "rush_epa": -0.05396
+      },
+      "deviations": {
+        "pass_rate": -0.059258163034461964,
+        "epa_per_play": 0.19292268942764496,
+        "success_rate": 0.07580329537742253,
+        "shotgun_rate": -0.10965123293869239,
+        "explosive_rate": 0.02666597541663525
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.03618136044857856,
+          "epa_vs_league": 0.13908512571316473,
+          "success_rate_vs_league": 0.01694430367330929,
+          "team_pass_rate": 0.891566265060241,
+          "team_epa": -0.012166265060240964,
+          "sample_size": 83
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.19041979207790496,
+          "epa_vs_league": 0.14997549677589156,
+          "success_rate_vs_league": 0.17660218449796028,
+          "team_pass_rate": 0.17647058823529413,
+          "team_epa": 0.06712941176470588,
+          "sample_size": 17
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.16302588996763756,
+          "epa_vs_league": 0.1416429004854369,
+          "success_rate_vs_league": -0.038228155339805836,
+          "team_pass_rate": 0.125,
+          "team_epa": 0.09043125,
+          "sample_size": 16
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.0258275681821607,
+          "epa_vs_league": 0.14599607553761396,
+          "success_rate_vs_league": 0.08485766802130174,
+          "team_pass_rate": 0.497164461247637,
+          "team_epa": 0.11484291115311909,
+          "sample_size": 529
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.051345922420579226,
+          "epa_vs_league": 0.2303837320279771,
+          "success_rate_vs_league": 0.060250273708593094,
+          "team_pass_rate": 0.772972972972973,
+          "team_epa": 0.17316324324324325,
+          "sample_size": 185
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.08805873383678914,
+          "epa_vs_league": 0.07293979121393669,
+          "success_rate_vs_league": 0.03097973770675505,
+          "team_pass_rate": 0.46511627906976744,
+          "team_epa": 0.13056279069767443,
+          "sample_size": 129
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.0759307359307359,
+          "epa_vs_league": 0.3195268961038961,
+          "success_rate_vs_league": 0.14108225108225114,
+          "team_pass_rate": 0.45454545454545453,
+          "team_epa": 0.3076515151515152,
+          "sample_size": 66
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.19334148799300305,
+          "epa_vs_league": 0.3990117141897416,
+          "success_rate_vs_league": 0.11451804060006465,
+          "team_pass_rate": 0.1927710843373494,
+          "team_epa": 0.4368289156626506,
+          "sample_size": 83
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.034169483484552066,
+          "epa_vs_league": 0.3637777423945917,
+          "success_rate_vs_league": 0.06413449564134494,
+          "team_pass_rate": 0.8857142857142857,
+          "team_epa": 0.3802614285714286,
+          "sample_size": 70
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 2
+}
+
+--- TEST 15: tell me about the niners ---
+{
+  "text": "**SF 2023 Profile**\n\n**Offense:**\n\u2022 EPA/Play: +0.166 (above avg)\n\u2022 Pass Rate: 55.4%\n\u2022 Success Rate: 50.3%\n\u2022 Pass EPA: +0.272 | Rush EPA: +0.034\n\n**Defense:**\n\u2022 EPA/Play Allowed: -0.063 (good)\n\n**Strengths:** Offensive Efficiency, Passing Attack, Overall Defense",
+  "pipeline": "team_profile",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "team": "SF",
+    "season": 2023,
+    "profile": {
+      "team": "SF",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.5536912751677853,
+        "epa_per_play": 0.16556535234899328,
+        "success_rate": 0.50251677852349,
+        "shotgun_rate": 0.6098993288590604,
+        "no_huddle_rate": 0.01761744966442953,
+        "explosive_rate": 0.08557046979865772,
+        "pass_epa": 0.27188606060606063,
+        "rush_epa": 0.03366372180451128,
+        "total_plays": 1192
+      },
+      "defense": {
+        "epa_per_play": -0.06299639133921411,
+        "success_rate": 0.42502004811547717,
+        "pass_epa": -0.06734287410926366,
+        "rush_epa": -0.05396
+      },
+      "deviations": {
+        "pass_rate": -0.059258163034461964,
+        "epa_per_play": 0.19292268942764496,
+        "success_rate": 0.07580329537742253,
+        "shotgun_rate": -0.10965123293869239,
+        "explosive_rate": 0.02666597541663525
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.03618136044857856,
+          "epa_vs_league": 0.13908512571316473,
+          "success_rate_vs_league": 0.01694430367330929,
+          "team_pass_rate": 0.891566265060241,
+          "team_epa": -0.012166265060240964,
+          "sample_size": 83
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.19041979207790496,
+          "epa_vs_league": 0.14997549677589156,
+          "success_rate_vs_league": 0.17660218449796028,
+          "team_pass_rate": 0.17647058823529413,
+          "team_epa": 0.06712941176470588,
+          "sample_size": 17
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.16302588996763756,
+          "epa_vs_league": 0.1416429004854369,
+          "success_rate_vs_league": -0.038228155339805836,
+          "team_pass_rate": 0.125,
+          "team_epa": 0.09043125,
+          "sample_size": 16
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.0258275681821607,
+          "epa_vs_league": 0.14599607553761396,
+          "success_rate_vs_league": 0.08485766802130174,
+          "team_pass_rate": 0.497164461247637,
+          "team_epa": 0.11484291115311909,
+          "sample_size": 529
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.051345922420579226,
+          "epa_vs_league": 0.2303837320279771,
+          "success_rate_vs_league": 0.060250273708593094,
+          "team_pass_rate": 0.772972972972973,
+          "team_epa": 0.17316324324324325,
+          "sample_size": 185
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.08805873383678914,
+          "epa_vs_league": 0.07293979121393669,
+          "success_rate_vs_league": 0.03097973770675505,
+          "team_pass_rate": 0.46511627906976744,
+          "team_epa": 0.13056279069767443,
+          "sample_size": 129
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.0759307359307359,
+          "epa_vs_league": 0.3195268961038961,
+          "success_rate_vs_league": 0.14108225108225114,
+          "team_pass_rate": 0.45454545454545453,
+          "team_epa": 0.3076515151515152,
+          "sample_size": 66
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.19334148799300305,
+          "epa_vs_league": 0.3990117141897416,
+          "success_rate_vs_league": 0.11451804060006465,
+          "team_pass_rate": 0.1927710843373494,
+          "team_epa": 0.4368289156626506,
+          "sample_size": 83
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.034169483484552066,
+          "epa_vs_league": 0.3637777423945917,
+          "success_rate_vs_league": 0.06413449564134494,
+          "team_pass_rate": 0.8857142857142857,
+          "team_epa": 0.3802614285714286,
+          "sample_size": 70
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 16: Ravens offense ---
+{
+  "text": "**BAL 2023 Profile**\n\n**Offense:**\n\u2022 EPA/Play: +0.063 (above avg)\n\u2022 Pass Rate: 57.6%\n\u2022 Success Rate: 47.0%\n\u2022 Pass EPA: +0.088 | Rush EPA: +0.029\n\n**Defense:**\n\u2022 EPA/Play Allowed: -0.142 (good)\n\n**Strengths:** Offensive Efficiency, Overall Defense",
+  "pipeline": "team_profile",
+  "confidence": 0.7,
+  "success": true,
+  "data": {
+    "team": "BAL",
+    "season": 2023,
+    "profile": {
+      "team": "BAL",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.5762426284751474,
+        "epa_per_play": 0.06281903959561921,
+        "success_rate": 0.4700926705981466,
+        "shotgun_rate": 0.8475147430497051,
+        "no_huddle_rate": 0.07076663858466722,
+        "explosive_rate": 0.06655433866891322,
+        "pass_epa": 0.0877514619883041,
+        "rush_epa": 0.028914910536779324,
+        "total_plays": 1187
+      },
+      "defense": {
+        "epa_per_play": -0.14200286885245902,
+        "success_rate": 0.39918032786885244,
+        "pass_epa": -0.1635957055214724,
+        "rush_epa": -0.09855061728395062
+      },
+      "deviations": {
+        "pass_rate": -0.03670680972709983,
+        "epa_per_play": 0.09017637667427089,
+        "success_rate": 0.04337918745207914,
+        "shotgun_rate": 0.1279641812519523,
+        "explosive_rate": 0.00764984428689075
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.03164372940492344,
+          "epa_vs_league": -0.01690575208373718,
+          "success_rate_vs_league": 0.040414809071525504,
+          "team_pass_rate": 0.8961038961038961,
+          "team_epa": -0.16815714285714287,
+          "sample_size": 77
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.19041979207790496,
+          "epa_vs_league": 0.1719637320700092,
+          "success_rate_vs_league": 0.17660218449796028,
+          "team_pass_rate": 0.17647058823529413,
+          "team_epa": 0.08911764705882352,
+          "sample_size": 17
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.29627090759528374,
+          "epa_vs_league": 0.6829016588977241,
+          "success_rate_vs_league": 0.07129147244310396,
+          "team_pass_rate": 0.21428571428571427,
+          "team_epa": 1.0831214285714286,
+          "sample_size": 14
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.19711679905854665,
+          "epa_vs_league": 0.002548014121800536,
+          "success_rate_vs_league": -0.021182700794351306,
+          "team_pass_rate": 0.09090909090909091,
+          "team_epa": -0.04866363636363636,
+          "sample_size": 11
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.006226743433742521,
+          "epa_vs_league": 0.07265336162315364,
+          "success_rate_vs_league": 0.03156221644171464,
+          "team_pass_rate": 0.5167652859960552,
+          "team_epa": 0.041500197238658776,
+          "sample_size": 507
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.02047821260550098,
+          "epa_vs_league": 0.10805890983736544,
+          "success_rate_vs_league": 0.06437545151798141,
+          "team_pass_rate": 0.7421052631578947,
+          "team_epa": 0.05083842105263158,
+          "sample_size": 190
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.06002432797504975,
+          "epa_vs_league": 0.02998384983133076,
+          "success_rate_vs_league": 0.006555823509027503,
+          "team_pass_rate": 0.4931506849315068,
+          "team_epa": 0.0876068493150685,
+          "sample_size": 146
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.1668398268398268,
+          "epa_vs_league": 0.07824962337662338,
+          "success_rate_vs_league": 0.019870129870129927,
+          "team_pass_rate": 0.36363636363636365,
+          "team_epa": 0.06637424242424242,
+          "sample_size": 66
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.018465513506823017,
+          "epa_vs_league": 0.06507691617414983,
+          "success_rate_vs_league": 0.12833802642572023,
+          "team_pass_rate": 0.36764705882352944,
+          "team_epa": 0.10289411764705883,
+          "sample_size": 68
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.010348788940697129,
+          "epa_vs_league": 0.1021814301022329,
+          "success_rate_vs_league": 0.005994960757624013,
+          "team_pass_rate": 0.9302325581395349,
+          "team_epa": 0.11866511627906977,
+          "sample_size": 86
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 2
+}
+
+--- TEST 17: KC vs SF ---
+{
+  "text": "**KC vs SF**\n\n**Offensive Efficiency:**\n\u2022 KC: +0.028 EPA/play\n\u2022 SF: +0.166 EPA/play\n\u2022 Edge: SF (+0.138)\n\n**Tendencies:**\n\u2022 KC pass rate: 66.7%\n\u2022 SF pass rate: 55.4%",
+  "pipeline": "team_comparison",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "team1": "KC",
+    "team2": "SF",
+    "season": 2023,
+    "comparison": {
+      "teams": [
+        "KC",
+        "SF"
+      ],
+      "season": 2023,
+      "offense": {
+        "epa_per_play": [
+          0.027937443267776096,
+          0.16556535234899328
+        ],
+        "pass_rate": [
+          0.6671709531013615,
+          0.5536912751677853
+        ],
+        "success_rate": [
+          0.4357034795763994,
+          0.50251677852349
+        ]
+      },
+      "defense": {
+        "epa_per_play": [
+          -0.07793125,
+          -0.06299639133921411
+        ]
+      },
+      "matchup_notes": []
+    },
+    "profile1": {
+      "team": "KC",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.6671709531013615,
+        "epa_per_play": 0.027937443267776096,
+        "success_rate": 0.4357034795763994,
+        "shotgun_rate": 0.829803328290469,
+        "no_huddle_rate": 0.02798789712556732,
+        "explosive_rate": 0.06354009077155824,
+        "pass_epa": 0.1072185941043084,
+        "rush_epa": -0.13098522727272727,
+        "total_plays": 1322
+      },
+      "defense": {
+        "epa_per_play": -0.07793125,
+        "success_rate": 0.4066358024691358,
+        "pass_epa": -0.10577272727272727,
+        "rush_epa": -0.02916433121019108
+      },
+      "deviations": {
+        "pass_rate": 0.05422151489911431,
+        "epa_per_play": 0.05529478034642778,
+        "success_rate": 0.008989996430331937,
+        "shotgun_rate": 0.1102527664927162,
+        "explosive_rate": 0.0046355963895357705
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.062728564967371,
+          "epa_vs_league": 0.2957456764876914,
+          "success_rate_vs_league": 0.08716805582477227,
+          "team_pass_rate": 0.9904761904761905,
+          "team_epa": 0.14449428571428571,
+          "sample_size": 105
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.1594254091604851,
+          "epa_vs_league": 0.16716187448486988,
+          "success_rate_vs_league": 0.009419521959260546,
+          "team_pass_rate": 0.5263157894736842,
+          "team_epa": 0.0843157894736842,
+          "sample_size": 19
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.10482799350361738,
+          "epa_vs_league": 0.5375725380186033,
+          "success_rate_vs_league": 0.12623652738815894,
+          "team_pass_rate": 0.6153846153846154,
+          "team_epa": 0.9377923076923077,
+          "sample_size": 13
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.045307443365695754,
+          "epa_vs_league": 0.08516498381877023,
+          "success_rate_vs_league": 0.1909385113268608,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.033953333333333335,
+          "sample_size": 15
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.027187182039736357,
+          "epa_vs_league": -0.04120203274812163,
+          "success_rate_vs_league": -0.039645181068412416,
+          "team_pass_rate": 0.5501792114695341,
+          "team_epa": -0.07235519713261648,
+          "sample_size": 558
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.0914164277084758,
+          "epa_vs_league": 0.11387005400212516,
+          "success_rate_vs_league": 0.05178963916100199,
+          "team_pass_rate": 0.8130434782608695,
+          "team_epa": 0.056649565217391305,
+          "sample_size": 230
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.11349165376011006,
+          "epa_vs_league": 0.13287904133258877,
+          "success_rate_vs_league": 0.05091329252403082,
+          "team_pass_rate": 0.6666666666666666,
+          "team_epa": 0.19050204081632652,
+          "sample_size": 147
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.11787545787545795,
+          "epa_vs_league": 0.21730175457875456,
+          "success_rate_vs_league": 0.018205128205128207,
+          "team_pass_rate": 0.6483516483516484,
+          "team_epa": 0.20542637362637362,
+          "sample_size": 91
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.00014766004965072188,
+          "epa_vs_league": -0.05916281550799672,
+          "success_rate_vs_league": -0.021816772335889745,
+          "team_pass_rate": 0.38596491228070173,
+          "team_epa": -0.02134561403508772,
+          "sample_size": 57
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.04064254659063593,
+          "epa_vs_league": -0.0703797388084158,
+          "success_rate_vs_league": 0.024660811430818608,
+          "team_pass_rate": 0.9605263157894737,
+          "team_epa": -0.05389605263157895,
+          "sample_size": 76
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "profile2": {
+      "team": "SF",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.5536912751677853,
+        "epa_per_play": 0.16556535234899328,
+        "success_rate": 0.50251677852349,
+        "shotgun_rate": 0.6098993288590604,
+        "no_huddle_rate": 0.01761744966442953,
+        "explosive_rate": 0.08557046979865772,
+        "pass_epa": 0.27188606060606063,
+        "rush_epa": 0.03366372180451128,
+        "total_plays": 1192
+      },
+      "defense": {
+        "epa_per_play": -0.06299639133921411,
+        "success_rate": 0.42502004811547717,
+        "pass_epa": -0.06734287410926366,
+        "rush_epa": -0.05396
+      },
+      "deviations": {
+        "pass_rate": -0.059258163034461964,
+        "epa_per_play": 0.19292268942764496,
+        "success_rate": 0.07580329537742253,
+        "shotgun_rate": -0.10965123293869239,
+        "explosive_rate": 0.02666597541663525
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.03618136044857856,
+          "epa_vs_league": 0.13908512571316473,
+          "success_rate_vs_league": 0.01694430367330929,
+          "team_pass_rate": 0.891566265060241,
+          "team_epa": -0.012166265060240964,
+          "sample_size": 83
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.19041979207790496,
+          "epa_vs_league": 0.14997549677589156,
+          "success_rate_vs_league": 0.17660218449796028,
+          "team_pass_rate": 0.17647058823529413,
+          "team_epa": 0.06712941176470588,
+          "sample_size": 17
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.16302588996763756,
+          "epa_vs_league": 0.1416429004854369,
+          "success_rate_vs_league": -0.038228155339805836,
+          "team_pass_rate": 0.125,
+          "team_epa": 0.09043125,
+          "sample_size": 16
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.0258275681821607,
+          "epa_vs_league": 0.14599607553761396,
+          "success_rate_vs_league": 0.08485766802130174,
+          "team_pass_rate": 0.497164461247637,
+          "team_epa": 0.11484291115311909,
+          "sample_size": 529
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.051345922420579226,
+          "epa_vs_league": 0.2303837320279771,
+          "success_rate_vs_league": 0.060250273708593094,
+          "team_pass_rate": 0.772972972972973,
+          "team_epa": 0.17316324324324325,
+          "sample_size": 185
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.08805873383678914,
+          "epa_vs_league": 0.07293979121393669,
+          "success_rate_vs_league": 0.03097973770675505,
+          "team_pass_rate": 0.46511627906976744,
+          "team_epa": 0.13056279069767443,
+          "sample_size": 129
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.0759307359307359,
+          "epa_vs_league": 0.3195268961038961,
+          "success_rate_vs_league": 0.14108225108225114,
+          "team_pass_rate": 0.45454545454545453,
+          "team_epa": 0.3076515151515152,
+          "sample_size": 66
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.19334148799300305,
+          "epa_vs_league": 0.3990117141897416,
+          "success_rate_vs_league": 0.11451804060006465,
+          "team_pass_rate": 0.1927710843373494,
+          "team_epa": 0.4368289156626506,
+          "sample_size": 83
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.034169483484552066,
+          "epa_vs_league": 0.3637777423945917,
+          "success_rate_vs_league": 0.06413449564134494,
+          "team_pass_rate": 0.8857142857142857,
+          "team_epa": 0.3802614285714286,
+          "sample_size": 70
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 18: compare the Chiefs and Ravens ---
+{
+  "text": "**KC vs BAL**\n\n**Offensive Efficiency:**\n\u2022 KC: +0.028 EPA/play\n\u2022 BAL: +0.063 EPA/play\n\u2022 Edge: BAL (+0.035)\n\n**Tendencies:**\n\u2022 KC pass rate: 66.7%\n\u2022 BAL pass rate: 57.6%",
+  "pipeline": "team_comparison",
+  "confidence": 0.7,
+  "success": true,
+  "data": {
+    "team1": "KC",
+    "team2": "BAL",
+    "season": 2023,
+    "comparison": {
+      "teams": [
+        "KC",
+        "BAL"
+      ],
+      "season": 2023,
+      "offense": {
+        "epa_per_play": [
+          0.027937443267776096,
+          0.06281903959561921
+        ],
+        "pass_rate": [
+          0.6671709531013615,
+          0.5762426284751474
+        ],
+        "success_rate": [
+          0.4357034795763994,
+          0.4700926705981466
+        ]
+      },
+      "defense": {
+        "epa_per_play": [
+          -0.07793125,
+          -0.14200286885245902
+        ]
+      },
+      "matchup_notes": []
+    },
+    "profile1": {
+      "team": "KC",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.6671709531013615,
+        "epa_per_play": 0.027937443267776096,
+        "success_rate": 0.4357034795763994,
+        "shotgun_rate": 0.829803328290469,
+        "no_huddle_rate": 0.02798789712556732,
+        "explosive_rate": 0.06354009077155824,
+        "pass_epa": 0.1072185941043084,
+        "rush_epa": -0.13098522727272727,
+        "total_plays": 1322
+      },
+      "defense": {
+        "epa_per_play": -0.07793125,
+        "success_rate": 0.4066358024691358,
+        "pass_epa": -0.10577272727272727,
+        "rush_epa": -0.02916433121019108
+      },
+      "deviations": {
+        "pass_rate": 0.05422151489911431,
+        "epa_per_play": 0.05529478034642778,
+        "success_rate": 0.008989996430331937,
+        "shotgun_rate": 0.1102527664927162,
+        "explosive_rate": 0.0046355963895357705
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.062728564967371,
+          "epa_vs_league": 0.2957456764876914,
+          "success_rate_vs_league": 0.08716805582477227,
+          "team_pass_rate": 0.9904761904761905,
+          "team_epa": 0.14449428571428571,
+          "sample_size": 105
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.1594254091604851,
+          "epa_vs_league": 0.16716187448486988,
+          "success_rate_vs_league": 0.009419521959260546,
+          "team_pass_rate": 0.5263157894736842,
+          "team_epa": 0.0843157894736842,
+          "sample_size": 19
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.10482799350361738,
+          "epa_vs_league": 0.5375725380186033,
+          "success_rate_vs_league": 0.12623652738815894,
+          "team_pass_rate": 0.6153846153846154,
+          "team_epa": 0.9377923076923077,
+          "sample_size": 13
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.045307443365695754,
+          "epa_vs_league": 0.08516498381877023,
+          "success_rate_vs_league": 0.1909385113268608,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.033953333333333335,
+          "sample_size": 15
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.027187182039736357,
+          "epa_vs_league": -0.04120203274812163,
+          "success_rate_vs_league": -0.039645181068412416,
+          "team_pass_rate": 0.5501792114695341,
+          "team_epa": -0.07235519713261648,
+          "sample_size": 558
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.0914164277084758,
+          "epa_vs_league": 0.11387005400212516,
+          "success_rate_vs_league": 0.05178963916100199,
+          "team_pass_rate": 0.8130434782608695,
+          "team_epa": 0.056649565217391305,
+          "sample_size": 230
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.11349165376011006,
+          "epa_vs_league": 0.13287904133258877,
+          "success_rate_vs_league": 0.05091329252403082,
+          "team_pass_rate": 0.6666666666666666,
+          "team_epa": 0.19050204081632652,
+          "sample_size": 147
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.11787545787545795,
+          "epa_vs_league": 0.21730175457875456,
+          "success_rate_vs_league": 0.018205128205128207,
+          "team_pass_rate": 0.6483516483516484,
+          "team_epa": 0.20542637362637362,
+          "sample_size": 91
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.00014766004965072188,
+          "epa_vs_league": -0.05916281550799672,
+          "success_rate_vs_league": -0.021816772335889745,
+          "team_pass_rate": 0.38596491228070173,
+          "team_epa": -0.02134561403508772,
+          "sample_size": 57
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.04064254659063593,
+          "epa_vs_league": -0.0703797388084158,
+          "success_rate_vs_league": 0.024660811430818608,
+          "team_pass_rate": 0.9605263157894737,
+          "team_epa": -0.05389605263157895,
+          "sample_size": 76
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "profile2": {
+      "team": "BAL",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.5762426284751474,
+        "epa_per_play": 0.06281903959561921,
+        "success_rate": 0.4700926705981466,
+        "shotgun_rate": 0.8475147430497051,
+        "no_huddle_rate": 0.07076663858466722,
+        "explosive_rate": 0.06655433866891322,
+        "pass_epa": 0.0877514619883041,
+        "rush_epa": 0.028914910536779324,
+        "total_plays": 1187
+      },
+      "defense": {
+        "epa_per_play": -0.14200286885245902,
+        "success_rate": 0.39918032786885244,
+        "pass_epa": -0.1635957055214724,
+        "rush_epa": -0.09855061728395062
+      },
+      "deviations": {
+        "pass_rate": -0.03670680972709983,
+        "epa_per_play": 0.09017637667427089,
+        "success_rate": 0.04337918745207914,
+        "shotgun_rate": 0.1279641812519523,
+        "explosive_rate": 0.00764984428689075
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.03164372940492344,
+          "epa_vs_league": -0.01690575208373718,
+          "success_rate_vs_league": 0.040414809071525504,
+          "team_pass_rate": 0.8961038961038961,
+          "team_epa": -0.16815714285714287,
+          "sample_size": 77
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.19041979207790496,
+          "epa_vs_league": 0.1719637320700092,
+          "success_rate_vs_league": 0.17660218449796028,
+          "team_pass_rate": 0.17647058823529413,
+          "team_epa": 0.08911764705882352,
+          "sample_size": 17
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.29627090759528374,
+          "epa_vs_league": 0.6829016588977241,
+          "success_rate_vs_league": 0.07129147244310396,
+          "team_pass_rate": 0.21428571428571427,
+          "team_epa": 1.0831214285714286,
+          "sample_size": 14
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.19711679905854665,
+          "epa_vs_league": 0.002548014121800536,
+          "success_rate_vs_league": -0.021182700794351306,
+          "team_pass_rate": 0.09090909090909091,
+          "team_epa": -0.04866363636363636,
+          "sample_size": 11
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.006226743433742521,
+          "epa_vs_league": 0.07265336162315364,
+          "success_rate_vs_league": 0.03156221644171464,
+          "team_pass_rate": 0.5167652859960552,
+          "team_epa": 0.041500197238658776,
+          "sample_size": 507
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.02047821260550098,
+          "epa_vs_league": 0.10805890983736544,
+          "success_rate_vs_league": 0.06437545151798141,
+          "team_pass_rate": 0.7421052631578947,
+          "team_epa": 0.05083842105263158,
+          "sample_size": 190
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.06002432797504975,
+          "epa_vs_league": 0.02998384983133076,
+          "success_rate_vs_league": 0.006555823509027503,
+          "team_pass_rate": 0.4931506849315068,
+          "team_epa": 0.0876068493150685,
+          "sample_size": 146
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.1668398268398268,
+          "epa_vs_league": 0.07824962337662338,
+          "success_rate_vs_league": 0.019870129870129927,
+          "team_pass_rate": 0.36363636363636365,
+          "team_epa": 0.06637424242424242,
+          "sample_size": 66
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.018465513506823017,
+          "epa_vs_league": 0.06507691617414983,
+          "success_rate_vs_league": 0.12833802642572023,
+          "team_pass_rate": 0.36764705882352944,
+          "team_epa": 0.10289411764705883,
+          "sample_size": 68
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.010348788940697129,
+          "epa_vs_league": 0.1021814301022329,
+          "success_rate_vs_league": 0.005994960757624013,
+          "team_pass_rate": 0.9302325581395349,
+          "team_epa": 0.11866511627906977,
+          "sample_size": 86
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 2
+}
+
+--- TEST 19: Bills versus Dolphins matchup ---
+{
+  "text": "**BUF vs MIA**\n\n**Offensive Efficiency:**\n\u2022 BUF: +0.115 EPA/play\n\u2022 MIA: +0.080 EPA/play\n\u2022 Edge: BUF (+0.035)\n\n**Tendencies:**\n\u2022 BUF pass rate: 59.2%\n\u2022 MIA pass rate: 60.0%\n\n**Matchup Notes:**\n\u2022 BUF's strong passing attack vs MIA's weak pass defense",
+  "pipeline": "team_comparison",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "team1": "BUF",
+    "team2": "MIA",
+    "season": 2023,
+    "comparison": {
+      "teams": [
+        "BUF",
+        "MIA"
+      ],
+      "season": 2023,
+      "offense": {
+        "epa_per_play": [
+          0.11498876313662086,
+          0.08043031963470319
+        ],
+        "pass_rate": [
+          0.5917542441390461,
+          0.6
+        ],
+        "success_rate": [
+          0.49474535165723527,
+          0.4639269406392694
+        ]
+      },
+      "defense": {
+        "epa_per_play": [
+          -0.0655226618705036,
+          -0.03276899641577061
+        ]
+      },
+      "matchup_notes": [
+        "BUF's strong passing attack vs MIA's weak pass defense"
+      ]
+    },
+    "profile1": {
+      "team": "BUF",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.5917542441390461,
+        "epa_per_play": 0.11498876313662086,
+        "success_rate": 0.49474535165723527,
+        "shotgun_rate": 0.7372675828617623,
+        "no_huddle_rate": 0.12126111560226355,
+        "explosive_rate": 0.050121261115602264,
+        "pass_epa": 0.17435724043715847,
+        "rush_epa": 0.028933861386138612,
+        "total_plays": 1237
+      },
+      "defense": {
+        "epa_per_play": -0.0655226618705036,
+        "success_rate": 0.4262589928057554,
+        "pass_epa": -0.06955448179271709,
+        "rush_epa": -0.058289698492462315
+      },
+      "deviations": {
+        "pass_rate": -0.02119519406320114,
+        "epa_per_play": 0.14234610021527255,
+        "success_rate": 0.06803186851116783,
+        "shotgun_rate": 0.01771702106400952,
+        "explosive_rate": -0.008783233266420207
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.027308554266461393,
+          "epa_vs_league": 0.18676599751497872,
+          "success_rate_vs_league": 0.08652600125013343,
+          "team_pass_rate": 0.9550561797752809,
+          "team_epa": 0.035514606741573036,
+          "sample_size": 89
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.1361211495439683,
+          "epa_vs_league": 0.13206146962657028,
+          "success_rate_vs_league": -0.027017725004302162,
+          "team_pass_rate": 0.23076923076923078,
+          "team_epa": 0.04921538461538461,
+          "sample_size": 13
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.06839074654005461,
+          "epa_vs_league": 0.009774967168400817,
+          "success_rate_vs_league": -0.01141529447418932,
+          "team_pass_rate": 0.5789473684210527,
+          "team_epa": 0.40999473684210525,
+          "sample_size": 19
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.1341797361214837,
+          "epa_vs_league": 0.060288573562359976,
+          "success_rate_vs_league": -0.0911127707244212,
+          "team_pass_rate": 0.15384615384615385,
+          "team_epa": 0.009076923076923076,
+          "sample_size": 13
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.011541647750408446,
+          "epa_vs_league": 0.049996103315792566,
+          "success_rate_vs_league": 0.04763490867412501,
+          "team_pass_rate": 0.5114503816793893,
+          "team_epa": 0.01884293893129771,
+          "sample_size": 524
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.11532947118673675,
+          "epa_vs_league": 0.14641722791516865,
+          "success_rate_vs_league": 0.03548529133491507,
+          "team_pass_rate": 0.8369565217391305,
+          "team_epa": 0.08919673913043479,
+          "sample_size": 184
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.004517294785751136,
+          "epa_vs_league": 0.2941539235931854,
+          "success_rate_vs_league": 0.11043710204784035,
+          "team_pass_rate": 0.5576923076923077,
+          "team_epa": 0.3517769230769231,
+          "sample_size": 156
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.19714285714285712,
+          "epa_vs_league": 0.25638155379188715,
+          "success_rate_vs_league": 0.11751322751322757,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.24450617283950618,
+          "sample_size": 81
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.09861257233035248,
+          "epa_vs_league": 0.070042798527091,
+          "success_rate_vs_league": 0.06436743819042612,
+          "team_pass_rate": 0.2875,
+          "team_epa": 0.10786,
+          "sample_size": 80
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.012548663233594715,
+          "epa_vs_league": 0.28721766517451447,
+          "success_rate_vs_league": 0.09116152266837191,
+          "team_pass_rate": 0.9324324324324325,
+          "team_epa": 0.30370135135135135,
+          "sample_size": 74
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "profile2": {
+      "team": "MIA",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.6,
+        "epa_per_play": 0.08043031963470319,
+        "success_rate": 0.4639269406392694,
+        "shotgun_rate": 0.8073059360730593,
+        "no_huddle_rate": 0.038356164383561646,
+        "explosive_rate": 0.07031963470319634,
+        "pass_epa": 0.12643531202435312,
+        "rush_epa": 0.01142283105022831,
+        "total_plays": 1095
+      },
+      "defense": {
+        "epa_per_play": -0.03276899641577061,
+        "success_rate": 0.42473118279569894,
+        "pass_epa": 0.01472865329512894,
+        "rush_epa": -0.11208325358851674
+      },
+      "deviations": {
+        "pass_rate": -0.012949438202247254,
+        "epa_per_play": 0.10778765671335488,
+        "success_rate": 0.037213457493201985,
+        "shotgun_rate": 0.08775537427530655,
+        "explosive_rate": 0.01141514032117387
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.036958256844121684,
+          "epa_vs_league": 0.2771125672439939,
+          "success_rate_vs_league": 0.08044536674914199,
+          "team_pass_rate": 0.9647058823529412,
+          "team_epa": 0.12586117647058823,
+          "sample_size": 85
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.05416225126574825,
+          "epa_vs_league": 0.23488292711644884,
+          "success_rate_vs_league": 0.16731425880136586,
+          "team_pass_rate": 0.42105263157894735,
+          "team_epa": 0.15203684210526316,
+          "sample_size": 19
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.060871949547573356,
+          "epa_vs_league": -0.7294769125308473,
+          "success_rate_vs_league": -0.14299424184261034,
+          "team_pass_rate": 0.5714285714285714,
+          "team_epa": -0.32925714285714286,
+          "sample_size": 14
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.021359223300970898,
+          "epa_vs_league": -0.08733501618122978,
+          "success_rate_vs_league": -0.009061488673139162,
+          "team_pass_rate": 0.26666666666666666,
+          "team_epa": -0.13854666666666668,
+          "sample_size": 15
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.07449417535254449,
+          "epa_vs_league": 0.10410938756046051,
+          "success_rate_vs_league": 0.062197697390830475,
+          "team_pass_rate": 0.44849785407725323,
+          "team_epa": 0.07295622317596566,
+          "sample_size": 466
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.005645676720333559,
+          "epa_vs_league": 0.07515442817867324,
+          "success_rate_vs_league": 0.0048858183441377045,
+          "team_pass_rate": 0.7272727272727273,
+          "team_epa": 0.017933939393939394,
+          "sample_size": 165
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.025337383787658263,
+          "epa_vs_league": 0.07887121539229532,
+          "success_rate_vs_league": 0.022971537309548318,
+          "team_pass_rate": 0.5785123966942148,
+          "team_epa": 0.13649421487603305,
+          "sample_size": 121
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.20285714285714285,
+          "epa_vs_league": 0.2404020476190476,
+          "success_rate_vs_league": -0.0195238095238095,
+          "team_pass_rate": 0.7333333333333333,
+          "team_epa": 0.22852666666666666,
+          "sample_size": 60
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.11388742766964755,
+          "epa_vs_league": 0.13899643489072738,
+          "success_rate_vs_league": 0.027625013948001875,
+          "team_pass_rate": 0.5,
+          "team_epa": 0.17681363636363637,
+          "sample_size": 66
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.034661685346616844,
+          "epa_vs_league": -0.007376110419261105,
+          "success_rate_vs_league": -0.02677459526774595,
+          "team_pass_rate": 0.9545454545454546,
+          "team_epa": 0.009107575757575757,
+          "sample_size": 66
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 20: How do the Eagles match up against Dallas ---
+{
+  "text": "**PHI vs DAL**\n\n**Offensive Efficiency:**\n\u2022 PHI: +0.044 EPA/play\n\u2022 DAL: +0.103 EPA/play\n\u2022 Edge: DAL (+0.059)\n\n**Tendencies:**\n\u2022 PHI pass rate: 59.8%\n\u2022 DAL pass rate: 63.1%",
+  "pipeline": "team_comparison",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "team1": "PHI",
+    "team2": "DAL",
+    "season": 2023,
+    "comparison": {
+      "teams": [
+        "PHI",
+        "DAL"
+      ],
+      "season": 2023,
+      "offense": {
+        "epa_per_play": [
+          0.04376364421416235,
+          0.10250376569037657
+        ],
+        "pass_rate": [
+          0.5975820379965457,
+          0.6309623430962343
+        ],
+        "success_rate": [
+          0.45164075993091535,
+          0.4811715481171548
+        ]
+      },
+      "defense": {
+        "epa_per_play": [
+          0.05631247863247863,
+          -0.08432585227272728
+        ]
+      },
+      "matchup_notes": []
+    },
+    "profile1": {
+      "team": "PHI",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.5975820379965457,
+        "epa_per_play": 0.04376364421416235,
+        "success_rate": 0.45164075993091535,
+        "shotgun_rate": 0.9378238341968912,
+        "no_huddle_rate": 0.1692573402417962,
+        "explosive_rate": 0.054404145077720206,
+        "pass_epa": 0.08213092485549132,
+        "rush_epa": -0.013210944206008584,
+        "total_plays": 1158
+      },
+      "defense": {
+        "epa_per_play": 0.05631247863247863,
+        "success_rate": 0.44700854700854703,
+        "pass_epa": 0.08282735483870968,
+        "rush_epa": 0.004289620253164557
+      },
+      "deviations": {
+        "pass_rate": -0.015367400205701487,
+        "epa_per_play": 0.07112098129281404,
+        "success_rate": 0.024927276784847907,
+        "shotgun_rate": 0.2182732723991384,
+        "explosive_rate": -0.004500349304302265
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.051343131126797004,
+          "epa_vs_league": 0.1176468963913832,
+          "success_rate_vs_league": 0.019110270913054783,
+          "team_pass_rate": 0.8764044943820225,
+          "team_epa": -0.033604494382022475,
+          "sample_size": 89
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.1168903803131991,
+          "epa_vs_league": 0.29262108501118567,
+          "success_rate_vs_league": 0.13836689038031325,
+          "team_pass_rate": 0.25,
+          "team_epa": 0.209775,
+          "sample_size": 20
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.21055662188099805,
+          "epa_vs_league": 0.7176802303262955,
+          "success_rate_vs_league": 0.10700575815738966,
+          "team_pass_rate": 0.3,
+          "team_epa": 1.1179,
+          "sample_size": 20
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.19711679905854665,
+          "epa_vs_league": -0.877706531332745,
+          "success_rate_vs_league": -0.021182700794351306,
+          "team_pass_rate": 0.09090909090909091,
+          "team_epa": -0.9289181818181819,
+          "sample_size": 11
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.02265112409717318,
+          "epa_vs_league": -0.05180907627940556,
+          "success_rate_vs_league": 0.0007406069415223371,
+          "team_pass_rate": 0.5456431535269709,
+          "team_epa": -0.08296224066390041,
+          "sample_size": 482
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.048372949447606284,
+          "epa_vs_league": 0.15995898878473386,
+          "success_rate_vs_league": 0.03700703046534981,
+          "team_pass_rate": 0.77,
+          "team_epa": 0.1027385,
+          "sample_size": 200
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.00931536378374953,
+          "epa_vs_league": 0.00443138648117454,
+          "success_rate_vs_league": -0.03429974005742287,
+          "team_pass_rate": 0.543859649122807,
+          "team_epa": 0.06205438596491228,
+          "sample_size": 114
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.09108225108225104,
+          "epa_vs_league": 0.24425416883116882,
+          "success_rate_vs_league": 0.08047619047619048,
+          "team_pass_rate": 0.4393939393939394,
+          "team_epa": 0.23237878787878788,
+          "sample_size": 66
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.010946251199059287,
+          "epa_vs_league": 0.04731956323297336,
+          "success_rate_vs_league": 0.09892626171983787,
+          "team_pass_rate": 0.39705882352941174,
+          "team_epa": 0.08513676470588236,
+          "sample_size": 68
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.16663701595208447,
+          "epa_vs_league": 0.41594098914783845,
+          "success_rate_vs_league": 0.07062800213485138,
+          "team_pass_rate": 0.7532467532467533,
+          "team_epa": 0.4324246753246753,
+          "sample_size": 77
+        }
+      },
+      "strengths": [
+        "offensive_efficiency"
+      ],
+      "weaknesses": [
+        "overall_defense"
+      ]
+    },
+    "profile2": {
+      "team": "DAL",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.6309623430962343,
+        "epa_per_play": 0.10250376569037657,
+        "success_rate": 0.4811715481171548,
+        "shotgun_rate": 0.6569037656903766,
+        "no_huddle_rate": 0.07447698744769875,
+        "explosive_rate": 0.06610878661087866,
+        "pass_epa": 0.17659827586206897,
+        "rush_epa": -0.02417936507936508,
+        "total_plays": 1195
+      },
+      "defense": {
+        "epa_per_play": -0.08432585227272728,
+        "success_rate": 0.4365530303030303,
+        "pass_epa": -0.06548496732026143,
+        "rush_epa": -0.11029572072072072
+      },
+      "deviations": {
+        "pass_rate": 0.018012904893987103,
+        "epa_per_play": 0.12986110276902826,
+        "success_rate": 0.05445806497108735,
+        "shotgun_rate": -0.06264679610737622,
+        "explosive_rate": 0.007204292228856185
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.0018216995828935767,
+          "epa_vs_league": 0.35529953892155386,
+          "success_rate_vs_league": 0.0737641757542255,
+          "team_pass_rate": 0.9259259259259259,
+          "team_epa": 0.20404814814814815,
+          "sample_size": 81
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.1548487501215835,
+          "epa_vs_league": -0.1520278280322926,
+          "success_rate_vs_league": 0.023149499075965363,
+          "team_pass_rate": 0.5217391304347826,
+          "team_epa": -0.23487391304347827,
+          "sample_size": 23
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.12102232548742298,
+          "epa_vs_league": 0.3522802303262955,
+          "success_rate_vs_league": 0.041216284473179154,
+          "team_pass_rate": 0.631578947368421,
+          "team_epa": 0.7525,
+          "sample_size": 19
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.173512571570824,
+          "epa_vs_league": -0.5169268110530247,
+          "success_rate_vs_league": -0.0911127707244212,
+          "team_pass_rate": 0.46153846153846156,
+          "team_epa": -0.5681384615384616,
+          "sample_size": 13
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.028942797454112656,
+          "epa_vs_league": 0.0796710869914195,
+          "success_rate_vs_league": 0.042014660232713996,
+          "team_pass_rate": 0.5519348268839104,
+          "team_epa": 0.04851792260692464,
+          "sample_size": 491
+        },
+        "down2_long": {
+          "pass_rate_vs_league": -0.025494453867310862,
+          "epa_vs_league": 0.15824645563556258,
+          "success_rate_vs_league": 0.0589959807415929,
+          "team_pass_rate": 0.6961325966850829,
+          "team_epa": 0.10102596685082874,
+          "sample_size": 181
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.08767005751597867,
+          "epa_vs_league": 0.12077559206555803,
+          "success_rate_vs_league": 0.02710376871450698,
+          "team_pass_rate": 0.6408450704225352,
+          "team_epa": 0.17839859154929577,
+          "sample_size": 142
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.08490842490842498,
+          "epa_vs_league": 0.06628179120879121,
+          "success_rate_vs_league": 0.04201465201465204,
+          "team_pass_rate": 0.6153846153846154,
+          "team_epa": 0.054406410256410256,
+          "sample_size": 78
+        },
+        "down2_short": {
+          "pass_rate_vs_league": 0.00277631655853644,
+          "epa_vs_league": -0.1762324792506868,
+          "success_rate_vs_league": -0.020354784031796136,
+          "team_pass_rate": 0.3888888888888889,
+          "team_epa": -0.1384152777777778,
+          "sample_size": 72
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.007827074174656223,
+          "epa_vs_league": 0.5822801692448499,
+          "success_rate_vs_league": 0.16654413419556185,
+          "team_pass_rate": 0.927710843373494,
+          "team_epa": 0.5987638554216868,
+          "sample_size": 83
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 21: How often do the Ravens pass ---
+{
+  "text": "**BAL Tendencies**\n\n**Overall:**\n\u2022 Pass Rate: 57.6%\n\u2022 Shotgun Rate: 84.8%\n\u2022 Passes 3.7% less than league average",
+  "pipeline": "team_tendencies",
+  "confidence": 0.7,
+  "success": true,
+  "data": {
+    "team": "BAL",
+    "season": 2023,
+    "overall_tendencies": {
+      "pass_rate": 0.5762426284751474,
+      "shotgun_rate": 0.8475147430497051,
+      "no_huddle_rate": 0.07076663858466722
+    },
+    "deviations": {
+      "pass_rate": -0.03670680972709983,
+      "epa_per_play": 0.09017637667427089,
+      "success_rate": 0.04337918745207914,
+      "shotgun_rate": 0.1279641812519523,
+      "explosive_rate": 0.00764984428689075
+    },
+    "situational": {
+      "down3_long": {
+        "pass_rate_vs_league": -0.03164372940492344,
+        "epa_vs_league": -0.01690575208373718,
+        "success_rate_vs_league": 0.040414809071525504,
+        "team_pass_rate": 0.8961038961038961,
+        "team_epa": -0.16815714285714287,
+        "sample_size": 77
+      },
+      "down1_medium": {
+        "pass_rate_vs_league": -0.19041979207790496,
+        "epa_vs_league": 0.1719637320700092,
+        "success_rate_vs_league": 0.17660218449796028,
+        "team_pass_rate": 0.17647058823529413,
+        "team_epa": 0.08911764705882352,
+        "sample_size": 17
+      },
+      "down4_short": {
+        "pass_rate_vs_league": -0.29627090759528374,
+        "epa_vs_league": 0.6829016588977241,
+        "success_rate_vs_league": 0.07129147244310396,
+        "team_pass_rate": 0.21428571428571427,
+        "team_epa": 1.0831214285714286,
+        "sample_size": 14
+      },
+      "down1_short": {
+        "pass_rate_vs_league": -0.19711679905854665,
+        "epa_vs_league": 0.002548014121800536,
+        "success_rate_vs_league": -0.021182700794351306,
+        "team_pass_rate": 0.09090909090909091,
+        "team_epa": -0.04866363636363636,
+        "sample_size": 11
+      },
+      "down1_long": {
+        "pass_rate_vs_league": -0.006226743433742521,
+        "epa_vs_league": 0.07265336162315364,
+        "success_rate_vs_league": 0.03156221644171464,
+        "team_pass_rate": 0.5167652859960552,
+        "team_epa": 0.041500197238658776,
+        "sample_size": 507
+      },
+      "down2_long": {
+        "pass_rate_vs_league": 0.02047821260550098,
+        "epa_vs_league": 0.10805890983736544,
+        "success_rate_vs_league": 0.06437545151798141,
+        "team_pass_rate": 0.7421052631578947,
+        "team_epa": 0.05083842105263158,
+        "sample_size": 190
+      },
+      "down2_medium": {
+        "pass_rate_vs_league": -0.06002432797504975,
+        "epa_vs_league": 0.02998384983133076,
+        "success_rate_vs_league": 0.006555823509027503,
+        "team_pass_rate": 0.4931506849315068,
+        "team_epa": 0.0876068493150685,
+        "sample_size": 146
+      },
+      "down3_short": {
+        "pass_rate_vs_league": -0.1668398268398268,
+        "epa_vs_league": 0.07824962337662338,
+        "success_rate_vs_league": 0.019870129870129927,
+        "team_pass_rate": 0.36363636363636365,
+        "team_epa": 0.06637424242424242,
+        "sample_size": 66
+      },
+      "down2_short": {
+        "pass_rate_vs_league": -0.018465513506823017,
+        "epa_vs_league": 0.06507691617414983,
+        "success_rate_vs_league": 0.12833802642572023,
+        "team_pass_rate": 0.36764705882352944,
+        "team_epa": 0.10289411764705883,
+        "sample_size": 68
+      },
+      "down3_medium": {
+        "pass_rate_vs_league": 0.010348788940697129,
+        "epa_vs_league": 0.1021814301022329,
+        "success_rate_vs_league": 0.005994960757624013,
+        "team_pass_rate": 0.9302325581395349,
+        "team_epa": 0.11866511627906977,
+        "sample_size": 86
+      }
+    },
+    "specific_situation": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 2
+}
+
+--- TEST 22: Chiefs tendencies on third down ---
+{
+  "text": "**KC Tendencies**\n\n**Overall:**\n\u2022 Pass Rate: 66.7%\n\u2022 Shotgun Rate: 83.0%\n\u2022 Passes 5.4% more than league average",
+  "pipeline": "team_tendencies",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "team": "KC",
+    "season": 2023,
+    "overall_tendencies": {
+      "pass_rate": 0.6671709531013615,
+      "shotgun_rate": 0.829803328290469,
+      "no_huddle_rate": 0.02798789712556732
+    },
+    "deviations": {
+      "pass_rate": 0.05422151489911431,
+      "epa_per_play": 0.05529478034642778,
+      "success_rate": 0.008989996430331937,
+      "shotgun_rate": 0.1102527664927162,
+      "explosive_rate": 0.0046355963895357705
+    },
+    "situational": {
+      "down3_long": {
+        "pass_rate_vs_league": 0.062728564967371,
+        "epa_vs_league": 0.2957456764876914,
+        "success_rate_vs_league": 0.08716805582477227,
+        "team_pass_rate": 0.9904761904761905,
+        "team_epa": 0.14449428571428571,
+        "sample_size": 105
+      },
+      "down1_medium": {
+        "pass_rate_vs_league": 0.1594254091604851,
+        "epa_vs_league": 0.16716187448486988,
+        "success_rate_vs_league": 0.009419521959260546,
+        "team_pass_rate": 0.5263157894736842,
+        "team_epa": 0.0843157894736842,
+        "sample_size": 19
+      },
+      "down4_short": {
+        "pass_rate_vs_league": 0.10482799350361738,
+        "epa_vs_league": 0.5375725380186033,
+        "success_rate_vs_league": 0.12623652738815894,
+        "team_pass_rate": 0.6153846153846154,
+        "team_epa": 0.9377923076923077,
+        "sample_size": 13
+      },
+      "down1_short": {
+        "pass_rate_vs_league": 0.045307443365695754,
+        "epa_vs_league": 0.08516498381877023,
+        "success_rate_vs_league": 0.1909385113268608,
+        "team_pass_rate": 0.3333333333333333,
+        "team_epa": 0.033953333333333335,
+        "sample_size": 15
+      },
+      "down1_long": {
+        "pass_rate_vs_league": 0.027187182039736357,
+        "epa_vs_league": -0.04120203274812163,
+        "success_rate_vs_league": -0.039645181068412416,
+        "team_pass_rate": 0.5501792114695341,
+        "team_epa": -0.07235519713261648,
+        "sample_size": 558
+      },
+      "down2_long": {
+        "pass_rate_vs_league": 0.0914164277084758,
+        "epa_vs_league": 0.11387005400212516,
+        "success_rate_vs_league": 0.05178963916100199,
+        "team_pass_rate": 0.8130434782608695,
+        "team_epa": 0.056649565217391305,
+        "sample_size": 230
+      },
+      "down2_medium": {
+        "pass_rate_vs_league": 0.11349165376011006,
+        "epa_vs_league": 0.13287904133258877,
+        "success_rate_vs_league": 0.05091329252403082,
+        "team_pass_rate": 0.6666666666666666,
+        "team_epa": 0.19050204081632652,
+        "sample_size": 147
+      },
+      "down3_short": {
+        "pass_rate_vs_league": 0.11787545787545795,
+        "epa_vs_league": 0.21730175457875456,
+        "success_rate_vs_league": 0.018205128205128207,
+        "team_pass_rate": 0.6483516483516484,
+        "team_epa": 0.20542637362637362,
+        "sample_size": 91
+      },
+      "down2_short": {
+        "pass_rate_vs_league": -0.00014766004965072188,
+        "epa_vs_league": -0.05916281550799672,
+        "success_rate_vs_league": -0.021816772335889745,
+        "team_pass_rate": 0.38596491228070173,
+        "team_epa": -0.02134561403508772,
+        "sample_size": 57
+      },
+      "down3_medium": {
+        "pass_rate_vs_league": 0.04064254659063593,
+        "epa_vs_league": -0.0703797388084158,
+        "success_rate_vs_league": 0.024660811430818608,
+        "team_pass_rate": 0.9605263157894737,
+        "team_epa": -0.05389605263157895,
+        "sample_size": 76
+      }
+    },
+    "specific_situation": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 23: what is the KC offensive style ---
+{
+  "text": "**KC Tendencies**\n\n**Overall:**\n\u2022 Pass Rate: 66.7%\n\u2022 Shotgun Rate: 83.0%\n\u2022 Passes 5.4% more than league average",
+  "pipeline": "team_tendencies",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "team": "KC",
+    "season": 2023,
+    "overall_tendencies": {
+      "pass_rate": 0.6671709531013615,
+      "shotgun_rate": 0.829803328290469,
+      "no_huddle_rate": 0.02798789712556732
+    },
+    "deviations": {
+      "pass_rate": 0.05422151489911431,
+      "epa_per_play": 0.05529478034642778,
+      "success_rate": 0.008989996430331937,
+      "shotgun_rate": 0.1102527664927162,
+      "explosive_rate": 0.0046355963895357705
+    },
+    "situational": {
+      "down3_long": {
+        "pass_rate_vs_league": 0.062728564967371,
+        "epa_vs_league": 0.2957456764876914,
+        "success_rate_vs_league": 0.08716805582477227,
+        "team_pass_rate": 0.9904761904761905,
+        "team_epa": 0.14449428571428571,
+        "sample_size": 105
+      },
+      "down1_medium": {
+        "pass_rate_vs_league": 0.1594254091604851,
+        "epa_vs_league": 0.16716187448486988,
+        "success_rate_vs_league": 0.009419521959260546,
+        "team_pass_rate": 0.5263157894736842,
+        "team_epa": 0.0843157894736842,
+        "sample_size": 19
+      },
+      "down4_short": {
+        "pass_rate_vs_league": 0.10482799350361738,
+        "epa_vs_league": 0.5375725380186033,
+        "success_rate_vs_league": 0.12623652738815894,
+        "team_pass_rate": 0.6153846153846154,
+        "team_epa": 0.9377923076923077,
+        "sample_size": 13
+      },
+      "down1_short": {
+        "pass_rate_vs_league": 0.045307443365695754,
+        "epa_vs_league": 0.08516498381877023,
+        "success_rate_vs_league": 0.1909385113268608,
+        "team_pass_rate": 0.3333333333333333,
+        "team_epa": 0.033953333333333335,
+        "sample_size": 15
+      },
+      "down1_long": {
+        "pass_rate_vs_league": 0.027187182039736357,
+        "epa_vs_league": -0.04120203274812163,
+        "success_rate_vs_league": -0.039645181068412416,
+        "team_pass_rate": 0.5501792114695341,
+        "team_epa": -0.07235519713261648,
+        "sample_size": 558
+      },
+      "down2_long": {
+        "pass_rate_vs_league": 0.0914164277084758,
+        "epa_vs_league": 0.11387005400212516,
+        "success_rate_vs_league": 0.05178963916100199,
+        "team_pass_rate": 0.8130434782608695,
+        "team_epa": 0.056649565217391305,
+        "sample_size": 230
+      },
+      "down2_medium": {
+        "pass_rate_vs_league": 0.11349165376011006,
+        "epa_vs_league": 0.13287904133258877,
+        "success_rate_vs_league": 0.05091329252403082,
+        "team_pass_rate": 0.6666666666666666,
+        "team_epa": 0.19050204081632652,
+        "sample_size": 147
+      },
+      "down3_short": {
+        "pass_rate_vs_league": 0.11787545787545795,
+        "epa_vs_league": 0.21730175457875456,
+        "success_rate_vs_league": 0.018205128205128207,
+        "team_pass_rate": 0.6483516483516484,
+        "team_epa": 0.20542637362637362,
+        "sample_size": 91
+      },
+      "down2_short": {
+        "pass_rate_vs_league": -0.00014766004965072188,
+        "epa_vs_league": -0.05916281550799672,
+        "success_rate_vs_league": -0.021816772335889745,
+        "team_pass_rate": 0.38596491228070173,
+        "team_epa": -0.02134561403508772,
+        "sample_size": 57
+      },
+      "down3_medium": {
+        "pass_rate_vs_league": 0.04064254659063593,
+        "epa_vs_league": -0.0703797388084158,
+        "success_rate_vs_league": 0.024660811430818608,
+        "team_pass_rate": 0.9605263157894737,
+        "team_epa": -0.05389605263157895,
+        "sample_size": 76
+      }
+    },
+    "specific_situation": null
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 24: top 10 running backs by EPA ---
+{
+  "text": "**Top RBs by Epa Per Play**\n\n1. **00-0033873**\n   EPA: +0.488 (70 attempts, 30% shrinkage)\n2. **00-0034857**\n   EPA: +0.479 (121 attempts, 20% shrinkage)\n3. **00-0039150**\n   EPA: +0.364 (36 attempts, 46% shrinkage)\n4. **00-0037834**\n   EPA: +0.328 (38 attempts, 44% shrinkage)\n5. **00-0033077**\n   EPA: +0.323 (51 attempts, 37% shrinkage)\n6. **00-0037077**\n   EPA: +0.313 (45 attempts, 40% shrinkage)\n7. **00-0029263**\n   EPA: +0.258 (66 attempts, 31% shrinkage)\n8. **00-0039040**\n   EPA: +0.224 (109 attempts, 22% shrinkage)\n9. **00-0038454**\n   EPA: +0.210 (47 attempts, 39% shrinkage)\n10. **00-0036945**\n   EPA: +0.192 (117 attempts, 20% shrinkage)",
+  "pipeline": "player_rankings",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "position": "RB",
+    "stat_type": "rushing",
+    "metric": "epa_per_play",
+    "count": 10,
+    "players": [
+      {
+        "player_id": "00-0033873",
+        "shrunk_value": 0.4879,
+        "raw_value": 0.7144014285714285,
+        "attempts": 70,
+        "shrinkage_applied": 0.3,
+        "epa_per_play": 0.4879,
+        "epa_ci_lower": 0.1829,
+        "epa_ci_upper": 0.793,
+        "success_rate": 0.6136,
+        "player_name": "00-0033873"
+      },
+      {
+        "player_id": "00-0034857",
+        "shrunk_value": 0.4786,
+        "raw_value": 0.6073545454545455,
+        "attempts": 121,
+        "shrinkage_applied": 0.199,
+        "epa_per_play": 0.4786,
+        "epa_ci_lower": 0.2647,
+        "epa_ci_upper": 0.6926,
+        "success_rate": 0.6514,
+        "player_name": "00-0034857"
+      },
+      {
+        "player_id": "00-0039150",
+        "shrunk_value": 0.364,
+        "raw_value": 0.701075,
+        "attempts": 36,
+        "shrinkage_applied": 0.455,
+        "epa_per_play": 0.364,
+        "epa_ci_lower": -0.112,
+        "epa_ci_upper": 0.84,
+        "success_rate": 0.5508,
+        "player_name": "00-0039150"
+      },
+      {
+        "player_id": "00-0037834",
+        "shrunk_value": 0.3284,
+        "raw_value": 0.619528947368421,
+        "attempts": 38,
+        "shrinkage_applied": 0.441,
+        "epa_per_play": 0.3284,
+        "epa_ci_lower": -0.1307,
+        "epa_ci_upper": 0.7874,
+        "success_rate": 0.5788,
+        "player_name": "00-0037834"
+      },
+      {
+        "player_id": "00-0033077",
+        "shrunk_value": 0.3226,
+        "raw_value": 0.5362431372549019,
+        "attempts": 51,
+        "shrinkage_applied": 0.37,
+        "epa_per_play": 0.3226,
+        "epa_ci_lower": -0.0541,
+        "epa_ci_upper": 0.6994,
+        "success_rate": 0.6217,
+        "player_name": "00-0033077"
+      },
+      {
+        "player_id": "00-0037077",
+        "shrunk_value": 0.3129,
+        "raw_value": 0.5485377777777778,
+        "attempts": 45,
+        "shrinkage_applied": 0.4,
+        "epa_per_play": 0.3129,
+        "epa_ci_lower": -0.0968,
+        "epa_ci_upper": 0.7227,
+        "success_rate": 0.4981,
+        "player_name": "00-0037077"
+      },
+      {
+        "player_id": "00-0029263",
+        "shrunk_value": 0.2578,
+        "raw_value": 0.3933151515151515,
+        "attempts": 66,
+        "shrinkage_applied": 0.312,
+        "epa_per_play": 0.2578,
+        "epa_ci_lower": -0.0595,
+        "epa_ci_upper": 0.575,
+        "success_rate": 0.5975,
+        "player_name": "00-0029263"
+      },
+      {
+        "player_id": "00-0039040",
+        "shrunk_value": 0.224,
+        "raw_value": 0.2968155963302752,
+        "attempts": 109,
+        "shrinkage_applied": 0.216,
+        "epa_per_play": 0.224,
+        "epa_ci_lower": -0.0046,
+        "epa_ci_upper": 0.4527,
+        "success_rate": 0.5062,
+        "player_name": "00-0039040"
+      },
+      {
+        "player_id": "00-0038454",
+        "shrunk_value": 0.2102,
+        "raw_value": 0.3702723404255319,
+        "attempts": 47,
+        "shrinkage_applied": 0.39,
+        "epa_per_play": 0.2102,
+        "epa_ci_lower": -0.1877,
+        "epa_ci_upper": 0.6082,
+        "success_rate": 0.4721,
+        "player_name": "00-0038454"
+      },
+      {
+        "player_id": "00-0036945",
+        "shrunk_value": 0.1916,
+        "raw_value": 0.25105470085470083,
+        "attempts": 117,
+        "shrinkage_applied": 0.204,
+        "epa_per_play": 0.1916,
+        "epa_ci_lower": -0.027,
+        "epa_ci_upper": 0.4101,
+        "success_rate": 0.4922,
+        "player_name": "00-0036945"
+      }
+    ]
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 25: best quarterbacks ---
+{
+  "text": "**Top QBs by Epa Per Play**\n\n1. **00-0027973**\n   EPA: +0.044 (61 attempts, 33% shrinkage)\n2. **00-0033936**\n   EPA: -0.011 (60 attempts, 33% shrinkage)\n3. **00-0035704**\n   EPA: -0.019 (83 attempts, 26% shrinkage)\n4. **00-0036898**\n   EPA: -0.094 (42 attempts, 42% shrinkage)\n5. **00-0026625**\n   EPA: -0.128 (43 attempts, 41% shrinkage)\n6. **00-0031503**\n   EPA: -0.131 (49 attempts, 38% shrinkage)\n7. **00-0028986**\n   EPA: -0.238 (59 attempts, 34% shrinkage)\n8. **00-0027948**\n   EPA: -0.253 (36 attempts, 46% shrinkage)\n9. **00-0034955**\n   EPA: -0.289 (40 attempts, 43% shrinkage)\n10. **00-0034177**\n   EPA: -0.315 (86 attempts, 26% shrinkage)",
+  "pipeline": "player_rankings",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "position": "QB",
+    "stat_type": "passing",
+    "metric": "epa_per_play",
+    "count": 10,
+    "players": [
+      {
+        "player_id": "00-0027973",
+        "shrunk_value": 0.0441,
+        "raw_value": 0.0745655737704918,
+        "attempts": 61,
+        "shrinkage_applied": 0.33,
+        "epa_per_play": 0.0441,
+        "epa_ci_lower": -0.493,
+        "epa_ci_upper": 0.5811,
+        "success_rate": 0.4189,
+        "player_name": "00-0027973"
+      },
+      {
+        "player_id": "00-0033936",
+        "shrunk_value": -0.0111,
+        "raw_value": -0.007611666666666667,
+        "attempts": 60,
+        "shrinkage_applied": 0.333,
+        "epa_per_play": -0.0111,
+        "epa_ci_lower": -0.554,
+        "epa_ci_upper": 0.5319,
+        "success_rate": 0.4458,
+        "player_name": "00-0033936"
+      },
+      {
+        "player_id": "00-0035704",
+        "shrunk_value": -0.0189,
+        "raw_value": -0.01928313253012048,
+        "attempts": 83,
+        "shrinkage_applied": 0.265,
+        "epa_per_play": -0.0189,
+        "epa_ci_lower": -0.4571,
+        "epa_ci_upper": 0.4192,
+        "success_rate": 0.3551,
+        "player_name": "00-0035704"
+      },
+      {
+        "player_id": "00-0036898",
+        "shrunk_value": -0.0938,
+        "raw_value": -0.1479095238095238,
+        "attempts": 42,
+        "shrinkage_applied": 0.417,
+        "epa_per_play": -0.0938,
+        "epa_ci_lower": -0.7833,
+        "epa_ci_upper": 0.5958,
+        "success_rate": 0.3628,
+        "player_name": "00-0036898"
+      },
+      {
+        "player_id": "00-0026625",
+        "shrunk_value": -0.1277,
+        "raw_value": -0.20420465116279068,
+        "attempts": 43,
+        "shrinkage_applied": 0.411,
+        "epa_per_play": -0.1277,
+        "epa_ci_lower": -0.8064,
+        "epa_ci_upper": 0.5511,
+        "success_rate": 0.44,
+        "player_name": "00-0026625"
+      },
+      {
+        "player_id": "00-0031503",
+        "shrunk_value": -0.1307,
+        "raw_value": -0.19978163265306123,
+        "attempts": 49,
+        "shrinkage_applied": 0.38,
+        "epa_per_play": -0.1307,
+        "epa_ci_lower": -0.7525,
+        "epa_ci_upper": 0.491,
+        "success_rate": 0.356,
+        "player_name": "00-0031503"
+      },
+      {
+        "player_id": "00-0028986",
+        "shrunk_value": -0.2381,
+        "raw_value": -0.3500237288135593,
+        "attempts": 59,
+        "shrinkage_applied": 0.337,
+        "epa_per_play": -0.2381,
+        "epa_ci_lower": -0.7872,
+        "epa_ci_upper": 0.311,
+        "success_rate": 0.3946,
+        "player_name": "00-0028986"
+      },
+      {
+        "player_id": "00-0027948",
+        "shrunk_value": -0.2528,
+        "raw_value": -0.44843055555555555,
+        "attempts": 36,
+        "shrinkage_applied": 0.455,
+        "epa_per_play": -0.2528,
+        "epa_ci_lower": -1.0175,
+        "epa_ci_upper": 0.512,
+        "success_rate": 0.3655,
+        "player_name": "00-0027948"
+      },
+      {
+        "player_id": "00-0034955",
+        "shrunk_value": -0.2895,
+        "raw_value": -0.493125,
+        "attempts": 40,
+        "shrinkage_applied": 0.429,
+        "epa_per_play": -0.2895,
+        "epa_ci_lower": -1.002,
+        "epa_ci_upper": 0.423,
+        "success_rate": 0.316,
+        "player_name": "00-0034955"
+      },
+      {
+        "player_id": "00-0034177",
+        "shrunk_value": -0.3152,
+        "raw_value": -0.41891395348837207,
+        "attempts": 86,
+        "shrinkage_applied": 0.259,
+        "epa_per_play": -0.3152,
+        "epa_ci_lower": -0.7433,
+        "epa_ci_upper": 0.1129,
+        "success_rate": 0.3114,
+        "player_name": "00-0034177"
+      }
+    ]
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 26: top 5 wide receivers ---
+{
+  "text": "**Top WRs by Epa Per Target**\n\n1. **00-0037261**\n   EPA: +0.652 (58 attempts, 34% shrinkage)\n2. **00-0036261**\n   EPA: +0.612 (125 attempts, 19% shrinkage)\n3. **00-0033288**\n   EPA: +0.542 (103 attempts, 23% shrinkage)\n4. **00-0036554**\n   EPA: +0.535 (126 attempts, 19% shrinkage)\n5. **00-0037838**\n   EPA: +0.479 (46 attempts, 40% shrinkage)",
+  "pipeline": "player_rankings",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "position": "WR",
+    "stat_type": "receiving",
+    "metric": "epa_per_target",
+    "count": 5,
+    "players": [
+      {
+        "player_id": "00-0037261",
+        "shrunk_value": 0.6516,
+        "raw_value": 0.9064793103448275,
+        "attempts": 58,
+        "shrinkage_applied": 0.341,
+        "epa_per_target": 0.6516,
+        "epa_ci_lower": 0.1109,
+        "epa_ci_upper": 1.1922,
+        "player_name": "00-0037261"
+      },
+      {
+        "player_id": "00-0036261",
+        "shrunk_value": 0.6119,
+        "raw_value": 0.7206616,
+        "attempts": 125,
+        "shrinkage_applied": 0.194,
+        "epa_per_target": 0.6119,
+        "epa_ci_lower": 0.2841,
+        "epa_ci_upper": 0.9397,
+        "player_name": "00-0036261"
+      },
+      {
+        "player_id": "00-0033288",
+        "shrunk_value": 0.5419,
+        "raw_value": 0.6534553398058253,
+        "attempts": 103,
+        "shrinkage_applied": 0.226,
+        "epa_per_target": 0.5419,
+        "epa_ci_lower": 0.171,
+        "epa_ci_upper": 0.9127,
+        "player_name": "00-0033288"
+      },
+      {
+        "player_id": "00-0036554",
+        "shrunk_value": 0.5351,
+        "raw_value": 0.6246730158730158,
+        "attempts": 126,
+        "shrinkage_applied": 0.192,
+        "epa_per_target": 0.5351,
+        "epa_ci_lower": 0.2089,
+        "epa_ci_upper": 0.8612,
+        "player_name": "00-0036554"
+      },
+      {
+        "player_id": "00-0037838",
+        "shrunk_value": 0.4793,
+        "raw_value": 0.6884673913043479,
+        "attempts": 46,
+        "shrinkage_applied": 0.395,
+        "epa_per_target": 0.4793,
+        "epa_ci_lower": -0.1521,
+        "epa_ci_upper": 1.1108,
+        "player_name": "00-0037838"
+      }
+    ]
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 27: best TEs by yards ---
+{
+  "text": "**Top TEs by Receiving Yards**\n\nNo players found matching criteria.",
+  "pipeline": "player_rankings",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "position": "TE",
+    "stat_type": "receiving",
+    "metric": "Receiving Yards",
+    "count": 0,
+    "players": []
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 28: KC ---
+{
+  "text": "Here's what I found:\n\n**KC:**\n\u2022 EPA/Play: +0.028\n\u2022 Pass Rate: 66.7%\n\u2022 Strengths: offensive_efficiency, passing_attack, overall_defense",
+  "pipeline": "general_query",
+  "confidence": 0.3,
+  "success": true,
+  "data": {
+    "teams_mentioned": [
+      "KC"
+    ],
+    "season": 2023,
+    "available_data": [
+      {
+        "team": "KC",
+        "profile_summary": {
+          "epa_per_play": 0.027937443267776096,
+          "pass_rate": 0.6671709531013615,
+          "strengths": [
+            "offensive_efficiency",
+            "passing_attack",
+            "overall_defense"
+          ],
+          "weaknesses": []
+        }
+      }
+    ]
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 3
+}
+
+--- TEST 29: run or pass ---
+{
+  "text": "I couldn't complete that analysis: Down and distance required",
+  "pipeline": "situation_epa",
+  "confidence": 0.7,
+  "success": false,
+  "data": null,
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 2
+}
+
+--- TEST 30: should I go for it ---
+{
+  "text": "I couldn't complete that analysis: Distance required for decision analysis",
+  "pipeline": "decision_analysis",
+  "confidence": 0.7,
+  "success": false,
+  "data": null,
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 2
+}
+
+--- TEST 31: what's the weather like ---
+{
+  "text": "I don't have specific data for that query. Could you ask about a specific team, player, or game situation?",
+  "pipeline": "general_query",
+  "confidence": 0.3,
+  "success": true,
+  "data": {
+    "teams_mentioned": [],
+    "season": 2023,
+    "available_data": []
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 3
+}
+
+--- TEST 32: 3rd and 5 ---
+{
+  "text": "I don't have specific data for that query. Could you ask about a specific team, player, or game situation?",
+  "pipeline": "general_query",
+  "confidence": 0.3,
+  "success": true,
+  "data": {
+    "teams_mentioned": [],
+    "season": 2023,
+    "available_data": []
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 3
+}
+
+--- TEST 33: How do we match up against the Ravens ---
+{
+  "text": "**KC vs BAL**\n\n**Offensive Efficiency:**\n\u2022 KC: +0.028 EPA/play\n\u2022 BAL: +0.063 EPA/play\n\u2022 Edge: BAL (+0.035)\n\n**Tendencies:**\n\u2022 KC pass rate: 66.7%\n\u2022 BAL pass rate: 57.6%",
+  "pipeline": "team_comparison",
+  "confidence": 0.95,
+  "success": true,
+  "data": {
+    "team1": "KC",
+    "team2": "BAL",
+    "season": 2023,
+    "comparison": {
+      "teams": [
+        "KC",
+        "BAL"
+      ],
+      "season": 2023,
+      "offense": {
+        "epa_per_play": [
+          0.027937443267776096,
+          0.06281903959561921
+        ],
+        "pass_rate": [
+          0.6671709531013615,
+          0.5762426284751474
+        ],
+        "success_rate": [
+          0.4357034795763994,
+          0.4700926705981466
+        ]
+      },
+      "defense": {
+        "epa_per_play": [
+          -0.07793125,
+          -0.14200286885245902
+        ]
+      },
+      "matchup_notes": []
+    },
+    "profile1": {
+      "team": "KC",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.6671709531013615,
+        "epa_per_play": 0.027937443267776096,
+        "success_rate": 0.4357034795763994,
+        "shotgun_rate": 0.829803328290469,
+        "no_huddle_rate": 0.02798789712556732,
+        "explosive_rate": 0.06354009077155824,
+        "pass_epa": 0.1072185941043084,
+        "rush_epa": -0.13098522727272727,
+        "total_plays": 1322
+      },
+      "defense": {
+        "epa_per_play": -0.07793125,
+        "success_rate": 0.4066358024691358,
+        "pass_epa": -0.10577272727272727,
+        "rush_epa": -0.02916433121019108
+      },
+      "deviations": {
+        "pass_rate": 0.05422151489911431,
+        "epa_per_play": 0.05529478034642778,
+        "success_rate": 0.008989996430331937,
+        "shotgun_rate": 0.1102527664927162,
+        "explosive_rate": 0.0046355963895357705
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": 0.062728564967371,
+          "epa_vs_league": 0.2957456764876914,
+          "success_rate_vs_league": 0.08716805582477227,
+          "team_pass_rate": 0.9904761904761905,
+          "team_epa": 0.14449428571428571,
+          "sample_size": 105
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": 0.1594254091604851,
+          "epa_vs_league": 0.16716187448486988,
+          "success_rate_vs_league": 0.009419521959260546,
+          "team_pass_rate": 0.5263157894736842,
+          "team_epa": 0.0843157894736842,
+          "sample_size": 19
+        },
+        "down4_short": {
+          "pass_rate_vs_league": 0.10482799350361738,
+          "epa_vs_league": 0.5375725380186033,
+          "success_rate_vs_league": 0.12623652738815894,
+          "team_pass_rate": 0.6153846153846154,
+          "team_epa": 0.9377923076923077,
+          "sample_size": 13
+        },
+        "down1_short": {
+          "pass_rate_vs_league": 0.045307443365695754,
+          "epa_vs_league": 0.08516498381877023,
+          "success_rate_vs_league": 0.1909385113268608,
+          "team_pass_rate": 0.3333333333333333,
+          "team_epa": 0.033953333333333335,
+          "sample_size": 15
+        },
+        "down1_long": {
+          "pass_rate_vs_league": 0.027187182039736357,
+          "epa_vs_league": -0.04120203274812163,
+          "success_rate_vs_league": -0.039645181068412416,
+          "team_pass_rate": 0.5501792114695341,
+          "team_epa": -0.07235519713261648,
+          "sample_size": 558
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.0914164277084758,
+          "epa_vs_league": 0.11387005400212516,
+          "success_rate_vs_league": 0.05178963916100199,
+          "team_pass_rate": 0.8130434782608695,
+          "team_epa": 0.056649565217391305,
+          "sample_size": 230
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": 0.11349165376011006,
+          "epa_vs_league": 0.13287904133258877,
+          "success_rate_vs_league": 0.05091329252403082,
+          "team_pass_rate": 0.6666666666666666,
+          "team_epa": 0.19050204081632652,
+          "sample_size": 147
+        },
+        "down3_short": {
+          "pass_rate_vs_league": 0.11787545787545795,
+          "epa_vs_league": 0.21730175457875456,
+          "success_rate_vs_league": 0.018205128205128207,
+          "team_pass_rate": 0.6483516483516484,
+          "team_epa": 0.20542637362637362,
+          "sample_size": 91
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.00014766004965072188,
+          "epa_vs_league": -0.05916281550799672,
+          "success_rate_vs_league": -0.021816772335889745,
+          "team_pass_rate": 0.38596491228070173,
+          "team_epa": -0.02134561403508772,
+          "sample_size": 57
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.04064254659063593,
+          "epa_vs_league": -0.0703797388084158,
+          "success_rate_vs_league": 0.024660811430818608,
+          "team_pass_rate": 0.9605263157894737,
+          "team_epa": -0.05389605263157895,
+          "sample_size": 76
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    },
+    "profile2": {
+      "team": "BAL",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.5762426284751474,
+        "epa_per_play": 0.06281903959561921,
+        "success_rate": 0.4700926705981466,
+        "shotgun_rate": 0.8475147430497051,
+        "no_huddle_rate": 0.07076663858466722,
+        "explosive_rate": 0.06655433866891322,
+        "pass_epa": 0.0877514619883041,
+        "rush_epa": 0.028914910536779324,
+        "total_plays": 1187
+      },
+      "defense": {
+        "epa_per_play": -0.14200286885245902,
+        "success_rate": 0.39918032786885244,
+        "pass_epa": -0.1635957055214724,
+        "rush_epa": -0.09855061728395062
+      },
+      "deviations": {
+        "pass_rate": -0.03670680972709983,
+        "epa_per_play": 0.09017637667427089,
+        "success_rate": 0.04337918745207914,
+        "shotgun_rate": 0.1279641812519523,
+        "explosive_rate": 0.00764984428689075
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.03164372940492344,
+          "epa_vs_league": -0.01690575208373718,
+          "success_rate_vs_league": 0.040414809071525504,
+          "team_pass_rate": 0.8961038961038961,
+          "team_epa": -0.16815714285714287,
+          "sample_size": 77
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.19041979207790496,
+          "epa_vs_league": 0.1719637320700092,
+          "success_rate_vs_league": 0.17660218449796028,
+          "team_pass_rate": 0.17647058823529413,
+          "team_epa": 0.08911764705882352,
+          "sample_size": 17
+        },
+        "down4_short": {
+          "pass_rate_vs_league": -0.29627090759528374,
+          "epa_vs_league": 0.6829016588977241,
+          "success_rate_vs_league": 0.07129147244310396,
+          "team_pass_rate": 0.21428571428571427,
+          "team_epa": 1.0831214285714286,
+          "sample_size": 14
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.19711679905854665,
+          "epa_vs_league": 0.002548014121800536,
+          "success_rate_vs_league": -0.021182700794351306,
+          "team_pass_rate": 0.09090909090909091,
+          "team_epa": -0.04866363636363636,
+          "sample_size": 11
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.006226743433742521,
+          "epa_vs_league": 0.07265336162315364,
+          "success_rate_vs_league": 0.03156221644171464,
+          "team_pass_rate": 0.5167652859960552,
+          "team_epa": 0.041500197238658776,
+          "sample_size": 507
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.02047821260550098,
+          "epa_vs_league": 0.10805890983736544,
+          "success_rate_vs_league": 0.06437545151798141,
+          "team_pass_rate": 0.7421052631578947,
+          "team_epa": 0.05083842105263158,
+          "sample_size": 190
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.06002432797504975,
+          "epa_vs_league": 0.02998384983133076,
+          "success_rate_vs_league": 0.006555823509027503,
+          "team_pass_rate": 0.4931506849315068,
+          "team_epa": 0.0876068493150685,
+          "sample_size": 146
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.1668398268398268,
+          "epa_vs_league": 0.07824962337662338,
+          "success_rate_vs_league": 0.019870129870129927,
+          "team_pass_rate": 0.36363636363636365,
+          "team_epa": 0.06637424242424242,
+          "sample_size": 66
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.018465513506823017,
+          "epa_vs_league": 0.06507691617414983,
+          "success_rate_vs_league": 0.12833802642572023,
+          "team_pass_rate": 0.36764705882352944,
+          "team_epa": 0.10289411764705883,
+          "sample_size": 68
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": 0.010348788940697129,
+          "epa_vs_league": 0.1021814301022329,
+          "success_rate_vs_league": 0.005994960757624013,
+          "team_pass_rate": 0.9302325581395349,
+          "team_epa": 0.11866511627906977,
+          "sample_size": 86
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 1
+}
+
+--- TEST 34: tell me about my team ---
+{
+  "text": "**SF 2023 Profile**\n\n**Offense:**\n\u2022 EPA/Play: +0.166 (above avg)\n\u2022 Pass Rate: 55.4%\n\u2022 Success Rate: 50.3%\n\u2022 Pass EPA: +0.272 | Rush EPA: +0.034\n\n**Defense:**\n\u2022 EPA/Play Allowed: -0.063 (good)\n\n**Strengths:** Offensive Efficiency, Passing Attack, Overall Defense",
+  "pipeline": "team_profile",
+  "confidence": 0.8,
+  "success": true,
+  "data": {
+    "team": "SF",
+    "season": 2023,
+    "profile": {
+      "team": "SF",
+      "season": 2023,
+      "overall": {
+        "pass_rate": 0.5536912751677853,
+        "epa_per_play": 0.16556535234899328,
+        "success_rate": 0.50251677852349,
+        "shotgun_rate": 0.6098993288590604,
+        "no_huddle_rate": 0.01761744966442953,
+        "explosive_rate": 0.08557046979865772,
+        "pass_epa": 0.27188606060606063,
+        "rush_epa": 0.03366372180451128,
+        "total_plays": 1192
+      },
+      "defense": {
+        "epa_per_play": -0.06299639133921411,
+        "success_rate": 0.42502004811547717,
+        "pass_epa": -0.06734287410926366,
+        "rush_epa": -0.05396
+      },
+      "deviations": {
+        "pass_rate": -0.059258163034461964,
+        "epa_per_play": 0.19292268942764496,
+        "success_rate": 0.07580329537742253,
+        "shotgun_rate": -0.10965123293869239,
+        "explosive_rate": 0.02666597541663525
+      },
+      "situational": {
+        "down3_long": {
+          "pass_rate_vs_league": -0.03618136044857856,
+          "epa_vs_league": 0.13908512571316473,
+          "success_rate_vs_league": 0.01694430367330929,
+          "team_pass_rate": 0.891566265060241,
+          "team_epa": -0.012166265060240964,
+          "sample_size": 83
+        },
+        "down1_medium": {
+          "pass_rate_vs_league": -0.19041979207790496,
+          "epa_vs_league": 0.14997549677589156,
+          "success_rate_vs_league": 0.17660218449796028,
+          "team_pass_rate": 0.17647058823529413,
+          "team_epa": 0.06712941176470588,
+          "sample_size": 17
+        },
+        "down1_short": {
+          "pass_rate_vs_league": -0.16302588996763756,
+          "epa_vs_league": 0.1416429004854369,
+          "success_rate_vs_league": -0.038228155339805836,
+          "team_pass_rate": 0.125,
+          "team_epa": 0.09043125,
+          "sample_size": 16
+        },
+        "down1_long": {
+          "pass_rate_vs_league": -0.0258275681821607,
+          "epa_vs_league": 0.14599607553761396,
+          "success_rate_vs_league": 0.08485766802130174,
+          "team_pass_rate": 0.497164461247637,
+          "team_epa": 0.11484291115311909,
+          "sample_size": 529
+        },
+        "down2_long": {
+          "pass_rate_vs_league": 0.051345922420579226,
+          "epa_vs_league": 0.2303837320279771,
+          "success_rate_vs_league": 0.060250273708593094,
+          "team_pass_rate": 0.772972972972973,
+          "team_epa": 0.17316324324324325,
+          "sample_size": 185
+        },
+        "down2_medium": {
+          "pass_rate_vs_league": -0.08805873383678914,
+          "epa_vs_league": 0.07293979121393669,
+          "success_rate_vs_league": 0.03097973770675505,
+          "team_pass_rate": 0.46511627906976744,
+          "team_epa": 0.13056279069767443,
+          "sample_size": 129
+        },
+        "down3_short": {
+          "pass_rate_vs_league": -0.0759307359307359,
+          "epa_vs_league": 0.3195268961038961,
+          "success_rate_vs_league": 0.14108225108225114,
+          "team_pass_rate": 0.45454545454545453,
+          "team_epa": 0.3076515151515152,
+          "sample_size": 66
+        },
+        "down2_short": {
+          "pass_rate_vs_league": -0.19334148799300305,
+          "epa_vs_league": 0.3990117141897416,
+          "success_rate_vs_league": 0.11451804060006465,
+          "team_pass_rate": 0.1927710843373494,
+          "team_epa": 0.4368289156626506,
+          "sample_size": 83
+        },
+        "down3_medium": {
+          "pass_rate_vs_league": -0.034169483484552066,
+          "epa_vs_league": 0.3637777423945917,
+          "success_rate_vs_league": 0.06413449564134494,
+          "team_pass_rate": 0.8857142857142857,
+          "team_epa": 0.3802614285714286,
+          "sample_size": 70
+        }
+      },
+      "strengths": [
+        "offensive_efficiency",
+        "passing_attack",
+        "overall_defense"
+      ],
+      "weaknesses": []
+    }
+  },
+  "suggestions": [],
+  "used_llm": false,
+  "tier": 2
+}

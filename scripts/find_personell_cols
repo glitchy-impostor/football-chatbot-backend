@@ -1,0 +1,31 @@
+"""
+Find personnel-related columns in nflfastR data.
+"""
+
+import pandas as pd
+from pathlib import Path
+
+filepath = Path("data/raw/play_by_play_2023.parquet")  # Use recent season
+df = pd.read_parquet(filepath)
+
+print(f"Total columns: {len(df.columns)}")
+print()
+
+# Search for personnel-related columns
+keywords = ['personnel', 'formation', 'defense', 'defender', 'box', 'men_in']
+
+print("Columns containing relevant keywords:")
+print("=" * 60)
+
+for col in sorted(df.columns):
+    col_lower = col.lower()
+    if any(kw in col_lower for kw in keywords):
+        # Get sample values
+        sample = df[col].dropna().head(3).tolist()
+        dtype = df[col].dtype
+        non_null = df[col].notna().sum()
+        pct = non_null / len(df) * 100
+        print(f"{col}")
+        print(f"  dtype: {dtype}, non-null: {pct:.1f}%")
+        print(f"  samples: {sample}")
+        print()
